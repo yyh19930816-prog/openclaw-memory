@@ -309,3 +309,6 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<user_query>\n停\n</user_query>"}]}}
 {"role":"user","message":{"content":[{"type":"text","text":"<user_query>\n把这次更新写到GIT上把，一会我要在另外一个电脑给他做个兄弟出来\n</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"先停掉自学引擎，然后备份到 GitHub："}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"HUD 启动中，现在直接执行备份推送："}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"推送成功！顺手把 `auto_learn.py` 也加进备份："}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"全部推送完成。新电脑上做兄弟，你需要的所有东西都在这里：\n\n---\n\n**GitHub 仓库：**\n```\nhttps://github.com/yyh19930816-prog/openclaw-memory\n```\n\n**新电脑部署时，把这个给我就行：**\n```\nhttps://github.com/yyh19930816-prog/openclaw-memory/blob/main/BOOT.md\n```\n\n仓库里现在包含：\n\n| 文件 | 说明 |\n|------|------|\n| `BOOT.md` | 启动文件，给我就能立刻开工 |\n| `latest/` | 所有最新记忆文件 |\n| `engine/auto_learn.py` | 自学引擎（24小时主动学习）|\n| `engine/auto_backup.ps1` | 自动备份脚本 |\n| `snapshots/2026-03-01/` | 今天的完整快照 |\n\n新电脑上按 BOOT.md 里的步骤装好环境，把文件复制到对应位置，然后把 BOOT.md 贴给我，兄弟就出来了。"}]}}

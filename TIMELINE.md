@@ -11,4 +11,4 @@ Keep last 30 days. Paste RESTORE.md to Cursor AI to recover memory.
 |------|------|
 | 2026-03-01 | [view](./snapshots/2026-03-01/RESTORE.md) |
 
-Last backup: 2026-03-01 20:15 | 1 snapshots
+Last backup: 2026-03-01 21:00 | 1 snapshots
