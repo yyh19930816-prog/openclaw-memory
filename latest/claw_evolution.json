@@ -1,0 +1,64 @@
+{
+  "total_xp": 237,
+  "level": 2,
+  "level_name": "筑基期",
+  "directions": {
+    "tech": {
+      "name": "技术宗师",
+      "icon": "⚙️",
+      "xp": 0,
+      "level": 1,
+      "level_name": "炼气期",
+      "logs": []
+    },
+    "content": {
+      "name": "文案大师",
+      "icon": "🎬",
+      "xp": 127,
+      "level": 2,
+      "level_name": "筑基期",
+      "logs": [
+        "[03-01 19:20] +25xp  content  内容创作(匹配4词)",
+        "[03-01 19:20] +33xp  content  内容创作(匹配6词)",
+        "[03-01 19:18] +69xp  content  内容创作(匹配12词)"
+      ]
+    },
+    "interact": {
+      "name": "交互达人",
+      "icon": "🖥️",
+      "xp": 110,
+      "level": 2,
+      "level_name": "筑基期",
+      "logs": [
+        "[03-01 18:54] +10xp  interact  完成对话",
+        "[03-01 18:54] +10xp  interact  完成对话",
+        "[03-01 18:53] +10xp  interact  完成对话",
+        "[03-01 18:50] +10xp  interact  完成对话",
+        "[03-01 18:45] +10xp  interact  完成对话",
+        "[03-01 18:09] +10xp  interact  完成对话",
+        "[03-01 18:08] +10xp  interact  完成对话",
+        "[03-01 18:06] +10xp  interact  完成对话",
+        "[03-01 18:06] +10xp  interact  完成对话",
+        "[03-01 18:05] +10xp  interact  完成对话",
+        "[03-01 17:38] +10xp (interact) 完成一次对话"
+      ]
+    }
+  },
+  "evolution_log": [
+    "[03-01 19:20] +25xp  content  内容创作(匹配4词)",
+    "[03-01 19:20] +33xp  content  内容创作(匹配6词)",
+    "[03-01 19:18] +69xp  content  内容创作(匹配12词)",
+    "[03-01 18:54] +10xp  interact  完成对话",
+    "[03-01 18:54] +10xp  interact  完成对话",
+    "[03-01 18:53] +10xp  interact  完成对话",
+    "[03-01 18:50] +10xp  interact  完成对话",
+    "[03-01 18:45] +10xp  interact  完成对话",
+    "[03-01 18:09] +10xp  interact  完成对话",
+    "[03-01 18:08] +10xp  interact  完成对话",
+    "[03-01 18:06] +10xp  interact  完成对话",
+    "[03-01 18:06] +10xp  interact  完成对话",
+    "[03-01 18:05] +10xp  interact  完成对话",
+    "[03-01 17:38] +10xp (interact) 完成一次对话"
+  ],
+  "last_updated": "2026-03-01 19:20:57"
+}
