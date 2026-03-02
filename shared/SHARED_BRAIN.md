@@ -2109,3 +2109,51 @@ README未提供具体安装代码，但强调两种部署方式：
 （注：README未完整展示，内容均基于现有原文提炼，未添加额外信息）
 
 ---
+
+### [Meituan-tech] python text to speech edge tts (2026-03-03 05:55)
+**Real source**: [rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133
+**Practice code**: ✅ code/meituan_python_text_to_speech_edge_tts_0303_0555.py
+
+# 🌟 edge-tts 中文解析  
+
+## 1. 项目定位  
+该项目是一个Python模块，可直接调用微软Edge浏览器的在线文本转语音(TTS)服务，支持通过Python代码或命令行工具生成语音。（注：原文首段说明）
+
+## 2. 核心功能  
+- **多语言语音合成**：支持查询和选择多种语言/风格的语音（如阿拉伯语`ar-EG-SalmaNeural`），通过`--list-voices`查看完整列表  
+- **参数调节**：可通过命令行调整语速(`--rate`)、音量(`--volume`)、音高(`--pitch`)  
+- **实时播放与保存**：使用`edge-playback`即时播放语音（需安装mpv），或通过`edge-tts`保存为MP3和字幕文件  
+- **Python集成**：提供Python模块直接调用（示例未完整展示）  
+- **SSML限制**：仅支持Edge原生生成的SSML格式，自定义SSML功能已被移除  
+
+## 3. 关键代码示例  
+### 安装  
+```bash
+# 标准安装  
+pip install edge-tts  
+
+# 仅使用命令行工具时推荐  
+pipx install edge-tts  
+```  
+
+### 基础用法  
+```bash  
+# 生成语音文件  
+edge-tts --text "Hello, world!" --write-media hello.mp3 --write-subtitles hello.srt  
+
+# 指定语音并实时播放  
+edge-playback --text "مرحبا كيف حالك؟" --voice ar-EG-SalmaNeural  
+
+# 调节语速（注意负值格式）  
+edge-tts --rate=-50% --text "Slow speech" --write-media slow.mp3  
+```  
+
+## 4. 适用人群  
+- **开发者**：需要快速集成多语言TTS到Python项目的场景  
+- **内容创作者**：批量生成带字幕的语音素材  
+- **语言学习者**：制作自定义发音练习材料  
+- **命令行用户**：通过简单指令实现文本转语音  
+
+⚠️ 注意：所有功能均严格基于README描述，不支持自定义SSML等未提及的特性。
+
+---
