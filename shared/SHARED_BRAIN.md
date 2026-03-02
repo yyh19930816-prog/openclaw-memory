@@ -835,3 +835,53 @@ python -m keyboard < events.txt  # 回放事件
 ⚠️ 需注意：项目当前无维护，Linux 需 root 权限，且 SSH 场景下无法使用。
 
 ---
+
+### [Meituan-content] video thumbnail generator python (2026-03-03 02:59)
+**Real source**: [pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) ⭐17
+**Practice code**: ✅ code/meituan_video_thumbnail_generator_python_0303_0259.py
+
+# Thumbnails 项目解析
+
+## 项目解决的问题
+该项目专注于**极速生成视频缩略图**，通过最小化资源占用实现高效率处理，提供CLI和Python API两种方式简化缩略图创建流程。
+
+## 核心功能与特点
+- **闪电般的生成速度**：专为快速缩略图生成优化，资源占用极低
+- **多格式兼容**：支持mp4/mkv/avi/mov/webm等主流视频格式作为输入
+- **输出灵活**：可生成WebVTT或JSON格式的缩略图元数据
+- **双重调用方式**：提供CLI命令行工具和Python API两种调用接口
+- **智能压缩技术**：自动优化缩略图文件大小确保快速加载
+
+## 安装与使用示例
+
+### CLI调用方式
+```bash
+thumbnails --base /media/ --output /var/www/movie.com/media/thumbnails/ --interval 5 ~Videos/movies
+```
+
+### Python API调用
+```python
+from thumbnails import Generator
+
+generator = Generator(["~Downloads/movie.mp4"])
+generator.base = "/media/"
+generator.skip = True  # 跳过已存在缩略图
+generator.output = "/var/www/media/thumbnails/"
+generator.interval = 5
+generator.generate()
+```
+
+### 开发模式安装
+```bash
+python3 -m pip install -e .
+```
+
+## 目标用户群体
+- 需要为视频网站生成预览缩略图的前后端开发者
+- 处理大量视频素材需要批量生成缩略图的媒体工作者
+- 开发视频播放器插件需要集成缩略图功能的程序员
+- 任何需要高效视频预览解决方案的技术团队
+
+（注：所有技术细节均严格遵循原README内容，未添加任何非官方说明）
+
+---
