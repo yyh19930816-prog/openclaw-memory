@@ -724,3 +724,44 @@ sudo apt install build-essential tesseract-ocr tesseract-ocr-eng libtesseract-de
 > 项目状态活跃，截至当前版本v0.6.0已在GitHub获得2525星，通过PyPi/Flathub/AUR多平台分发。遇到问题可查阅项目的[FAQ文档](https://dynobo.github.io/normcap/#faqs)或提交issue。
 
 ---
+
+### [Meituan-content] youtube shorts script template (2026-03-03 02:45)
+**Real source**: [IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1012
+**Practice code**: ✅ code/meituan_youtube_shorts_script_template_0303_0245.py
+
+以下是基于 **IgorShadurin/app.yumcut.com** README 的准确中文提炼：
+
+---
+
+### 1. 解决的问题  
+YumCut 旨在将短视频制作转化为可重复的自动化流程，替代传统手动剪辑混乱，同时通过开源/自托管降低成本，帮助团队高频发布内容。（原文引述：*"turn short-form production into a repeatable workflow instead of manual editing chaos"* 和 *"reduce production cost"*）
+
+---
+
+### 2. 核心功能  
+- **端到端自动化生成**：输入创意，自动生成脚本、配音、画面、字幕及最终9:16视频（*"You provide the idea, YumCut generates the script, voice, visuals, captions, and final edit"*）  
+- **多语言支持**：一键生成不同语言版本（*"turning one idea into multiple language versions"*）  
+- **开源可控**：无供应商锁定，代码可审计，支持自托管（*"Open-source and self-hosted: no vendor lock-in"*）  
+- **成本优化**：可自定义服务商，灵活调整质量/速度（*"bring your own providers, run local components"*）  
+- **批量生产**：适用于多品牌/客户的机构级批量制作（*"agency-style batch production across multiple brands"*）  
+
+---
+
+### 3. 使用示例  
+README 中未提供具体安装代码，但明确说明：  
+- 自托管版本：需部署本地组件（*"self-hosted control"*）  
+- 云端版本：直接访问 **[YumCut官网](https://yumcut.com/?utm_source=github_app_yc)**（*"The already deployed hosted version is available"*）  
+
+---
+
+### 4. 目标用户  
+- **个人/团队创作者**：需快速发布 TikTok/YouTube Shorts/Instagram Reels 的无露脸频道（*"faceless channels"*）  
+- **增长团队**：测试多样化内容钩子（*"testing different hooks/styles quickly"*）  
+- **多语言营销**：跨语言内容拓展（*"wider reach"* 示例中的西班牙语视频）  
+- **代理机构**：为多个品牌批量制作视频（*"multiple brands or clients"*）  
+
+--- 
+
+所有信息严格来自 README，无虚构内容。
+
+---
