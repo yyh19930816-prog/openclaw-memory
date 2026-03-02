@@ -1057,3 +1057,64 @@ python main_offline_model.py # 离线模式
 （注：所有内容均来自README原文，未添加任何外部信息）
 
 ---
+
+### [Meituan-tech] github actions scheduled automation (2026-03-03 03:33)
+**Real source**: [evryfs/github-actions-runner-operator](https://github.com/evryfs/github-actions-runner-operator) ⭐446
+**Practice code**: ✅ code/meituan_github_actions_scheduled_automation_0303_0333.py
+
+以下是严格基于README内容的精准提炼（中文）：
+
+---
+
+### 1. 解决的问题  
+该项目提供Kubernetes Operator，用于**按需调度和扩展GitHub Actions的自托管运行器(Runner) Pod**，实现工作流环境的声明式管理（来自README开篇说明）。
+
+---
+
+### 2. 核心功能/知识点  
+- **认证模式**  
+  - ✅ **GitHub应用认证**（首选）：  
+    - 需配置`Actions`和`Administration`的读写权限（仓库级）或`Self Hosted Runners`权限（组织级）  
+    - 通过Secret注入`GITHUB_APP_INTEGRATION_ID`和`GITHUB_APP_PRIVATE_KEY`  
+  - ✅ **个人访问令牌(PAT)**：  
+    - 需在GitHub创建PAT并存储为Kubernetes Secret `actions-runner`  
+
+- **优势特性**  
+  - 增强安全性（避免令牌暴露给Runner Pod）  
+  - 更高的GitHub API配额（相比PAT）  
+
+- **技术指标**  
+  - 使用Go开发（Go module版本通过徽章显示）  
+  - 通过Codacy/Go Report Card/Codecov的质量检测（README徽章）  
+
+---
+
+### 3. 关键代码示例  
+**GitHub应用认证配置**：  
+```shell
+# 创建Secret存储认证信息
+kubectl create secret generic github-runner-app \
+  --from-literal=GITHUB_APP_INTEGRATION_ID=<app_id> \
+  --from-file=GITHUB_APP_PRIVATE_KEY=<private_key>
+
+# Operator部署中注入环境变量
+envFrom:
+- secretRef:
+    name: github-runner-app
+```
+
+**PAT认证配置**：  
+```shell
+kubectl create secret generic actions-runner --from-literal=GH_TOKEN=<token>
+```
+
+---
+
+### 4. 目标用户  
+- **运维/DevOps工程师**：需在K8s集群中动态管理GitHub Actions Runner  
+- **安全敏感团队**：优先使用GitHub应用认证模式的企业  
+- **中大规模CI/CD用户**：需要突破GitHub托管Runner限制或自定义运行环境  
+
+（所有内容均基于README事实提炼）
+
+---
