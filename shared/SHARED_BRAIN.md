@@ -2076,3 +2076,36 @@ pip install -r requirements.txt
 ⚠️ 注意：README 仅包含环境配置指南，未提及其他功能代码或具体应用场景。
 
 ---
+
+### [Meituan-content] youtube shorts script template (2026-03-03 05:48)
+**Real source**: [IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1019
+**Practice code**: ✅ code/meituan_youtube_shorts_script_template_0303_0548.py
+
+# YumCut 开源AI短视频生成工具解析  
+
+**1. 解决的核心问题**  
+YumCut 旨在将短视频制作转化为可重复的工作流程，替代繁琐的手动剪辑，并通过开源/自托管方案降低制作成本。  
+
+**2. 核心功能**  
+- **全流程自动化**：根据用户想法自动生成脚本、配音、画面、字幕和最终剪辑  
+- **多平台适配**：专为TikTok/YouTube Shorts/Instagram Reels设计的9:16竖屏视频  
+- **多语言支持**：一键生成不同语言版本视频扩展受众  
+- **开源可控**：避免供应商锁定，允许自托管和代码审计  
+- **成本优化**：支持自带服务商和本地化组件，平衡质量与速度  
+
+**3. 官方使用示例**  
+README未提供具体安装代码，但强调两种部署方式：  
+```markdown
+- 免费使用已部署的托管版: [yumcut.com](https://yumcut.com)
+- 自托管: 可完全控制基础设施（需自行配置）
+```
+
+**4. 目标用户**  
+- **内容创作者**：需要快速批量生产无露脸短视频  
+- **营销团队**：为多品牌/客户进行机构式批量化制作  
+- **增长团队**：测试不同内容风格的A/B效果  
+- **多语言运营**：将单创意扩展至不同语言市场  
+
+（注：README未完整展示，内容均基于现有原文提炼，未添加额外信息）
+
+---
