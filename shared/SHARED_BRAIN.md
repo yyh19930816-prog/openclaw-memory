@@ -1926,3 +1926,65 @@ async def user_rank_card(ctx, user:disnake.Member):
 注意：如需等级卡片功能，建议使用作者推荐的替代库 DiscordLevelingCard，而非此库中的已弃用功能。
 
 ---
+
+### [Meituan-tech] python text to speech edge tts (2026-03-03 05:28)
+**Real source**: [rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133
+**Practice code**: ✅ code/meituan_python_text_to_speech_edge_tts_0303_0528.py
+
+# edge-tts 项目介绍
+
+## 项目解决的问题
+该项目提供了一个Python模块，允许通过代码或命令行直接调用Microsoft Edge的在线文本转语音(TTS)服务。
+
+## 核心功能
+- **命令行工具**：通过`edge-tts`和`edge-playback`命令实现文本转语音和实时播放
+- **多语言支持**：支持多种语言和声音（如阿拉伯语、阿姆哈拉语等神经网络语音）
+- **语音参数调整**：可调节语速(`--rate`)、音量(`--volume`)和音调(`--pitch`)
+- **字幕生成**：转换时可同步生成字幕文件(.srt格式)
+- **Python模块集成**：提供Python API直接调用TTS服务
+
+## 安装与使用示例
+
+### 安装方式
+```bash
+# 标准安装
+pip install edge-tts
+
+# 仅使用命令行工具时推荐
+pipx install edge-tts
+```
+
+### 基础使用
+```bash
+# 文本转语音并保存
+edge-tts --text "Hello, world!" --write-media hello.mp3 --write-subtitles hello.srt
+
+# 实时播放带字幕
+edge-playback --text "Hello, world!"
+```
+
+### 语音参数调整
+```bash
+# 语速降低50%
+edge-tts --rate=-50% --text "Hello, world!" --write-media hello_slow.mp3
+
+# 音量降低50% 
+edge-tts --volume=-50% --text "Hello, world!"
+```
+
+### 切换语音
+```bash
+# 列出所有可用语音
+edge-tts --list-voices
+
+# 使用阿拉伯语语音
+edge-tts --voice ar-EG-SalmaNeural --text "مرحبا كيف حالك؟"
+```
+
+## 适合人群
+- 需要快速实现多语言TTS功能的开发者  
+- 希望免费用Microsoft Edge语音服务的用户  
+- 需要生成带字幕的语音内容的内容创作者  
+- Python项目中需要集成文本转语音的工程师
+
+---
