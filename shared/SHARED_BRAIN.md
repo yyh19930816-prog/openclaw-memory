@@ -2202,3 +2202,58 @@ python -m keyboard < events.txt  # 回放事件
 注：所有内容均严格来自README原文，未添加任何主观推断。当前项目状态已标记为**未维护**，但基础功能仍可用。
 
 ---
+
+### [Meituan-interact] python desktop gui tkinter modern (2026-03-03 06:09)
+**Real source**: [israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) ⭐2564
+**Practice code**: ✅ code/meituan_python_desktop_gui_tkinter_modern_0303_0609.py
+
+### ttkbootstrap 项目解析
+
+#### 1. 解决的问题  
+ttkbootstrap 通过提供**Bootstrap风格的现代化扁平主题**，解决了传统 tkinter 界面风格老旧的问题，让开发者能快速创建精美的 GUI 应用。
+
+#### 2. 核心功能  
+✔️ **内置主题**  
+- 10+ 种精心设计的深色/浅色主题（如示例中的 `superhero` 主题）  
+
+✔️ **预设样式**  
+- 简洁的关键字 API（如 `bootstyle="info-outline"`）替代传统复杂样式类  
+- 支持多种状态样式：`primary`、`success`、`striped` 等  
+
+✔️ **新增控件**  
+- 提供了 `Meter`、`DateEntry`、`Floodgauge` 等美观新控件  
+- 支持主题化自定义对话框  
+
+✔️ **主题生成器**  
+- 内置工具可轻松创建、加载和应用自定义主题  
+
+#### 3. 安装与示例代码  
+**安装命令**：  
+```python
+python -m pip install ttkbootstrap
+```
+
+**基础使用**（来自README原文）：  
+```python
+import ttkbootstrap as ttk
+
+root = ttk.Window(themename="superhero")  # 应用主题
+
+# 使用 bootstyle 关键字设置按钮样式
+b1 = ttk.Button(root, text="Submit", bootstyle="success")
+b1.pack(side="left", padx=5, pady=10)
+
+b2 = ttk.Button(root, text="Submit", bootstyle="info-outline")
+b2.pack(side="left", padx=5, pady=10)
+
+root.mainloop()
+```
+
+#### 4. 适用人群  
+- **熟悉 tkinter 的开发者**：需要快速美化传统界面  
+- **Bootstrap 爱好者**：习惯通过关键字（如 `primary`）设置样式  
+- **轻量级 GUI 需求者**：依赖 pip 安装，无需复杂配置  
+
+> ℹ️ 项目文档和主题预览详见 [官方网站](https://ttkbootstrap.readthedocs.io/)。所有功能均严格基于 README 描述，无扩展内容。
+
+---
