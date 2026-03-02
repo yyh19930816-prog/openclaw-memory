@@ -1355,3 +1355,64 @@ git clone https://github.com/TheBlewish/Automated-AI-Web-Researcher-Olla
 （注：全文严格基于README原文，未添加任何外部信息。代码示例仅为对README描述的技术实现假设，非仓库真实代码。）
 
 ---
+
+### [Meituan-tech] python image generation pillow (2026-03-03 04:14)
+**Real source**: [krishsharma0413/pilcord](https://github.com/krishsharma0413/pilcord) ⭐7
+**Practice code**: ✅ code/meituan_python_image_generation_pillow_0303_0414.py
+
+### pilcord 项目解析  
+
+#### 1. 项目解决的问题  
+这是一个基于 PIL 的图像生成库，专门为 Discord 机器人提供丰富的图片功能，包括等级卡片、欢迎卡片和梗图生成（README 首段明确说明）。  
+
+#### 2. 核心功能  
+- **等级卡片生成**：  
+  - 已弃用 `RankCard`（转用 [DiscordLevelingCard](https://github.com/krishsharma0413/DiscordLevelingCard)），但支持多种卡片样式（`card1`/`card2`/`card3`）。  
+  - 可自定义背景、进度条颜色、文本颜色等（通过 `CardSettings` 类配置）。  
+- **梗图模板**：  
+  - 预置 `fight_under_this_flag`、`uwu_discord`、`rip` 等模板（示例图片见 README）。  
+- **输出兼容性**：  
+  - 直接返回 `bytes` 数据，无缝对接 `discord.py`/`disnake` 等库的 `File` 类。  
+
+#### 3. 安装与使用示例  
+**安装命令**：  
+```sh
+# PyPI 版本
+pip install pilcord
+
+# 开发版（GitHub）
+pip install git+https://github.com/ResetXD/pilcord
+```
+
+**代码示例（等级卡片）**：  
+```python
+from DiscordLevelingCard import RankCard, CardSettings
+
+card_settings = CardSettings(
+    background="背景图片URL或路径",
+    text_color="white",
+    bar_color="#000000"
+)
+
+card = RankCard(
+    settings=card_settings,
+    avatar="用户头像URL",
+    level=1,
+    current_exp=1,
+    max_exp=1,
+    username="用户名"
+)
+image_bytes = card.card1()  # 生成卡片并返回bytes
+```
+
+#### 4. 适用人群  
+- **Discord 机器人开发者**：需要快速集成等级系统或梗图功能。  
+- **Python 初学者**：代码结构清晰，直接调用预置方法即可生成图片。  
+
+#### 注意事项  
+- 等级卡片功能已迁移至独立库，新项目建议使用 [DiscordLevelingCard](https://github.com/krishsharma0413/DiscordLevelingCard)。  
+- 所有图像生成均依赖 PIL（Python Imaging Library），需确保环境支持。  
+
+（注：全文严格基于 README 内容，未添加任何虚构信息。）
+
+---
