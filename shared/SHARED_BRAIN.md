@@ -2611,3 +2611,68 @@ edge-tts --voice ar-EG-SalmaNeural --text "مرحبا كيف حالك؟" --write
 > ⚠️ 注意：自定义SSML功能已被移除（微软API限制），所有参数需通过命令行选项调节。
 
 ---
+
+### [Meituan-interact] python hotkey global keyboard (2026-03-03 06:52)
+**Real source**: [boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971
+**Practice code**: ✅ code/meituan_python_hotkey_global_keyboard_0303_0652.py
+
+# Python键盘控制库keyboard解析
+
+根据GitHub仓库boppreh/keyboard的README内容，这是一个用于全面控制键盘输入的Python库。
+
+## 项目定位
+
+这个项目解决了需要通过程序全局监听、模拟和控制键盘事件的需求，让开发者能跨平台实现键盘自动化操作（Windows/Linux/实验性支持MacOS）。
+
+## 核心功能
+
+- **全局键盘监听**：捕获所有键盘输入，不受程序焦点限制
+- **跨平台支持**：兼容Windows和Linux（需sudo权限），实验性支持MacOS
+- **高级API封装**：提供录制回放(`record/play`)、缩写替换(`add_abbreviation`)等便捷功能
+- **纯Python实现**：无需编译C模块，零依赖
+- **国际化支持**：自动适应键盘布局，正确处理特殊字符（如`Ctrl+ç`）
+
+## 使用示例
+
+### 安装方式
+```bash
+pip install keyboard  # 推荐
+# 或
+git clone https://github.com/boppreh/keyboard  # 免安装
+```
+
+### 基础用法
+```python
+import keyboard
+
+# 热键注册
+keyboard.add_hotkey('ctrl+shift+a', print, args=('hotkey触发',))
+
+# 键盘录制与回放
+recorded = keyboard.record(until='esc')  # 录制到ESC按下
+keyboard.play(recorded, speed_factor=3)  # 三倍速回放
+
+# 缩写功能
+keyboard.add_abbreviation('@@', 'my.email@example.com')
+```
+
+### 命令行使用
+```bash
+# 录制事件到文件
+python -m keyboard > events.txt
+
+# 回放事件
+python -m keyboard < events.txt
+```
+
+## 目标用户
+
+适合需要实现以下功能的开发者：
+- 自动化测试工程师（键盘操作录制回放）
+- 效率工具开发者（快捷键扩展/文本缩写）
+- 辅助功能开发者（键盘输入增强）
+- 教育项目（编程输入演示）
+
+⚠️ 注意：该项目目前处于未维护状态，可能遇到兼容性问题，不建议用于线上生产环境或游戏外挂开发。
+
+---
