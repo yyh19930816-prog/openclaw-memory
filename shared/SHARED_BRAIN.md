@@ -235,3 +235,37 @@ root.mainloop()
 （全部内容严格依据README，无额外补充）
 
 ---
+
+### [Meituan-interact] python speech recognition offline (2026-03-03 01:43)
+**Real source**: [alphacep/vosk-api](https://github.com/alphacep/vosk-api) ⭐14313
+**Practice code**: ✅ code/meituan_python_speech_recognition_offline_0303_0143.py
+
+# Vosk语音识别工具包解析
+
+## 1. 项目解决的问题
+Vosk是一个离线开源语音识别工具包，为20多种语言和方言提供语音识别能力，解决离线环境下的实时语音转文字需求。
+
+## 2. 核心功能
+- **多语言支持**：支持英语、中文、俄语、法语等20+语言和方言，包括印度英语、阿拉伯语等特殊变体
+- **高效轻量**：模型体积仅50MB，支持大型连续词汇转录
+- **低延迟处理**：提供零延迟响应的流式API
+- **可定制化**：支持词汇表重配置和说话人识别功能
+- **跨平台应用**：从树莓派等小型设备到大型服务器集群均可部署
+
+## 3. 安装与使用
+README推荐访问[Vosk官方网站](https://alphacephei.com/vosk)获取完整文档，但揭示了其主要绑定语言：
+
+```
+支持的编程语言绑定包括：
+Python, Java, Node.JS, C#, C++, Rust, Go等
+```
+
+## 4. 目标用户群体
+- 需要离线语音识别的应用开发者（聊天机器人/智能家居）
+- 媒体工作者（电影字幕生成/讲座访谈转录）
+- 嵌入式设备开发者（树莓派/Android手机）
+- 多语言场景下的虚拟助理开发者
+
+（注：本文严格基于提供的README内容提炼，所有功能点均有原文对应，未做任何扩展虚构）
+
+---
