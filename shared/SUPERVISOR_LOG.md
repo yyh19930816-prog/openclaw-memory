@@ -663,3 +663,5 @@ pyth |
 
 2. **Python requests retry (0 |
 | 2026-03-03 06:03 | 悟空审计美团学习 | 评分:90分 | 结论:基本真实 | 问题:第一条笔记未完全对应GitHub出处，建议补充yumcut的具体仓库链接 |
+| 2026-03-03 06:03 | 美团核实悟空汇报 | ⚠️存疑 | 结论: ⚠️存疑  
+原因: 汇报中提到的代码文件wukong_python_requests_retry_rate_limit_exponen_0303_06 |
