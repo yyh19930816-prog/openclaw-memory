@@ -240,3 +240,63 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+
+---
+## 🤝 共享工作空间协作规则（新增 2026-03-02 20:15）
+
+### 每次session开始前必读：
+1. `shared/STATUS.md` — 查看悟空当前状态和共享知识
+2. `shared/TODAY_TASKS.md` — 查看今日任务分配
+3. `shared/SUPERVISION.md` — 了解互相监督规则
+
+### 共享空间访问方式：
+```python
+import requests, base64
+TOKEN = "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"
+REPO  = "yyh19930816-prog/openclaw-memory"
+headers = {"Authorization": f"token {TOKEN}"}
+
+def read_shared(filename):
+    r = requests.get(f"https://api.github.com/repos/{REPO}/contents/shared/{filename}",
+                     headers=headers)
+    if r.status_code == 200:
+        return base64.b64decode(r.json()["content"]).decode("utf-8")
+    return ""
+
+status = read_shared("STATUS.md")
+tasks  = read_shared("TODAY_TASKS.md")
+```
+
+### 每次Heartbeat必做（新增）：
+- 更新 `shared/STATUS.md` 中龙虾自己的状态栏
+- 读取悟空的状态栏，核查是否与实际一致
+- 悟空仓库今日日志：`https://api.github.com/repos/yyh19930816-prog/wukong-memory/contents/workspace/memory/YYYY-MM-DD.md`
+- 发现悟空有虚假汇报 → 在互查记录里标注
+
+### 互查方法（龙虾检查悟空）：
+```python
+# 读悟空今日日志
+import requests, base64
+from datetime import datetime
+today = datetime.now().strftime("%Y-%m-%d")
+r = requests.get(
+    f"https://api.github.com/repos/yyh19930816-prog/wukong-memory/contents/workspace/memory/{today}.md",
+    headers={"Authorization": "token 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"}
+)
+if r.status_code == 200:
+    wukong_log = base64.b64decode(r.json()["content"]).decode("utf-8")
+    # 对照STATUS.md里悟空的声明，找不一致的地方
+```
+
+### 知识共享规则：
+- 自己学到有价值的东西 → 写入 `shared/STATUS.md` 的「龙虾贡献」部分
+- 读到悟空的新能力 → 写入自己的 `TOOLS.md`
+- 不搬运无用信息，只共享真正可复用的经验
+
+### 悟空的基本信息：
+- 所在：老板主电脑
+- API：SiliconFlow DeepSeek-V3
+- 节点：node_wukong_001（EVOMAP，积分600，声誉50）
+- 擅长：飞书、网络搜索、EVOMAP、GitHub学习
+- 记忆库：https://github.com/yyh19930816-prog/wukong-memory
