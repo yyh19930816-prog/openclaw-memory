@@ -3050,3 +3050,37 @@ kubectl create secret generic actions-runner --from-literal=GH_TOKEN=<token>
 ⚠️ 以上内容全部来自README原文，未添加任何外部信息。关键特性如认证模式、权限要求、代码示例均为原文直接引用。
 
 ---
+
+### [Meituan-content] youtube shorts script template (2026-03-03 07:40)
+**Real source**: [IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1022
+**Practice code**: ✅ code/meituan_youtube_shorts_script_template_0303_0740.py
+
+# YumCut开源AI短视频生成工具解析
+
+## 1. 解决的核心问题
+YumCut是一个开源AI短视频生成工具，旨在**将短视频生产转化为可重复的工作流**，替代手动剪辑的混乱状态，主要服务于TikTok、YouTube Shorts和Instagram Reels的9:16竖版视频创作。
+
+## 2. 核心功能亮点
+- **全自动生成流程**：用户提供创意想法，系统自动生成脚本、配音、画面、字幕和最终编辑
+- **多语言支持**：可将一个创意快速转换为不同语言版本（示例如西班牙语版《辛普森一家》）
+- **成本控制**：开源自托管架构，可自主选择服务提供商，灵活调整质量/速度平衡
+- **批量生产支持**：适合机构为多个品牌/客户进行批次化生产
+- **已验证的案例效果**：README展示了多个成功案例（如比特币故事TikTok获90K播放）
+
+## 3. 使用方式
+虽然README未提供具体安装代码，但明确说明了两种使用途径：
+
+```markdown
+1. 免费使用托管版：[yumcut.com](https://yumcut.com/?utm_source=github_app_yc)
+2. 自托管部署：仓库代码开源可自行部署
+```
+
+## 4. 目标用户群体
+✓ **内容创作者**：需要快速持续产出竖版短视频的个人  
+✓ **成长型团队**：每日需要发布TikTok/Shorts/Reels的无露脸频道运营  
+✓ **营销机构**：服务多个客户需要批量生产不同风格视频的团队  
+✓ **多语言运营者**：需要将内容快速本地化到不同语言的国际博主  
+
+> README特别强调："Built for creators, agencies, and growth teams that need to produce short vertical videos fast and consistently"
+
+---
