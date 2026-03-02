@@ -1849,3 +1849,80 @@ edge-tts --volume=+20% --text "Loud speech" --write-media loud.mp3
 > 注意：该项目无法使用自定义SSML，因为微软限制了非Edge生成的SSML语法。
 
 ---
+
+### [Meituan-tech] python image generation pillow (2026-03-03 05:21)
+**Real source**: [krishsharma0413/pilcord](https://github.com/krishsharma0413/pilcord) ⭐7
+**Practice code**: ✅ code/meituan_python_image_generation_pillow_0303_0521.py
+
+# pilcord 项目解析
+
+## 1. 项目解决的问题
+pilcord 是一个基于 PIL(Python Imaging Library)的图像生成库，专门为 Discord 机器人提供丰富的卡片图片生成功能，包括等级卡片、欢迎卡片和表情包生成。
+
+## 2. 核心功能与特点
+
+- **多种图片生成功能**
+  - 提供等级卡片、欢迎卡片和表情包(meme)生成
+  - 示例表情包包括 `fight_under_this_flag`、`uwu_discord` 和 `rip`
+
+- **等级卡片生成(已弃用)**
+  - 注意：等级卡片功能已被弃用，建议使用作者的另一个库 DiscordLevelingCard
+  - 原功能支持三种卡片样式(card1, card2, card3)
+
+- **灵活的配置选项**
+  - 可通过 CardSettings 类自定义背景、颜色等
+  - 支持 URL 或本地文件作为背景
+
+- **直接兼容 Discord 生态**
+  - 所有生成方法返回 `bytes` 数据
+  - 可直接用于 discord.py、disnake、pycord、nextcord 的 File 类
+
+## 3. 安装与使用示例
+
+**安装方法：**
+
+```sh
+# PyPI 版本
+pip install pilcord
+
+# GitHub 开发版 
+pip install git+https://github.com/ResetXD/pilcord
+```
+
+**基本使用示例(来自文档)：**
+
+```py
+from disnake.ext import commands
+from DiscordLevelingCard import RankCard, CardSettings
+import disnake
+
+client = commands.Bot()
+card_settings = CardSettings(
+    background="url or path to background image",
+    text_color="white",
+    bar_color="#000000"
+)
+
+@client.slash_command(name="rank")
+async def user_rank_card(ctx, user:disnake.Member):
+    await ctx.response.defer()
+    a = RankCard(
+        settings=card_settings,
+        avatar=user.display_avatar.url,
+        level=1,
+        current_exp=1,
+        max_exp=1,
+        username="cool username",
+        rank=1
+    )
+```
+
+## 4. 适用人群
+
+- **Discord 机器人开发者**：需要为机器人添加图片生成功能
+- **Python 开发者**：熟悉 PIL/Pillow 库，想快速实现图片处理功能
+- **社区管理员**：希望为 Discord 服务器定制欢迎消息和等级系统
+
+注意：如需等级卡片功能，建议使用作者推荐的替代库 DiscordLevelingCard，而非此库中的已弃用功能。
+
+---
