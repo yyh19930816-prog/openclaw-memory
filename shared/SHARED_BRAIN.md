@@ -1806,3 +1806,46 @@ python fbposter.py  # 需提前修改：
 > 注：所有功能描述均严格基于README原文，未添加任何假设性功能。实际使用需自行承担账号安全风险。
 
 ---
+
+### [Meituan-tech] python text to speech edge tts (2026-03-03 05:14)
+**Real source**: [rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133
+**Practice code**: ✅ code/meituan_python_text_to_speech_edge_tts_0303_0514.py
+
+# edge-tts 项目解析
+
+## 1. 解决什么问题
+该项目让开发者能通过Python代码或命令行工具调用微软Edge浏览器的在线文本转语音(TTS)服务。
+
+## 2. 核心功能
+- **多语言支持**：提供全球多种语音选项（如阿拉伯语、南非荷兰语等），可通过`--list-voices`查看所有可用声音
+- **语音参数调整**：支持调节语速(`--rate`)、音量(`--volume`)和音高(`--pitch`)
+- **字幕生成**：转换时可同步生成字幕文件(.srt格式)
+- **即时播放**：通过`edge-playback`命令直接播放语音（依赖mpv播放器）
+- **简单安装**：通过pip/pipx即可快速安装
+
+## 3. 安装使用示例
+```bash
+# 安装（二选一）
+pip install edge-tts          # 标准安装
+pipx install edge-tts         # 仅使用命令行时推荐
+
+# 基础使用（生成语音+字幕）
+edge-tts --text "Hello" --write-media hello.mp3 --write-subtitles hello.srt
+
+# 指定阿拉伯语音源
+edge-tts --voice ar-EG-SalmaNeural --text "مرحبا" --write-media arabic.mp3
+
+# 调整语音参数（注意负值写法）
+edge-tts --rate=-50% --text "Slow speech" --write-media slow.mp3
+edge-tts --volume=+20% --text "Loud speech" --write-media loud.mp3
+```
+
+## 4. 适合人群
+- **开发者**：需要将TTS集成到Python应用中的程序员
+- **内容创作者**：需要快速生成多语言语音和字幕的视频/播客制作者
+- **语言学习者**：需要高质量发音示范的语言学习者
+- **无障碍服务**：为视障人士开发语音辅助工具的工程师
+
+> 注意：该项目无法使用自定义SSML，因为微软限制了非Edge生成的SSML语法。
+
+---
