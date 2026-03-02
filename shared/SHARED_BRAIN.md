@@ -1278,3 +1278,42 @@ git clone https://github.com/TheBlewish/Automated-AI-Web-Researcher-Olla
 （注：所有描述均严格对应README中提到的功能演示，未添加任何主观推测内容）
 
 ---
+
+### [Meituan-content] viral content formula hook engagement (2026-03-03 04:00)
+**Real source**: [parzival1920/ViralHook---Premium-Hook-Generator](https://github.com/parzival1920/ViralHook---Premium-Hook-Generator) ⭐0
+**Practice code**: ✅ code/meituan_viral_content_formula_hook_engagement_0303_0400.py
+
+以下是严格基于 **parzival1920/ViralHook---Premium-Hook-Generator** README内容的提炼：
+
+---
+
+1. **项目解决的问题**  
+   该项目提供本地运行动AI Studio应用的完整环境（来自README首段描述）。
+
+2. **核心功能/知识点**  
+   - 支持通过Node.js在本地运行AI Studio应用  
+   - 需配置Gemini API密钥（`GEMINI_API_KEY`）  
+   - 提供快速开发启动命令（`npm run dev`）  
+   - 依赖管理通过`npm install`完成  
+   - 原始应用可在AI Studio平台访问（链接：[ai.studio/apps/drive/1WiAM...](https://ai.studio/apps/drive/1WiAM9EAzpz8IufARUovs7Cqb6hzYmYrM)）
+
+3. **安装/使用代码示例**  
+   ```bash
+   # 1. 安装依赖
+   npm install
+
+   # 2. 配置.env.local中的API密钥
+   GEMINI_API_KEY=your_api_key_here
+
+   # 3. 启动应用
+   npm run dev
+   ```
+
+4. **适用人群**  
+   - 需要本地调试AI Studio应用的开发者  
+   - 熟悉Node.js和npm基础操作的技术人员  
+   - 已拥有Gemini API密钥的用户  
+
+（注：README未提及具体功能细节，以上分析仅基于可见文本）
+
+---
