@@ -623,3 +623,6 @@ pyth |
 1. edge-tts部分未标星数但内容详实
 2. Windows分支链接不完整已标注
 3. 所有笔记都标注了真实 |
+| 2026-03-03 05:49 | 美团审查悟空代码 | 文件:wukong_rag_retrieval_augmented_generation_local_0303_0532.py | 评分:70 | 能否运行:否 | 主要问题:
+1. query_api方法末尾存在语法错误(字符串未闭合)
+2. search方法中embeddings.any()用法错误(numpy数组应判空用si |
