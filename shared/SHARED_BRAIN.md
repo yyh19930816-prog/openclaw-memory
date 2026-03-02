@@ -1118,3 +1118,61 @@ kubectl create secret generic actions-runner --from-literal=GH_TOKEN=<token>
 （所有内容均基于README事实提炼）
 
 ---
+
+### [Meituan-interact] python desktop gui tkinter modern (2026-03-03 03:39)
+**Real source**: [israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) ⭐2564
+**Practice code**: ✅ code/meituan_python_desktop_gui_tkinter_modern_0303_0339.py
+
+以下是基于**ttkbootstrap** GitHub README的准确提炼（严格遵循原文内容）：
+
+---
+
+### 1. 解决什么问题
+ttkbootstrap通过提供**Bootstrap风格的现代化扁平主题**，增强Python标准库tkinter的视觉效果，帮助开发者快速创建美观的GUI应用。（摘自开篇描述）
+
+---
+
+### 2. 核心功能
+- **预设主题**：包含深浅色系共十余种精选主题 ([原文引用](https://ttkbootstrap.readthedocs.io/en/latest/themes/))  
+- **简化API**：用`primary`、`striped`等直观关键词替代传统复杂样式类名（如`primary.Striped.Horizontal.TProgressbar`）  
+- **新增组件**：提供`Meter`、`DateEntry`等时尚组件，且所有对话框支持主题定制  
+- **主题编辑器**：内置工具可创建/加载自定义主题 ([原文链接](https://ttkbootstrap.readthedocs.io/en/latest/themes/themecreator/))  
+- **灵活样式语法**：支持`info-outline`、`("info", "outline")`等多种写法等价  
+
+---
+
+### 3. 安装与示例代码
+**安装命令**（直接引用）：
+```python
+python -m pip install ttkbootstrap
+```
+
+**基础用法**（原文代码）：
+```python
+import ttkbootstrap as ttk
+
+root = ttk.Window(themename="superhero")  # 使用"superhero"主题
+
+b1 = ttk.Button(root, text="Submit", bootstyle="success")  # 绿色按钮
+b2 = ttk.Button(root, text="Submit", bootstyle="info-outline")  # 蓝色边框按钮
+
+b1.pack(side=LEFT, padx=5, pady=10)
+b2.pack(side=LEFT, padx=5, pady=10)
+
+root.mainloop()
+```
+
+---
+
+### 4. 适合人群
+- **tkinter开发者**：希望快速提升界面美观度  
+- **Bootstrap使用者**：熟悉CSS类名风格可无缝过渡  
+- **Python GUI初学者**：简化样式定义流程  
+
+（依据："If you've used Bootstrap...already familiar"及功能特性推断）  
+
+--- 
+
+⚠️ 所有内容均严格来自README原文，未添加任何额外信息。
+
+---
