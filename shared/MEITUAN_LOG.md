@@ -36,3 +36,4 @@
 | 2026-03-03 04:34 | Learn+Code | learn+write | repo:[04AR/webcon_python_subprocess](https://github.com/04AR/webcon_python_subprocess) ⭐2 | ✅ code/meituan_python_subprocess_automation_windows_0303_0434.py | done |
 | 2026-03-03 04:41 | Learn+Code | learn+write | repo:[IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1018 | ✅ code/meituan_youtube_shorts_script_template_0303_0441.py | done |
 | 2026-03-03 04:48 | Learn+Code | learn+write | repo:[jacky-xbb/faceless-video-generator](https://github.com/jacky-xbb/faceless-video-generator) ⭐60 | ✅ code/meituan_tiktok_ai_content_creation_tool_0303_0448.py | done |
+| 2026-03-03 04:54 | Learn+Code | learn+write | repo:[dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525 | ✅ code/meituan_python_screen_capture_ocr_0303_0454.py | done |
