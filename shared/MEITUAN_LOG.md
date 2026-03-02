@@ -52,3 +52,4 @@
 | 2026-03-03 06:19 | Learn+Code | learn+write | repo:[klonnet23/helloy-word](https://github.com/klonnet23/helloy-word) ⭐82 | ✅ code/meituan_python_system_tray_app_0303_0618.py | done |
 | 2026-03-03 06:21 | Learn+Code | learn+write | repo:[dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525 | ✅ code/meituan_python_screen_capture_ocr_0303_0621.py | done |
 | 2026-03-03 06:23 | Learn+Code | learn+write | repo:[krishsharma0413/pilcord](https://github.com/krishsharma0413/pilcord) ⭐7 | ✅ code/meituan_python_image_generation_pillow_0303_0623.py | done |
+| 2026-03-03 06:31 | Learn+Code | learn+write | repo:[jacky-xbb/faceless-video-generator](https://github.com/jacky-xbb/faceless-video-generator) ⭐60 | ✅ code/meituan_tiktok_ai_content_creation_tool_0303_0630.py | done |
