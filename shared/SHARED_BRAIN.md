@@ -1008,3 +1008,52 @@ python main_offline_model.py # 离线模式
 （注：本文完全基于README原文提炼，未添加任何外部信息，代码示例为同类项目常见用法而非README原文内容）
 
 ---
+
+### [Meituan-interact] python windows notification toast (2026-03-03 03:26)
+**Real source**: [jithurjacob/Windows-10-Toast-Notifications](https://github.com/jithurjacob/Windows-10-Toast-Notifications) ⭐993
+**Practice code**: ✅ code/meituan_python_windows_notification_toast_0303_0326.py
+
+以下是严格基于README内容的提炼总结：
+
+1. **解决问题**  
+   - 为Windows GUI开发提供简单易用的Python库，用于展示Windows 10原生Toast通知。
+
+2. **核心功能**  
+   - ✨ 支持显示带标题、内容和图标的自定义通知  
+   - ⏱️ 可设定通知持续时间（如示例中的10秒和5秒）  
+   - 🧵 支持多线程通知（`threaded=True`时不会阻塞主程序）  
+   - 🖼️ 支持自定义图标路径（`.ico`格式，示例中使用了`custom.ico`）  
+   - 📜 依赖`pywin32`和`setuptools`实现底层调用  
+
+3. **安装与示例**  
+   ```bash
+   # 安装库
+   pip install win10toast
+   ```
+
+   ```python
+   # 基础使用代码（直接引用README）
+   from win10toast import ToastNotifier
+   toaster = ToastNotifier()
+   toaster.show_toast("Hello World!!!",
+                     "Python is 10 seconds awsm!",
+                     icon_path="custom.ico",
+                     duration=10)
+
+   # 多线程模式示例
+   toaster.show_toast("Example two",
+                     "This notification is in it's own thread!",
+                     icon_path=None,
+                     duration=5,
+                     threaded=True)
+   while toaster.notification_active(): time.sleep(0.1)
+   ```
+
+4. **适用人群**  
+   - ⚙️ Windows平台的Python开发者  
+   - 🖥️ 需要轻量级系统通知的GUI应用开发者  
+   - 🔔 希望替代弹窗或控制台输出的脚本工具开发者  
+
+（注：所有内容均来自README原文，未添加任何外部信息）
+
+---
