@@ -209,11 +209,39 @@ def learn_one(direction):
     if direction in ("tech", "interact"):
         write_to_tools(direction, topic, result)
 
+    # 把核心结论写进MEMORY.md顶部（1句话，随时可查）
+    summarize_to_memory(direction, topic, result)
+
     # 加经验值（真正学习给更多XP）
     xp = min(30 + len(result) // 30, 120)
     add_xp(direction, xp, f"主动学习: {topic[:20]}")
 
     return True
+
+def summarize_to_memory(direction, topic, result):
+    """把本轮最重要的1句话结论写进MEMORY.md顶部，方便龙虾随时调用"""
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    dir_names = {"tech": "技术宗师", "content": "文案大师", "interact": "交互达人"}
+    # 让AI提炼一句话结论
+    summary_prompt = f"把以下学习内容提炼成1句话（不超过50字）的核心结论，直接输出结论，不要任何前缀：\n\n{result[:500]}"
+    one_line = ask_ai(summary_prompt, "你是信息提炼专家，只输出一句话结论，不超过50字。")
+    if "[API错误" in one_line or "[网络错误" in one_line:
+        one_line = result[:80]
+    
+    entry = f"- [{now}][{dir_names.get(direction,'?')}] {one_line.strip()}\n"
+    try:
+        with open(MEM_FILE, "r", encoding="utf-8") as f:
+            content = f.read()
+        # 插入到文件顶部的"最新学习摘要"区域
+        marker = "## 🧠 自动学习摘要（最新在前）\n"
+        if marker in content:
+            content = content.replace(marker, marker + entry)
+        else:
+            content = marker + entry + "\n---\n\n" + content
+        with open(MEM_FILE, "w", encoding="utf-8") as f:
+            f.write(content)
+    except:
+        append_to_file(MEM_FILE, entry)
 
 def learn_cycle():
     """一轮完整学习：三个方向各学一次"""
@@ -226,7 +254,7 @@ def learn_cycle():
         ok = learn_one(direction)
         results[direction] = ok
         if ok:
-            time.sleep(5)  # 避免API限流
+            time.sleep(8)  # 避免API限流，稍微等一下
 
     success = sum(1 for v in results.values() if v)
     print(f"\n本轮学习完成: {success}/3 个方向成功")
@@ -234,7 +262,7 @@ def learn_cycle():
     return success
 
 # ── 主循环 ─────────────────────────────────────────────────────
-INTERVAL_MINUTES = 90  # 每90分钟学一轮（一天约16轮，每轮3方向=48次学习）
+INTERVAL_MINUTES = 10  # 每10分钟学一轮（一天约144轮，每轮3方向=432次学习）
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
