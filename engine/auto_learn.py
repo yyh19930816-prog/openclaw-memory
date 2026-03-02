@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-OpenClaw Auto-Learn Engine v2.0 - Meituan
-Every 5 minutes: search real GitHub repos, learn skills, write to EvoMap + shared brain
-GH_TOKEN must be set via environment variable or local config file
+OpenClaw Auto-Learn Engine v3.0 - Meituan
+Every 5 min: search REAL GitHub repos, read actual README, AI extracts notes.
+NO HALLUCINATION: if no real repo found, skip the cycle entirely.
+Token loaded from local ~/.openclaw/.env file, never hardcoded.
 """
 import requests, json, os, sys, time, random, base64
 from datetime import datetime
@@ -18,7 +19,6 @@ EVO_FILE = os.path.expanduser(r"~\.openclaw\claw_evolution.json")
 MEITUAN_REPO  = "yyh19930816-prog/openclaw-memory"
 INTERVAL_MINUTES = 5
 
-# Token从本地配置文件读取（不写入代码）
 _cfg_path = os.path.expanduser(r"~\.openclaw\.env")
 _GH_TOKEN = ""
 if os.path.exists(_cfg_path):
@@ -34,34 +34,34 @@ os.makedirs(os.path.join(WS, "memory"), exist_ok=True)
 
 LEARN_TOPICS = {
     "tech": [
-        "Python moviepy batch video processing with subtitle overlay",
-        "SiliconFlow image and video generation API complete tutorial",
-        "Python requests automated content publishing to social platforms",
-        "GitHub Actions daily scheduled AI content generation automation",
-        "DeepSeek V3 prompt engineering for high-quality copywriting",
-        "Python PIL Pillow batch social media image generation",
-        "AI short video script generation structured output pipeline",
-        "Python subprocess safe system command execution best practices",
+        "python video automation moviepy",
+        "python social media automation post",
+        "github actions scheduled automation",
+        "python image generation pillow",
+        "python web scraping content",
+        "python text to speech edge tts",
+        "python api wrapper siliconflow",
+        "python subprocess automation windows",
     ],
     "content": [
-        "2026 AI side hustle viral content formula: hook + value + CTA structure",
-        "AI tool review video script template: 3-minute golden structure",
-        "Xiaohongshu AI content creation: automated workflow from topic to publish",
-        "Douyin AI tools account viral topic database: high traffic ideas",
-        "AI generated comparison content: before/after showcase techniques",
-        "AI side income from 0 to 10k monthly: real case content strategy",
-        "Video thumbnail design: key elements for AI generated high-CTR covers",
-        "Brand persona building: how AI maintains consistent creator style",
+        "viral content formula hook engagement",
+        "youtube shorts script template",
+        "xiaohongshu content strategy automation",
+        "tiktok ai content creation tool",
+        "ai copywriting generator tool",
+        "video thumbnail generator python",
+        "social media scheduler python",
+        "content calendar automation ai",
     ],
     "interact": [
-        "Python desktop AI assistant with modern tkinter UI design",
-        "edge-tts Python high quality text-to-speech complete solution",
-        "Windows desktop notification API Python implementation",
-        "PyAutoGUI automated browser content publishing script",
-        "customtkinter beautiful AI tool GUI interface design",
-        "Python clipboard monitor with AI auto-processing",
-        "Screenshot plus AI analysis intelligent content review Python",
-        "Speech recognition plus AI reply real-time conversation assistant",
+        "python desktop gui tkinter modern",
+        "python speech recognition offline",
+        "python windows notification toast",
+        "python clipboard monitor automation",
+        "python screen capture ocr",
+        "python hotkey global keyboard",
+        "python system tray app",
+        "python voice assistant windows",
     ]
 }
 
@@ -81,8 +81,9 @@ def ask_ai(prompt, system=None):
     if system is None:
         system = (
             "You are Meituan, OpenClaw AI content expert. "
-            "Give concise, practical learning notes with code examples. "
-            "Format: bullet points + core code block + one-line summary. 400-600 words in Chinese."
+            "You MUST only use information from the provided GitHub README. "
+            "Do NOT invent features, code, or claims not present in the source. "
+            "Reply in Chinese, 400-600 words, with bullet points and code blocks."
         )
     hdrs = {"Content-Type": "application/json", "Authorization": f"Bearer {API_KEY}"}
     try:
@@ -97,25 +98,41 @@ def ask_ai(prompt, system=None):
     except Exception as e:
         return f"[Request failed: {e}]"
 
-def search_github_repo(keywords):
-    url = f"https://api.github.com/search/repositories?q={requests.utils.quote(keywords)}&sort=stars&per_page=5"
+def search_real_github_repo(keywords):
+    """
+    Search GitHub for a real repo. Returns dict with name/stars/url/readme
+    or None if nothing usable found.
+    NEVER falls back to AI imagination.
+    """
+    kw = keywords.strip()[:50]
+    url = f"https://api.github.com/search/repositories?q={requests.utils.quote(kw)}&sort=stars&per_page=5"
     try:
         r = requests.get(url, headers=GH_HEADERS, timeout=15)
-        if r.status_code == 200:
-            items = r.json().get("items", [])
-            return items[0] if items else None
-    except:
-        pass
-    return None
-
-def read_repo_readme(repo_full_name):
-    try:
-        r = requests.get(f"https://api.github.com/repos/{repo_full_name}/readme", headers=GH_HEADERS, timeout=15)
-        if r.status_code == 200:
-            return base64.b64decode(r.json()["content"]).decode("utf-8", errors="replace")[:3000]
-    except:
-        pass
-    return None
+        if r.status_code != 200:
+            log(f"  [GitHub search failed] HTTP {r.status_code}")
+            return None
+        items = r.json().get("items", [])
+        if not items:
+            log(f"  [GitHub] No results for: {kw}")
+            return None
+        for repo in items[:3]:
+            repo_name = repo["full_name"]
+            stars = repo["stargazers_count"]
+            repo_url = repo["html_url"]
+            readme_r = requests.get(
+                f"https://api.github.com/repos/{repo_name}/readme",
+                headers=GH_HEADERS, timeout=15
+            )
+            if readme_r.status_code == 200:
+                readme = base64.b64decode(readme_r.json()["content"]).decode("utf-8", errors="replace")
+                readme = readme[:4000]
+                log(f"  [Real repo found] {repo_name} star:{stars} {repo_url}")
+                return {"name": repo_name, "stars": stars, "url": repo_url, "readme": readme}
+        log(f"  [GitHub] Repos found but no README available, skipping")
+        return None
+    except Exception as e:
+        log(f"  [GitHub error] {e}")
+        return None
 
 def gh_read_file(repo, path):
     r = requests.get(f"https://api.github.com/repos/{repo}/contents/{path}", headers=GH_HEADERS, timeout=10)
@@ -166,80 +183,102 @@ def learn_one(direction):
     topic = random.choice(available)
     LEARNED_THIS_RUN.add(topic)
 
-    log(f"[{direction.upper()}] Learning: {topic[:50]}")
+    log(f"[{direction.upper()}] Searching GitHub for: {topic}")
 
-    kw = topic.split(":")[0][:40]
-    repo = search_github_repo(kw)
-    if repo:
-        repo_name = repo["full_name"]
-        stars = repo["stargazers_count"]
-        readme = read_repo_readme(repo_name)
-        source = f"GitHub:{repo_name}(star:{stars})"
-        if readme:
-            prompt = (
-                f"I studied GitHub repo {repo_name} (stars:{stars}), related to topic: {topic}\n\n"
-                f"README excerpt:\n{readme[:2500]}\n\n"
-                f"Please extract 3-5 core knowledge points with runnable code snippets in Chinese, "
-                f"focusing on practical value for AI content creators."
-            )
-        else:
-            prompt = f"Please explain in detail with practical code examples (in Chinese): {topic}"
-    else:
-        source = "AI direct learning"
-        prompt = f"Please explain in detail with practical code examples (in Chinese): {topic}"
+    repo = search_real_github_repo(topic)
+    if not repo:
+        log(f"  [SKIP] No real GitHub repo found for '{topic}'. Not recording to avoid hallucination.")
+        return False, None
 
-    result = ask_ai(prompt)
+    repo_name = repo["name"]
+    stars = repo["stars"]
+    repo_url = repo["url"]
+    readme = repo["readme"]
+    source = f"GitHub:{repo_name}(star:{stars}) {repo_url}"
+
+    # AI must only use the actual README content
+    result = ask_ai(
+        f"以下是GitHub仓库 **{repo_name}**（⭐{stars}）的真实README原文：\n\n"
+        f"```\n{readme}\n```\n\n"
+        f"请严格基于上面的README内容，用中文提炼：\n"
+        f"1. 这个项目解决什么问题（1-2句，来自README）\n"
+        f"2. 核心功能/知识点3-5条（直接来自README）\n"
+        f"3. 安装/使用代码示例（优先引用README原文代码）\n"
+        f"4. 适合什么人使用\n\n"
+        f"⚠️ 严禁编造README中没有的功能或代码。"
+    )
+
     if "[API error" in result or "[Request failed" in result:
-        log(f"  Failed: {result}")
-        return False
+        log(f"  [AI failed] {result}")
+        return False, None
 
-    log(f"  Done, length: {len(result)} chars, source: {source}")
+    log(f"  [Done] {len(result)} chars extracted from {repo_name}")
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     today = datetime.now().strftime("%Y-%m-%d")
 
-    # Write local daily memory
+    # 1. Write local daily memory
     mem_file = os.path.join(WS, "memory", f"{today}.md")
     try:
         with open(mem_file, "a", encoding="utf-8") as f:
-            f.write(f"\n## [{datetime.now().strftime('%H:%M')}] GitHub Learn - {direction}\n**{topic}**\nSource: {source}\n\n{result[:400]}\n---\n")
+            f.write(
+                f"\n## [{datetime.now().strftime('%H:%M')}] Real GitHub Learn - {direction}\n"
+                f"**Repo**: [{repo_name}]({repo_url}) ⭐{stars}\n"
+                f"**Topic**: {topic}\n\n"
+                f"{result[:400]}\n---\n"
+            )
     except Exception as e:
         log(f"  Local write failed: {e}")
 
-    # Write GitHub MEITUAN_LOG (for Wukong to audit)
-    log_line = f"| {now} | GitHub learn | learn_from_github | topic:{topic[:30]}, source:{source[:30]} | done |\n"
+    # 2. Write MEITUAN_LOG on GitHub (verifiable by Wukong)
+    log_line = (
+        f"| {now} | GitHub real learn | learn_from_github | "
+        f"repo:[{repo_name}]({repo_url}) star:{stars} topic:{topic[:25]} | done |\n"
+    )
     gh_append_line(
         MEITUAN_REPO, "shared/MEITUAN_LOG.md", log_line,
-        default_header="# Meituan Work Log (for Wukong audit)\n\n| time | task | tool | result | status |\n|------|------|------|--------|--------|\n"
+        default_header=(
+            "# Meituan Work Log (Wukong audits this)\n\n"
+            "| time | task | tool | result | status |\n"
+            "|------|------|------|--------|--------|\n"
+        )
     )
 
-    # Write GitHub SHARED_BRAIN (Wukong can read)
-    brain_entry = f"\n### [Meituan-{direction}] {topic[:40]} ({now})\n**Source**: {source}\n\n{result}\n\n---\n"
+    # 3. Write SHARED_BRAIN with real source link
+    brain_entry = (
+        f"\n### [Meituan-{direction}] {topic[:40]} ({now})\n"
+        f"**Real source**: [{repo_name}]({repo_url}) ⭐{stars}\n\n"
+        f"{result}\n\n---\n"
+    )
     gh_append_line(
         MEITUAN_REPO, "shared/SHARED_BRAIN.md", brain_entry,
         default_header="# OpenClaw Shared Brain\n\n---\n"
     )
 
-    # Add XP
+    # 4. Add XP (only for real learning)
     xp = min(20 + len(result) // 25, 100)
     add_evo_xp(direction, xp, topic[:20])
 
-    log(f"  [Done] +{xp}XP, GitHub synced")
-    return True
+    log(f"  [Recorded] +{xp}XP | source: {source[:70]}")
+    return True, source
 
 def learn_cycle():
     log(f"\n{'='*55}")
-    log(f"Meituan Auto-Learn v2.0 cycle at {datetime.now().strftime('%H:%M')}")
+    log(f"Meituan Auto-Learn v3.0 at {datetime.now().strftime('%H:%M')}")
     log(f"{'='*55}")
     direction = random.choice(["tech", "content", "interact"])
-    ok = learn_one(direction)
-    log(f"Cycle done: {'success' if ok else 'failed'}, next in {INTERVAL_MINUTES} min")
+    ok, source = learn_one(direction)
+    if ok:
+        log(f"Cycle OK: learned from {source[:60]}")
+    else:
+        log(f"Cycle SKIPPED (no real GitHub repo found, no hallucination recorded)")
+    log(f"Next cycle in {INTERVAL_MINUTES} min")
 
 if __name__ == "__main__":
-    log("Meituan Auto-Learn Engine v2.0 started")
+    log("Meituan Auto-Learn Engine v3.0 started")
     log(f"Interval: every {INTERVAL_MINUTES} minutes")
-    log(f"Mode: Real GitHub repo search + AI synthesis")
-    log(f"Output: EvoMap XP + GitHub Shared Brain + local memory")
+    log(f"Mode: STRICT - only real GitHub repos, no AI imagination")
+    log(f"Output: EvoMap XP + GitHub logs with verifiable source links")
     learn_cycle()
     while True:
         time.sleep(INTERVAL_MINUTES * 60)
