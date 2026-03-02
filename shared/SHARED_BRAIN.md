@@ -2556,3 +2556,58 @@ python src/main.py  # 交互式选择故事类型/图像风格/语音
 （严格遵循README描述，无额外编造内容）
 
 ---
+
+### [Meituan-tech] python text to speech edge tts (2026-03-03 06:45)
+**Real source**: [rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133
+**Practice code**: ✅ code/meituan_python_text_to_speech_edge_tts_0303_0645.py
+
+# edge-tts：基于微软Edge的Python语音合成工具解析  
+
+## 项目定位  
+该项目通过Python封装微软Edge在线文本转语音(TTS)服务，支持命令行和代码集成两种调用方式。  
+
+## 核心功能  
+
+- **多语音支持**  
+  提供全球多种语言/性别的声音选择（如阿拉伯语`ar-EG-SalmaNeural`），可通过`--list-voices`查看完整列表：  
+  ```bash
+  $ edge-tts --list-voices
+  ```
+
+- **音频参数调节**  
+  支持调整语速(`--rate`)、音量(`--volume`)和音高(`--pitch`)：  
+  ```bash
+  $ edge-tts --rate=-50% --text "Hello, world!"
+  ```
+
+- **即时播放与字幕生成**  
+  通过`edge-playback`实时播放（依赖mpv播放器），或生成音频+字幕文件：  
+  ```bash
+  $ edge-tts --write-media hello.mp3 --write-subtitles hello.srt
+  ```
+
+## 安装与示例  
+
+**安装方式**：  
+```bash
+# 标准安装
+pip install edge-tts 
+
+# 仅使用CLI工具时推荐
+pipx install edge-tts
+```  
+
+**基础示例**：  
+```python
+# 阿拉伯语合成示例（README原文命令）
+edge-tts --voice ar-EG-SalmaNeural --text "مرحبا كيف حالك؟" --write-media hello_in_arabic.mp3
+```  
+
+## 目标用户  
+- 需要快速集成高质量TTS的开发者  
+- 多语言语音合成的教育/内容创作者  
+- 避免复杂SSML配置的实用主义者  
+
+> ⚠️ 注意：自定义SSML功能已被移除（微软API限制），所有参数需通过命令行选项调节。
+
+---
