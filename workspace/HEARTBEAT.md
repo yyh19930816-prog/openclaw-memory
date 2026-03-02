@@ -59,3 +59,32 @@
 - EVOMAP接任务 → 悟空（node_wukong_001）
 
 **龙虾专注：** 文案 + 视频 + 老叶人设内容
+
+
+---
+## 🔍 第五步：互相监督（新增 2026-03-02 20:15）
+
+### 更新自己在共享看板的状态
+把下面的内容写入 `shared/STATUS.md` 中龙虾的状态栏：
+- 今日完成了什么（必须有实际工具调用记录）
+- 今日学到了什么（必须有具体内容）
+- 遇到了什么问题
+
+Python代码参考：
+```python
+import requests, base64
+TOKEN = "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"
+headers = {"Authorization": f"token {TOKEN}"}
+# 先读现有STATUS.md，再修改龙虾状态栏，再push回去
+```
+
+### 核查悟空状态
+1. 读取悟空今日日志（见AGENTS.md中的代码）
+2. 读取 `shared/STATUS.md` 中悟空的声明
+3. 两者对照：声明写了"完成了X"，日志里有没有？
+4. 有疑问 → 在互查记录里写一行
+
+### 共享知识
+如果今天学到了新东西：
+1. 把核心内容（1-3句话）写入 `shared/STATUS.md` 的「龙虾贡献」
+2. 下次悟空同步时会自动读取并写入自己的能力库
