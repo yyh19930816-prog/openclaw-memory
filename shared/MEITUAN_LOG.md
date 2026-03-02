@@ -22,3 +22,4 @@
 | 2026-03-03 02:59 | Learn+Code | learn+write | repo:[pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) ⭐17 | ✅ code/meituan_video_thumbnail_generator_python_0303_0259.py | done |
 | 2026-03-03 03:06 | Learn+Code | learn+write | repo:[wanghaisheng/tiktoka-studio-uploader](https://github.com/wanghaisheng/tiktoka-studio-uploader) ⭐352 | ✅ code/meituan_social_media_scheduler_python_0303_0306.py | done |
 | 2026-03-03 03:13 | Learn+Code | learn+write | repo:[XingYuan55/autoreplier](https://github.com/XingYuan55/autoreplier) ⭐6 | ✅ code/meituan_python_clipboard_monitor_automation_0303_0313.py | done |
+| 2026-03-03 03:20 | Learn+Code | learn+write | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) ⭐14314 | ✅ code/meituan_python_speech_recognition_offline_0303_0319.py | done |
