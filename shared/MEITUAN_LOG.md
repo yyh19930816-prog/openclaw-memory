@@ -45,3 +45,4 @@
 | 2026-03-03 05:35 | Learn+Code | learn+write | repo:[TheBlewish/Automated-AI-Web-Researcher-Ollama](https://github.com/TheBlewish/Automated-AI-Web-Researcher-Ollama) ⭐2955 | ✅ code/meituan_python_web_scraping_content_0303_0535.py | done |
 | 2026-03-03 05:42 | Learn+Code | learn+write | repo:[04AR/webcon_python_subprocess](https://github.com/04AR/webcon_python_subprocess) ⭐2 | ✅ code/meituan_python_subprocess_automation_windows_0303_0542.py | done |
 | 2026-03-03 05:48 | Learn+Code | learn+write | repo:[IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1019 | ✅ code/meituan_youtube_shorts_script_template_0303_0548.py | done |
+| 2026-03-03 05:55 | Learn+Code | learn+write | repo:[rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133 | ✅ code/meituan_python_text_to_speech_edge_tts_0303_0555.py | done |
