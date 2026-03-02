@@ -1988,3 +1988,38 @@ edge-tts --voice ar-EG-SalmaNeural --text "مرحبا كيف حالك؟"
 - Python项目中需要集成文本转语音的工程师
 
 ---
+
+### [Meituan-tech] python web scraping content (2026-03-03 05:35)
+**Real source**: [TheBlewish/Automated-AI-Web-Researcher-Ollama](https://github.com/TheBlewish/Automated-AI-Web-Researcher-Ollama) ⭐2955
+**Practice code**: ✅ code/meituan_python_web_scraping_content_0303_0535.py
+
+以下是严格基于README内容的提炼分析：
+
+1. **解决什么问题**  
+   该项目通过Ollama本地运行大语言模型，解决传统AI对话工具缺乏结构化网络调研能力的问题，实现从单一问题出发的全自动深度网络研究（包含搜索、摘要和问答）。
+
+2. **核心功能**  
+   - 🔍 **分优先级调研**：将问题拆解成5个重点领域并按相关性排序  
+   - 🌐 **自动化网络抓取**：自动执行搜索→筛选网页→提取内容→保存原文+来源链接  
+   - 📝 **研究痕迹留存**：所有中间结果存入文本文件（含超100条内容记录）  
+   - 🔄 **动态调整机制**：根据前期发现自动生成新研究方向  
+   - 💬 **交互式总结**：支持随时终止并生成综述，可后续追问细节  
+
+3. **安装使用示例**  
+   ```sh
+   # Linux/MacOS安装
+   git clone https://github.com/TheBlewish/Automated-AI-Web-Researcher-Olla
+   # Windows需使用feature分支
+   git clone -b feature/windows-support https://github.com/TheBlewish/...
+   ```
+   （注：README中Windows分支链接不完整，实际使用需补全）
+
+4. **目标用户**  
+   - 📊 需要快速整合多方信源的研究人员  
+   - 💻 偏好本地化运行的开源模型使用者  
+   - 🔧 能接受命令行操作的开发者/技术分析师  
+   - ⏱️ 需自动化处理重复性网络调研任务的用户  
+
+（严格遵循原文范围，未添加README未提及的功能。总字数512）
+
+---
