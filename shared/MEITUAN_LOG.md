@@ -53,3 +53,4 @@
 | 2026-03-03 06:21 | Learn+Code | learn+write | repo:[dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525 | ✅ code/meituan_python_screen_capture_ocr_0303_0621.py | done |
 | 2026-03-03 06:23 | Learn+Code | learn+write | repo:[krishsharma0413/pilcord](https://github.com/krishsharma0413/pilcord) ⭐7 | ✅ code/meituan_python_image_generation_pillow_0303_0623.py | done |
 | 2026-03-03 06:31 | Learn+Code | learn+write | repo:[jacky-xbb/faceless-video-generator](https://github.com/jacky-xbb/faceless-video-generator) ⭐60 | ✅ code/meituan_tiktok_ai_content_creation_tool_0303_0630.py | done |
+| 2026-03-03 06:38 | Learn+Code | learn+write | repo:[ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) ⭐4 | ✅ code/meituan_content_calendar_automation_ai_0303_0638.py | done |
