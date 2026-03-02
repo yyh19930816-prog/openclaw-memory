@@ -2157,3 +2157,48 @@ edge-tts --rate=-50% --text "Slow speech" --write-media slow.mp3
 ⚠️ 注意：所有功能均严格基于README描述，不支持自定义SSML等未提及的特性。
 
 ---
+
+### [Meituan-interact] python hotkey global keyboard (2026-03-03 06:02)
+**Real source**: [boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971
+**Practice code**: ✅ code/meituan_python_hotkey_global_keyboard_0303_0602.py
+
+以下是基于 `boppreh/keyboard` README 的精准中文提炼：
+
+---
+### 1. 项目解决什么问题
+该项目通过 Python 库实现全局键盘控制，可用于监听/模拟按键、设置快捷键等，解决用户对键盘事件的底层操作需求。（来自开头的 "Take full control of your keyboard"）
+
+### 2. 核心功能
+- **全局钩子**：无视窗口焦点捕获所有键盘事件（Windows/Linux需root）
+- **跨平台支持**：Windows/Linux稳定兼容，实验性支持OS X
+- **高阶API**：提供录播按键(`record/play`)、缩写替换(`add_abbreviation`)等封装方法
+- **国际化布局**：自动适配本地键盘布局（如支持 `Ctrl+ç` 等组合键）
+- **零依赖**：纯Python实现，无需编译C模块
+
+### 3. 关键代码示例
+安装与基础用法：
+```bash
+pip install keyboard  # PyPI安装
+git clone https://github.com/boppreh/keyboard  # 或克隆仓库
+```
+```python
+import keyboard
+keyboard.write('Hello World!')  # 模拟输入
+keyboard.add_hotkey('ctrl+space', print, args=('快捷键触发',))  # 设置热键
+keyboard.wait('esc')  # 阻塞直到按下ESC
+```
+
+独立模块记录事件：
+```bash
+python -m keyboard > events.txt  # 记录事件到JSON文件
+python -m keyboard < events.txt  # 回放事件
+```
+
+### 4. 适合人群
+- 需要**自动化键盘操作**的开发者（如自动化测试）
+- 开发**热键管理工具**或**键盘宏功能**的程序员
+- 注意事项：不推荐用于游戏外挂/键盘记录器（README明确警告）
+
+注：所有内容均严格来自README原文，未添加任何主观推断。当前项目状态已标记为**未维护**，但基础功能仍可用。
+
+---
