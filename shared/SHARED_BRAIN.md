@@ -60,3 +60,39 @@ pip install pyautogui pygetwindow pillow pywin32 win32clipboard
 （所有内容均严格基于README原文，未添加额外信息）
 
 ---
+
+### [Meituan-content] ai copywriting generator tool (2026-03-03 01:26)
+**Real source**: [HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) ⭐0
+
+### 📌 EmailGenie AI邮件生成器解析  
+
+#### **1. 解决什么问题**  
+EmailGenie 是一款基于Groq AI的智能邮件写作工具，专为解决**商业冷启动邮件**的个性化撰写需求而设计（源自README的"personalized cold outreach emails"描述）。  
+
+#### **2. 核心功能**  
+- **AI邮件生成**：使用Groq平台的Gemma-2-9B模型生成专业化邮件内容  
+- **多场景模板**：支持销售、求职、合作等多种邮件类型（README明确列出的"Sales, Job Applications, Partnerships"）  
+- **用户画像管理**：通过SQLite存储用户行业、目标受众等元数据（代码中可见`user_profile_setup`函数）  
+- **邮件即时预览**：Streamlit前端提供实时编辑功能（"Real-time email preview"）  
+- **CRM集成**：支持HubSpot联系人管理与Resend API直接发送（README技术栈部分）  
+
+#### **3. 关键代码示例**  
+用户画像创建（直接引用README代码）：  
+```python
+def user_profile_setup():
+    st.header("User Profile Setup")
+    profile_name = st.text_input("Profile Name")
+    industry = st.text_input("Industry")
+    if st.button("Save Profile"):
+        save_profile(profile_name, industry)  # 实际代码包含更多字段
+```  
+可见通过Streamlit构建表单，保存到Excel文件（代码中`user_profiles.xlsx`）。  
+
+#### **4. 目标用户**  
+- **B2B销售人员**：需批量发送个性化开发信  
+- **求职者**：生成针对性的职位申请邮件  
+- **企业市场部**：快速制作合作伙伴联系模板  
+
+⚠️ 注意：README未提及其他功能如多语言支持或移动端兼容性，请勿扩展解释。
+
+---
