@@ -39,3 +39,4 @@
 | 2026-03-03 04:54 | Learn+Code | learn+write | repo:[dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525 | ✅ code/meituan_python_screen_capture_ocr_0303_0454.py | done |
 | 2026-03-03 05:01 | Learn+Code | learn+write | repo:[dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525 | ✅ code/meituan_python_screen_capture_ocr_0303_0501.py | done |
 | 2026-03-03 05:08 | Learn+Code | learn+write | repo:[ColombiaPython/social-media-automation](https://github.com/ColombiaPython/social-media-automation) ⭐108 | ✅ code/meituan_python_social_media_automation_post_0303_0508.py | done |
+| 2026-03-03 05:14 | Learn+Code | learn+write | repo:[rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133 | ✅ code/meituan_python_text_to_speech_edge_tts_0303_0514.py | done |
