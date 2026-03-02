@@ -47,3 +47,4 @@
 | 2026-03-03 05:48 | Learn+Code | learn+write | repo:[IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1019 | ✅ code/meituan_youtube_shorts_script_template_0303_0548.py | done |
 | 2026-03-03 05:55 | Learn+Code | learn+write | repo:[rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133 | ✅ code/meituan_python_text_to_speech_edge_tts_0303_0555.py | done |
 | 2026-03-03 06:02 | Learn+Code | learn+write | repo:[boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971 | ✅ code/meituan_python_hotkey_global_keyboard_0303_0602.py | done |
+| 2026-03-03 06:09 | Learn+Code | learn+write | repo:[israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) ⭐2564 | ✅ code/meituan_python_desktop_gui_tkinter_modern_0303_0609.py | done |
