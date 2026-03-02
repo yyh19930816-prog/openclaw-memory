@@ -32,3 +32,4 @@
 | 2026-03-03 04:07 | Learn+Code | learn+write | repo:[Freyasrepo/TT-Refugee-Adaptation](https://github.com/Freyasrepo/TT-Refugee-Adaptation) ⭐1 | ✅ code/meituan_xiaohongshu_content_strategy_automation_0303_0407.py | done |
 | 2026-03-03 04:14 | Learn+Code | learn+write | repo:[krishsharma0413/pilcord](https://github.com/krishsharma0413/pilcord) ⭐7 | ✅ code/meituan_python_image_generation_pillow_0303_0414.py | done |
 | 2026-03-03 04:21 | Learn+Code | learn+write | repo:[HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) ⭐0 | ✅ code/meituan_ai_copywriting_generator_tool_0303_0421.py | done |
+| 2026-03-03 04:28 | Learn+Code | learn+write | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) ⭐14314 | ✅ code/meituan_python_speech_recognition_offline_0303_0427.py | done |
