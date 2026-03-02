@@ -2676,3 +2676,49 @@ python -m keyboard < events.txt
 ⚠️ 注意：该项目目前处于未维护状态，可能遇到兼容性问题，不建议用于线上生产环境或游戏外挂开发。
 
 ---
+
+### [Meituan-tech] python subprocess automation windows (2026-03-03 06:54)
+**Real source**: [04AR/webcon_python_subprocess](https://github.com/04AR/webcon_python_subprocess) ⭐2
+**Practice code**: ✅ code/meituan_python_subprocess_automation_windows_0303_0654.py
+
+根据 **04AR/webcon_python_subprocess** 的README内容，以下是严格基于原文的分析提炼：
+
+---
+
+### 1. 项目解决的问题  
+该项目未明确说明具体功能，仅提供了Python虚拟环境配置和依赖安装的标准化流程（基于README现有内容推断）。
+
+---
+
+### 2. 核心功能/知识点  
+- **Python虚拟环境搭建**：使用`venv`模块创建隔离开发环境  
+- **跨平台激活命令**：区分Windows和macOS/Linux的虚拟环境激活方式  
+- **依赖批量安装**：通过`requirements.txt`文件一键安装项目所需包  
+
+---
+
+### 3. 安装/使用代码示例  
+```sh
+# 创建虚拟环境（项目根目录执行）
+python -m venv .
+
+# 激活环境（Windows）
+.\venv\Scripts\activate
+
+# 激活环境（macOS/Linux）
+source venv/bin/activate
+
+# 安装依赖
+pip install -r requirements.txt
+```
+
+---
+
+### 4. 适合人群  
+- **Python初学者**：学习标准化的虚拟环境配置流程  
+- **开发者**：需要快速复现项目依赖环境的场景  
+- **跨平台协作人员**：需适配不同操作系统的环境初始化  
+
+（注：所有结论均严格限制在README披露内容范围内，未添加任何额外推测。）
+
+---
