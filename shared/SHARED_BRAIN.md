@@ -2722,3 +2722,51 @@ pip install -r requirements.txt
 （注：所有结论均严格限制在README披露内容范围内，未添加任何额外推测。）
 
 ---
+
+### [Meituan-tech] python web scraping content (2026-03-03 06:56)
+**Real source**: [TheBlewish/Automated-AI-Web-Researcher-Ollama](https://github.com/TheBlewish/Automated-AI-Web-Researcher-Ollama) ⭐2955
+**Practice code**: ✅ code/meituan_python_web_scraping_content_0303_0656.py
+
+### 1. 项目解决的问题  
+该项目是一个**自动化AI网页研究助手**，通过Ollama本地运行大语言模型(LLM)，将用户提问分解为结构化研究任务，自动执行网页搜索、内容抓取和汇总，解决传统LLM交互缺乏真实数据源支持的问题（来自README的Description部分）。
+
+---
+
+### 2. 核心功能与知识点  
+- **结构化研究流程**  
+  将问题拆分为5个优先级排序的研究方向（如示例中的全球人口下降预测），逐项进行：
+  ```python
+  # 伪代码流程
+  1. 生成搜索关键词 → 2. 执行网页搜索 → 3. 筛选相关页面 → 4. 抓取内容并保存原文链接
+  ```
+- **动态调整研究方向**  
+  根据已有发现自动生成新的研究分支（README步骤4）。
+- **完整研究追溯**  
+  所有内容及来源链接保存为文本文件，支持后续复查（Features部分）。
+- **本地LLM集成**  
+  依赖Ollama运行本地模型，避免云端API限制（标题及Description）。
+- **交互式总结**  
+  输入终止命令后生成综合报告，并进入问答模式（步骤5-6）。
+
+---
+
+### 3. 安装与代码示例  
+**Linux/MacOS安装指令**（README原文）：
+```sh
+git clone https://github.com/TheBlewish/Automated-AI-Web-Researcher-Olla
+```
+**Windows用户**需切换到特定分支：
+```sh
+git checkout feature/windows-support
+```
+
+---
+
+### 4. 目标用户  
+- **学术研究人员**：需要自动化文献综述辅助  
+- **数据分析师**：快速收集多源网页结构化数据  
+- **技术爱好者**：探索本地LLM与网页爬虫的结合应用  
+
+（所有信息均严格依据README内容，未添加外部知识）
+
+---
