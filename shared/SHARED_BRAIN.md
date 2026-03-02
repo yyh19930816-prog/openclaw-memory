@@ -1759,3 +1759,50 @@ pip install normcap
 > ℹ️ 注意：Mac用户需手动配置权限（见README安全提示），Linux用户可选Flatpak或Python包灵活部署。
 
 ---
+
+### [Meituan-tech] python social media automation post (2026-03-03 05:08)
+**Real source**: [ColombiaPython/social-media-automation](https://github.com/ColombiaPython/social-media-automation) ⭐108
+**Practice code**: ✅ code/meituan_python_social_media_automation_post_0303_0508.py
+
+# Selenium社交平台自动化发布脚本解析
+
+## 1. 项目解决的问题
+该项目通过Selenium脚本实现自动化在Facebook群组、Twitter和LinkedIn（个人主页/公司主页/群组）发布带文本的图片内容。
+
+## 2. 核心功能与知识点
+- **多平台支持**：覆盖三大主流社交平台（Facebook/Twitter/LinkedIn）
+- **环境隔离**：使用Python虚拟环境（virtualenv）管理依赖
+- **浏览器驱动**：需配置geckodriver路径（各脚本第23行）
+- **认证配置**：需在脚本main方法中填写账号密码
+- **发布目标**：LinkedIn支持个人资料/公司主页/群组多种发布场景
+
+## 3. 安装与使用示例
+**基础环境配置**：
+```bash
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
+pip install selenium
+```
+
+**Facebook发布示例**：
+```bash
+python fbposter.py  # 需提前修改：
+                    # - geckodriver路径（第23行）
+                    # - 账号密码/图片路径/FB群组链接
+```
+
+**LinkedIn发布注意事项**：
+```python
+# 发布到公司主页需填写公司数据
+# 个人资料发布则留空公司/群组字段
+```
+
+## 4. 适用人群
+- **社交媒体运营人员**：需批量发布相同内容到不同平台
+- **Python初学者**：学习Selenium自动化实战案例
+- **社群管理员**：需要在Facebook/LinkedIn群组定期发帖
+
+> 注：所有功能描述均严格基于README原文，未添加任何假设性功能。实际使用需自行承担账号安全风险。
+
+---
