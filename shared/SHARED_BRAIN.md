@@ -2507,3 +2507,52 @@ python src/main.py  # 交互式选择故事类型/图像风格/语音
 ⚠️ 所有信息均来自README原文，未添加任何非公开内容。
 
 ---
+
+### [Meituan-content] content calendar automation ai (2026-03-03 06:38)
+**Real source**: [ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) ⭐4
+**Practice code**: ✅ code/meituan_content_calendar_automation_ai_0303_0638.py
+
+### 📌 项目核心提炼（基于真实README内容）
+
+#### 1️⃣ **解决什么问题**  
+该项目通过AI驱动的自动化营销团队（基于CrewAI框架），帮助企业**自动化生成营销策略与内容**，解决中小企业在市场研究、内容创作和SEO优化等方面耗时耗力的问题。
+
+---
+
+#### 2️⃣ **核心功能/知识点**  
+- **市场调研自动化**  
+  通过AI分析市场趋势、竞品策略，生成报告并保存至`market_research.md`。  
+- **个性化营销策略**  
+  自动创建包含受众细分、渠道选择的营销计划（输出至`marketing_strategy.md`）。  
+- **全渠道内容生成**  
+  支持社交媒体帖子（LinkedIn/Twitter）、邮件营销、Instagram短视频脚本（存储于`resources/drafts/posts/`和`reels/`）。  
+- **SEO优化博客**  
+  自动生成带关键词优化、内链的博客草稿（保存至`blogs/`目录）。  
+- **协同AI代理**  
+  由"营销主管"、"内容创作者"、"SEO专家"等AI角色分工合作，使用`SerperDevTool`和`ScrapeWebsiteTool`工具采集数据。
+
+---
+
+#### 3️⃣ **使用示例（直接引用README输入格式）**  
+```json
+{
+  "product_name": "AI Powered Excel Automation Tool",
+  "target_audience": "Small and Medium Enterprises (SMEs)",
+  "product_description": "A tool that automates repetitive tasks in Excel using AI.",
+  "budget": "Rs. 50,000",
+  "current_date": "2025-08-07"
+}
+```
+*注：README未提供安装代码，仅展示输入示例。输出内容会按功能自动保存到对应Markdown文件。*
+
+---
+
+#### 4️⃣ **适合人群**  
+- **中小企业主**：预算有限但需专业级营销内容。  
+- **营销团队**：快速生成策略草稿，减少重复劳动。  
+- **内容创作者**：批量产出SEO文章/社交媒体脚本。  
+- **创业公司**：缺乏专职营销人员时替代人工方案。  
+
+（严格遵循README描述，无额外编造内容）
+
+---
