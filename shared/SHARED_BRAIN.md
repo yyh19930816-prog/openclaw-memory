@@ -925,3 +925,51 @@ README中未提供具体代码示例，但明确以下关键操作点：
 > ⚠️ 注意事项：所有功能描述均严格摘自README，未提及任何未明确的功能（如API细节、第三方集成等）。
 
 ---
+
+### [Meituan-interact] python clipboard monitor automation (2026-03-03 03:13)
+**Real source**: [XingYuan55/autoreplier](https://github.com/XingYuan55/autoreplier) ⭐6
+**Practice code**: ✅ code/meituan_python_clipboard_monitor_automation_0303_0313.py
+
+以下是根据 GitHub 仓库 **XingYuan55/autoreplier** README 的严格提炼：
+
+---
+
+### 1. 项目解决的问题  
+自动监控微信消息并通过 AI 实现智能回复，减少用户重复性消息处理工作（源自「项目介绍」部分）。
+
+---
+
+### 2. 核心功能/知识点  
+- **智能消息监控**  
+  实时捕获微信消息，支持中文及多类型消息处理（如文本），跳过表情和图片（见「主要特点」和「注意事项」）。  
+- **AI 对话驱动**  
+  通过剪贴板将消息转发至 AI（在线/离线模式），生成连贯回复（见「程序运行逻辑」和「更新日志」）。  
+- **剪贴板与鼠标控制**  
+  依赖 `pyautogui` 和 `win32clipboard` 实现自动化操作，需固定窗口坐标（见「自动化控制实现」和「安装依赖」）。  
+- **稳定性优化**  
+  版本迭代中修复了中文编码、剪贴板冲突等问题（见「更新日志」的 ver1.0-rc2 修复内容）。  
+
+---
+
+### 3. 安装/使用代码示例  
+```bash
+# 安装依赖（原文代码）
+pip install pyautogui pygetwindow pillow pywin32 win32clipboard
+
+# 运行程序（原文代码）
+python main.py              # 在线模式
+python main_offline_model.py # 离线模式
+```
+
+---
+
+### 4. 适合人群  
+- 个人用户：自动回复日常消息  
+- 小型企业：低成本搭建智能客服（见「适用人群」）  
+- 开发者：基于现有代码扩展自定义规则（见「优势特色」中的灵活扩展性）  
+
+---
+
+⚠️ 注：以上内容全部源自 README 原文，未添加任何外部信息。
+
+---
