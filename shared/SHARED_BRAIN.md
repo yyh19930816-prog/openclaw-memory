@@ -1317,3 +1317,41 @@ git clone https://github.com/TheBlewish/Automated-AI-Web-Researcher-Olla
 （注：README未提及具体功能细节，以上分析仅基于可见文本）
 
 ---
+
+### [Meituan-content] xiaohongshu content strategy automation (2026-03-03 04:07)
+**Real source**: [Freyasrepo/TT-Refugee-Adaptation](https://github.com/Freyasrepo/TT-Refugee-Adaptation) ⭐1
+**Practice code**: ✅ code/meituan_xiaohongshu_content_strategy_automation_0303_0407.py
+
+1. **项目解决的问题**：研究TikTok用户迁移至小红书后的行为变化与内容适应策略，分析其身份重构及平台内容风格转变（源自README开篇概述部分）。
+
+2. **核心功能/知识点**（直接引用README内容）：
+   - **行为分析**：追踪用户的收藏、评论、分享和点赞等行为数据。
+   - **无监督学习模型**：使用K-Means+NMF进行用户分群和主题建模，GNN+DBSCAN检测社区和异常行为。
+   - **数据预处理**：包括文本清洗（处理中英文混杂内容）、缺失值填充和数值标准化（如"1万+"转为数字）。
+   - **研究主题**：识别用户是否保留TikTok内容风格或适应小红书原生模式。
+   - **异常检测**：发现机器人账号或超活跃KOL（如README中提到的"bot activity"和"hyper-engaged influencers"）。
+
+3. **代码示例**（README未提供具体代码，仅描述方法）：
+   根据README描述的方法论，假设预处理如下（符合原文TF-IDF和清洗逻辑）：
+   ```python
+   # 文本清洗示例（README提到需处理特殊字符和语言混合）
+   import re
+   def clean_text(text):
+       text = re.sub(r'[^\w\s\u4e00-\u9fa5]', '', text)  # 保留中英文和空格
+       return text.strip()
+
+   # TF-IDF关键词提取（README明确使用的方法）
+   from sklearn.feature_extraction.text import TfidfVectorizer
+   tfidf = TfidfVectorizer(max_features=100)
+   X = tfidf.fit_transform(cleaned_texts)
+   ```
+
+4. **适合用户**：
+   - **社会科学研究者**：研究跨平台用户迁移行为。
+   - **数据科学家**：实践无监督学习（聚类、社区检测）。
+   - **小红书运营团队**：分析迁移用户内容策略优化推荐系统。
+   - **内容创作者**：了解跨平台适应方法论（README最后提到的"cross-platform creators"）。 
+
+（注：全文严格基于README原文，未添加任何外部信息。代码示例仅为对README描述的技术实现假设，非仓库真实代码。）
+
+---
