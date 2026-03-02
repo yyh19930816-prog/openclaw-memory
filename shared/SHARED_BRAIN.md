@@ -1559,3 +1559,67 @@ pip install -r requirements.txt
 （注：所有内容均严格基于README原文，未添加额外信息）
 
 ---
+
+### [Meituan-content] youtube shorts script template (2026-03-03 04:41)
+**Real source**: [IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1018
+**Practice code**: ✅ code/meituan_youtube_shorts_script_template_0303_0441.py
+
+# YumCut开源AI短视频生成器分析
+
+根据README内容，我来为您提炼关键信息：
+
+## 1. 项目解决的核心问题
+
+该项目通过开源解决方案替代封闭的短视频SaaS工具，**将短视频制作转变为可重复的自动化流程**，降低生产成本并帮助团队更高效地发布内容。
+
+## 2. 核心功能亮点
+
+- **端到端短视频生产**
+    ```markdown
+    You provide the idea, YumCut generates the script, voice, visuals, captions, and final edit
+    ```
+
+- **多语言支持**
+    ```markdown
+    turning one idea into multiple language versions for wider reach
+    ```
+
+- **经济高效**
+    ```markdown
+    Open-source and self-hosted: no vendor lock-in, fully auditable code
+    ```
+
+- **生产导向架构**
+    ```markdown
+    separate app + storage modes, signed upload/delete grants, typed API boundaries
+    ```
+
+- **多平台适配**
+    ```markdown
+    for TikTok, YouTube Shorts, and Instagram Reels
+    ```
+
+## 3. 安装使用代码示例
+
+README中未提供具体安装代码，但提及了关键架构设计原则：
+```markdown
+Cost control: bring your own providers, run local components where possible
+Production-oriented architecture: separate app + storage modes
+```
+
+## 4. 目标用户群体
+
+- **个人创作者**: 免费自托管使用
+- **增长团队**: 需要批量生产短视频
+- **营销机构**: 跨品牌/客户的批量制作
+- **无面孔频道**: 日更TikTok/Shorts/Reels
+
+```markdown
+Main use cases:
+- daily publishing for faceless channels
+- agency-style batch production across multiple brands 
+```
+
+该项目特别适合需要**高频测试不同内容创意**且注重**成本控制**的短视频运营团队。
+
+---
