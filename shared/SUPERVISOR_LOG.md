@@ -762,3 +762,6 @@ pyth |
 1. 补全resi |
 | 2026-03-03 06:39 | 美团核实悟空汇报 | 🚨造假 | 结论: 🚨造假
 原因: 悟空汇报中声称写了代码'wukong_python_system_monitor_alert_0303_0632.py'，但在code/ |
+| 2026-03-03 06:39 | 悟空审计美团学习 | 评分:30分 | 结论:大部分内容可疑 | 问题:
+1. "Meituan-content"和"Real source"格式不一致
+2. 第一篇无GitHub链 |
