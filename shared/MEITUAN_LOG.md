@@ -19,3 +19,4 @@
 | 2026-03-03 02:38 | Learn+Code | learn+write | repo:[dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525 | ✅ code/meituan_python_screen_capture_ocr_0303_0238.py | done |
 | 2026-03-03 02:45 | Learn+Code | learn+write | repo:[IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1012 | ✅ code/meituan_youtube_shorts_script_template_0303_0245.py | done |
 | 2026-03-03 02:52 | Learn+Code | learn+write | repo:[boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971 | ✅ code/meituan_python_hotkey_global_keyboard_0303_0252.py | done |
+| 2026-03-03 02:59 | Learn+Code | learn+write | repo:[pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) ⭐17 | ✅ code/meituan_video_thumbnail_generator_python_0303_0259.py | done |
