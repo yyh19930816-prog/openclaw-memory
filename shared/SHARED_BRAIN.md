@@ -2983,3 +2983,70 @@ bot.run('token')
 ⚠️ 所有内容均严格来自README原文，未添加任何臆测信息。
 
 ---
+
+### [Meituan-tech] github actions scheduled automation (2026-03-03 07:33)
+**Real source**: [evryfs/github-actions-runner-operator](https://github.com/evryfs/github-actions-runner-operator) ⭐446
+**Practice code**: ✅ code/meituan_github_actions_scheduled_automation_0303_0733.py
+
+根据GitHub仓库 **evryfs/github-actions-runner-operator** 的README内容，以下是提炼总结（严格基于原文）：
+
+---
+
+### 1. 项目解决的问题  
+这是一个Kubernetes Operator，用于按需调度和扩展[GitHub Actions自托管运行器](https://help.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)，以声明式方式自定义工作流运行环境。
+
+---
+
+### 2. 核心功能/知识点  
+- **认证模式**（关键区别）：
+  - **GitHub应用模式**（推荐）：  
+    - 更高安全性和API配额  
+    - 需配置`Actions`和`Administration`的读写权限（仓库级）或`Self Hosted Runners`权限（组织级）  
+  - **个人访问令牌(PAT)**：  
+    - 需在仓库或组织级别创建PAT  
+    - CR级别的PAT优先级高于Operator级别  
+
+- **动态扩缩容**：  
+  根据GitHub Actions任务需求自动调度K8s Pod作为运行器。  
+
+- **安全实践**：  
+  通过Kubernetes Secrets管理敏感凭证（如私钥和PAT）。  
+
+- **监控指标**：  
+  项目通过了Codacy代码质量检测、Go Report Card评分和Codecov覆盖率测试（见README徽标）。  
+
+---
+
+### 3. 安装/使用示例  
+
+#### GitHub应用模式配置示例：  
+1. 创建Secret存储应用ID和私钥：  
+```shell
+kubectl create secret generic github-runner-app \
+  --from-literal=GITHUB_APP_INTEGRATION_ID=<app_id> \
+  --from-file=GITHUB_APP_PRIVATE_KEY=<private_key>
+```
+2. 在Operator部署中引用Secret：  
+```yaml
+envFrom:
+- secretRef:
+    name: github-runner-app
+```
+
+#### PAT模式配置示例：  
+```shell
+kubectl create secret generic actions-runner --from-literal=GH_TOKEN=<token>
+```
+
+---
+
+### 4. 适合用户群体  
+- **需要定制化GitHub Actions运行环境**的Kubernetes运维人员  
+- **大规模CI/CD流水线**团队，需动态扩缩运行器实例  
+- **注重安全管控**的组织（优先选择GitHub App集成方案）  
+
+---
+
+⚠️ 以上内容全部来自README原文，未添加任何外部信息。关键特性如认证模式、权限要求、代码示例均为原文直接引用。
+
+---
