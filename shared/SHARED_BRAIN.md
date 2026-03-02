@@ -2806,3 +2806,62 @@ README未提供具体代码，但注明：
 > ⚠️ 注意事项：所有信息均来自README原文，无虚构内容。实际使用前请查阅项目最新文档或联系作者（wanghaisheng）。
 
 ---
+
+### [Meituan-content] ai copywriting generator tool (2026-03-03 07:06)
+**Real source**: [HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) ⭐0
+**Practice code**: ✅ code/meituan_ai_copywriting_generator_tool_0303_0706.py
+
+以下是严格基于 GitHub 仓库 `EmailGenie-AI-Powered-Email-Copywriting-Generator` README 内容的提炼：
+
+---
+
+### 1. 项目解决的核心问题  
+**自动化生成个性化商务邮件**，通过 AI 技术（Groq Gemma-2-9B 模型）结合专业邮件营销策略，为企业提供高效的冷邮件撰写方案。
+
+---
+
+### 2. 核心功能/知识点（直接摘自 README）  
+- **AI 驱动生成**：基于 Groq 的 Gemma-2-9B 模型生成上下文相关的邮件内容  
+- **多场景模板**：支持销售、求职、合作等商务邮件类型  
+- **用户画像管理**：自定义发件人背景、行业、目标受众等资料（代码实例如下）  
+- **无缝集成**：通过 Resend API 直接发送邮件，支持 HubSpot CRM 同步  
+- **本地数据存储**：SQLite 记录邮件模板及发送历史  
+
+---
+
+### 3. 关键代码示例（来自 README）  
+**用户画像管理功能**（Python Streamlit 实现）：  
+```python
+def user_profile_setup():
+    # 创建设置用户档案界面
+    st.header("用户档案设置")
+    profile_name = st.text_input("档案名称")
+    industry = st.text_input("行业")
+    target_audience = st.text_input("目标受众")
+    background = st.text_area("个人/公司背景")
+    
+    if st.button("保存档案"):
+        if profile_name and industry and target_audience and background:
+            save_profile(profile_name, industry, target_audience, background)  # 存储至Excel
+        else:
+            st.error("请填写全部字段！")
+```
+
+**技术栈**（READMD 明确列出的技术）：  
+```
+前端: Streamlit | AI模型: Groq Gemma-2-9B | 数据库: SQLite | 邮件服务: Resend
+```
+
+---
+
+### 4. 目标用户  
+- **B2B 销售团队**：需批量发送个性化销售邮件  
+- **招聘人员**：快速生成针对候选人的求职邮件  
+- **商务开发者**：寻求合作伙伴时的自动化邮件沟通  
+- **技术-营销结合领域开发者**：学习 AI+CRM 集成实践（需 Python 基础）  
+
+---
+
+⚠️ 注：所有内容均严格限于 README 原文信息，未添加任何推测性描述。
+
+---
