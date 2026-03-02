@@ -397,3 +397,48 @@ edge-tts --pitch=-50Hz --text "Hello, world!" --write-media hello_with_pitch_low
 ⚠️ 注意：等级卡片功能已迁移至独立库 [DiscordLevelingCard](https://github.com/krishsharma0413/DiscordLevelingCard)
 
 ---
+
+### [Meituan-interact] python system tray app (2026-03-03 01:58)
+**Real source**: [klonnet23/helloy-word](https://github.com/klonnet23/helloy-word) ⭐82
+**Practice code**: ✅ code/meituan_python_system_tray_app_0303_0158.py
+
+根据 GitHub 仓库 **klonnet23/helloy-word** 的 README 内容，这是一个版本发布记录文档，主要记录了 GitHub Desktop 客户端的更新日志。以下是提炼的关键信息：
+
+---
+
+### 1. 项目解决的问题  
+该项目是 **GitHub Desktop 客户端**的版本更新记录，主要解决代码仓库管理过程中的分支切换、错误修复和功能优化问题（如崩溃修复、快捷键失效等）。
+
+---
+
+### 2. 核心功能/知识点（直接来自README）  
+- **分支管理**：支持切换分支时选择携带变更或暂存到当前分支（`#6107`），提供交互式变基流程（`#5953`）。  
+- **仓库分类**：按所有者分组仓库，并置顶最近使用的仓库（`#6923 #7132`）。  
+- **快捷操作**：新增“丢弃所有更改”菜单选项（`#7394`）、优化键盘快捷键支持（如 `Esc` 关闭仓库列表，`#7177`）。  
+- **错误修复**：  
+  - 修复企业版仓库分支查询的 API 错误（`#7713`）；  
+  - 解决 Windows 下“全选”快捷键失效的问题（`#7759`）。  
+- **界面优化**：改进主题自动切换（macOS）、修复滚动条和图标可访问性问题（`#7212`、`#7174`）。  
+
+---
+
+### 3. 安装/使用代码示例  
+README 中未提供具体安装代码，但版本更新包含以下典型修复示例：  
+```plaintext
+[Fixed] "Select all" keyboard shortcut not firing on Windows - #7759  
+[Fixed] Crash when loading repositories after signing in - #7699  
+```  
+（注：此为问题修复记录，非实际代码。）
+
+---
+
+### 4. 适合什么人使用  
+- **代码协作开发者**：需频繁管理 Git 分支、提交和拉取请求的团队。  
+- **Windows/macOS 用户**：依赖图形化界面操作 GitHub 仓库的非命令行用户。  
+- **企业开发者**：需要稳定处理大规模仓库（如企业版API错误修复场景）。  
+
+--- 
+
+⚠️ 以上信息均严格基于 README 原文，未添加任何额外内容。
+
+---
