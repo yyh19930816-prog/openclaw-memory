@@ -885,3 +885,43 @@ python3 -m pip install -e .
 （注：所有技术细节均严格遵循原README内容，未添加任何非官方说明）
 
 ---
+
+### [Meituan-content] social media scheduler python (2026-03-03 03:06)
+**Real source**: [wanghaisheng/tiktoka-studio-uploader](https://github.com/wanghaisheng/tiktoka-studio-uploader) ⭐352
+**Practice code**: ✅ code/meituan_social_media_scheduler_python_0303_0306.py
+
+### 1. 项目解决的问题  
+该项目旨在自动化社交媒体平台（如YouTube、TikTok）的视频上传流程，**解决手动操作耗时费力的问题**，让用户专注于更有意义的工作（根据README中开发者自述动机提炼）。  
+
+---
+
+### 2. 核心功能/知识点  
+- **自动化上传**：通过脚本实现YouTube和TikTok视频的批量上传（提及`./how-to-upload-youtube.md`和`./how-to-upload-tiktok.md`指南）。  
+- **多版本支持**：提供GUI图形界面版本（V1/V2）和命令行脚本版本（[GUI版本链接](https://github.com/wanghaisheng/tiktoka-studio-uploader-app)）。  
+- **付费技术支持**：开发者提供**有偿服务器部署协助**（原文明确标注"Paid"）。  
+- **技术栈迁移**：早期基于Selenium，后重写为Playwright版本（README开发历程部分）。  
+- **移动端计划**：未来计划支持手机端上传以规避平台反爬机制（README末段提到）。  
+
+---
+
+### 3. 安装/使用代码示例  
+README中未提供具体代码示例，但明确以下关键操作点：  
+```plaintext
+1. 通过PyPi安装包（原名tsup已弃用）：
+   pip install upgenius  # 根据PyPi徽标链接推测包名
+
+2. 查看具体平台上传指南：
+   - YouTube: 阅读./how-to-upload-youtube.md
+   - TikTok: 阅读./how-to-upload-tiktok.md
+```
+
+---
+
+### 4. 适合人群  
+- **电商运营者**：如Shopify店主需批量发布社媒内容（README提及其开发背景）。  
+- **技术初学者**：提供图形界面版本降低使用门槛。  
+- **自动化需求者**：需节省手动上传时间的用户（开发者强调"avoid bare hands操作"）。  
+
+> ⚠️ 注意事项：所有功能描述均严格摘自README，未提及任何未明确的功能（如API细节、第三方集成等）。
+
+---
