@@ -1416,3 +1416,66 @@ image_bytes = card.card1()  # 生成卡片并返回bytes
 （注：全文严格基于 README 内容，未添加任何虚构信息。）
 
 ---
+
+### [Meituan-content] ai copywriting generator tool (2026-03-03 04:21)
+**Real source**: [HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) ⭐0
+**Practice code**: ✅ code/meituan_ai_copywriting_generator_tool_0303_0421.py
+
+以下是严格基于 **HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator** README内容的提炼：
+
+---
+
+### 1. 解决的问题  
+通过AI生成个性化商务冷邮件（如销售、求职、合作等场景），结合专业邮件营销最佳实践，提升邮件沟通效果。
+
+---
+
+### 2. 核心功能  
+- **AI邮件生成**：基于Groq的Gemma-2-9B模型  
+- **多模板支持**：适配销售、求职、合作等场景  
+- **用户画像管理**：存储发件人行业/背景/目标受众  
+- **无缝集成**：支持Resend API发送+HubSpot CRM管理  
+- **本地化存储**：SQLite保存模板和发送历史  
+
+---
+
+### 3. 代码示例（来自README）  
+#### 用户画像创建（Streamlit前端）  
+```python
+def user_profile_setup():
+    st.header("User Profile Setup")
+    # 输入字段
+    profile_name = st.text_input("Profile Name")
+    industry = st.text_input("Industry")
+    target_audience = st.text_input("Target Audience")
+    background = st.text_area("Personal/Company Background")
+    
+    if st.button("Save Profile"):
+        if profile_name and industry and target_audience and background:
+            save_profile(...)  # 保存至SQLite
+        else:
+            st.error("请填写所有字段")
+```
+
+#### 邮件生成逻辑（部分代码）  
+```python
+def generate_email(email_purpose, recipient_name, recipient_company, ...):
+    prompt = f"生成{email_purpose}邮件给{recipient_name}"  # 实际prompt在README中未完整展示
+    # 调用Groq API生成内容（代码片段未完整）
+```
+
+---
+
+### 4. 目标用户  
+- **B2B销售人员**：需要批量生成个性化开发信  
+- **求职者**：快速定制求职邮件模板  
+- **商务拓展**：自动化合作邀约邮件  
+- **营销人员**：集成HubSpot的CRM工作流  
+
+**技术依赖**：需熟悉Python环境配置（Streamlit/Groq API/Resend）。  
+
+---
+
+（注：README中未提供完整安装步骤和AI生成代码的完整实现，仅展示部分前端交互逻辑。）
+
+---
