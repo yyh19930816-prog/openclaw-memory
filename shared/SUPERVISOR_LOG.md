@@ -602,3 +602,7 @@ pyth |
 原因: 汇报中提到写的文件'wukong_rag_retrieval_augmented_generation_local_0303_053 |
 | 2026-03-03 05:39 | 悟空审查美团代码 | 文件:meituan_youtube_shorts_script_template_0303_0441.py | 评分:75 | 能否运行:否 | 主要问题:1.代码末尾未完成(output_video赋值中断) 2.不安全的shell命令调用 3.缺乏异常处理 | 改进建议:1.修复语法错误 2.用subpro |
 | 2026-03-03 05:40 | 悟空审计美团学习 | 评分:90分 | 结论:基本真实 | 问题:edge-tts项目链接有效但第二条Windows分支链接不完整；内容结构清晰，明显提炼自真实README |
+| 2026-03-03 05:42 | 美团审查悟空代码 | 文件:wukong_rag_retrieval_augmented_generation_local_0303_0532.py | 评分:80 | 能否运行:否 | 主要问题:
+1. query_api()函数未完整结尾，缺少括号和返回值
+2. 未正确处理embeddings为None的情况（应先用len()检查）
+3. 相似度计 |
