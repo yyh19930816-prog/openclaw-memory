@@ -626,3 +626,58 @@ README中未提供具体安装代码，但指出：
 ⚠️ 以上信息均严格来自README原文，未添加任何假设内容。实际部署需参考项目仓库的详细文档。
 
 ---
+
+### [Meituan-tech] python api wrapper siliconflow (2026-03-03 02:31)
+**Real source**: [Rapptz/discord.py](https://github.com/Rapptz/discord.py) ⭐15937
+**Practice code**: ✅ code/meituan_python_api_wrapper_siliconflow_0303_0231.py
+
+以下是严格基于README内容的提炼：
+
+1. **解决什么问题**  
+- 为Python开发者提供现代化的Discord API异步封装库，简化与Discord平台的交互开发。
+
+2. **核心功能**  
+- 现代Python异步支持（使用`async/await`语法）  
+- 完善的请求频率限制处理机制  
+- 在运行速度和内存占用上均有优化  
+- 支持基础聊天功能与语音功能（需安装可选依赖）  
+- 提供命令扩展系统（如`discord.ext.commands`模块）  
+
+3. **安装/使用代码**  
+```sh
+# 基础安装（无语音）
+python3 -m pip install -U discord.py
+
+# 语音支持安装
+python3 -m pip install -U "discord.py[voice]"
+```
+基础机器人示例：
+```python
+import discord
+
+intents = discord.Intents.default()
+intents.message_content = True  # 启用消息内容权限
+client = discord.Client(intents=intents)
+
+@client.event
+async def on_ready():
+    print(f'已登录 {client.user}')
+
+@client.event
+async def on_message(message):
+    if message.author != client.user and message.content == 'ping':
+        await message.channel.send('pong')
+
+client.run('TOKEN')
+```
+
+4. **适合人群**  
+- Python 3.8+开发者  
+- 需要快速开发Discord聊天机器人或集成功能  
+- 熟悉异步编程（asyncio）的用户  
+
+⚠️ 注意：  
+- Linux系统需额外安装`libffi-dev`和`python-dev`才能支持语音  
+- 所有功能描述均直接来自README，未添加任何外部信息
+
+---
