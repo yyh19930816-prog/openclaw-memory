@@ -765,3 +765,73 @@ README 中未提供具体安装代码，但明确说明：
 所有信息严格来自 README，无虚构内容。
 
 ---
+
+### [Meituan-interact] python hotkey global keyboard (2026-03-03 02:52)
+**Real source**: [boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971
+**Practice code**: ✅ code/meituan_python_hotkey_global_keyboard_0303_0252.py
+
+以下是基于 **boppreh/keyboard** README 的准确提炼：
+
+---
+
+### 1. 解决什么问题  
+提供一个轻量级 Python 库，实现对键盘的全局监听、热键注册和按键模拟，让开发者能完全控制键盘输入事件。
+
+---
+
+### 2. 核心功能  
+- **全局钩子**  
+  监听所有键盘输入（无视窗口焦点），支持 Windows/Linux（需 root）和实验性 macOS。  
+- **热键与缩写**  
+  支持复杂组合键（如 `ctrl+shift+m`）和快速替换（如输入 `@@` 自动替换为邮箱）。  
+- **事件录制与回放**  
+  通过 `record()` 和 `play()` 记录并重放按键操作，支持调整回放速度。  
+- **无依赖纯 Python**  
+  无需编译 C 模块，直接复制文件即可部署，兼容 Python 2/3。  
+- **国际化布局支持**  
+  正确映射非英文键盘按键（如 `Ctrl+ç`），不破坏死键输入。
+
+---
+
+### 3. 安装与示例  
+**安装方式：**  
+```bash
+pip install keyboard  # PyPI 安装
+git clone https://github.com/boppreh/keyboard  # 或克隆仓库
+```
+
+**代码示例：**  
+```python
+import keyboard
+
+# 模拟快捷键输入
+keyboard.press_and_release('shift+s, space')
+
+# 注册热键打印消息
+keyboard.add_hotkey('ctrl+shift+a', print, args=('triggered', 'hotkey'))
+
+# 录制并3倍速回放按键
+recorded = keyboard.record(until='esc')
+keyboard.play(recorded, speed_factor=3)
+
+# 缩写替换
+keyboard.add_abbreviation('@@', 'my.long.email@example.com')
+```
+
+**独立模块使用：**  
+```bash
+python -m keyboard > events.txt  # 保存按键事件到文件
+python -m keyboard < events.txt  # 回放事件
+```
+
+---
+
+### 4. 适合人群  
+- **自动化测试开发者**：模拟用户键盘输入。  
+- **热键工具作者**：快速实现全局快捷键功能。  
+- **输入增强需求者**：如自定义缩写替换或宏操作。  
+- **教育项目开发者**：通过录制/回放演示操作流程。  
+
+⚠️ 需注意：项目当前无维护，Linux 需 root 权限，且 SSH 场景下无法使用。
+
+---
