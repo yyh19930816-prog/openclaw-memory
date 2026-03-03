@@ -126,3 +126,4 @@
 | 2026-03-03 13:58 | GitHub real learn | learn_from_github | repo:[yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) star:10 topic:python video segment spli | done |
 | 2026-03-03 14:11 | GitHub real learn | learn_from_github | repo:[yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) star:10 topic:python video segment spli | done |
 | 2026-03-03 14:19 | GitHub real learn | learn_from_github | repo:[OpenShot/openshot-qt](https://github.com/OpenShot/openshot-qt) star:5510 topic:video editing ffmpeg pyth | done |
+| 2026-03-03 14:34 | GitHub real learn | learn_from_github | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) star:14315 topic:python speech recognition | done |
