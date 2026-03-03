@@ -113,3 +113,4 @@
 | 2026-03-03 13:05 | GitHub real learn | learn_from_github | repo:[OpenShot/openshot-qt](https://github.com/OpenShot/openshot-qt) star:5510 topic:video editing ffmpeg pyth | done |
 | 2026-03-03 13:11 | GitHub real learn | learn_from_github | repo:[dynobo/normcap](https://github.com/dynobo/normcap) star:2525 topic:python screen capture ocr | done |
 | 2026-03-03 13:21 | GitHub real learn | learn_from_github | repo:[Surajkumar5050/zyron-assistant](https://github.com/Surajkumar5050/zyron-assistant) star:98 topic:python voice assistant wi | done |
+| 2026-03-03 13:27 | GitHub real learn | learn_from_github | repo:[arirusso/viddl](https://github.com/arirusso/viddl) star:32 topic:ffmpeg video cut clip | done |
