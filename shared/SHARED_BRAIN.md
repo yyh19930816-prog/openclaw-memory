@@ -5227,3 +5227,44 @@ README未提供具体安装代码，但版本日志显示需通过GitHub Desktop
 （注：全文基于README现有内容，未添加任何外部信息。）
 
 ---
+
+### [Meituan-video] video editing ffmpeg python (2026-03-03 13:05)
+**Real source**: [OpenShot/openshot-qt](https://github.com/OpenShot/openshot-qt) ⭐5510
+
+### 1. 项目解决的问题  
+OpenShot是一款获奖的**免费开源视频编辑器**，致力于为Linux、Mac和Windows平台提供高质量的**视频编辑与动画解决方案**（支持多种格式和高级特效）。
+
+---
+
+### 2. 核心功能  
+- **跨平台支持**：兼容Linux、Mac和Windows，基于FFmpeg支持多种音视频格式。  
+- **高级时间轴**：拖放、缩放、帧级精确编辑、无限轨道/图层。  
+- **动画与特效**：  
+  ```plaintext
+  关键帧动画、3D动态标题、SVG矢量图形、视频过渡实时预览、色度键抠像等。
+  ```  
+- **硬件加速**：实验性支持VA-API、NVDEC等硬件编解码。  
+- **多格式交互**：导入/导出EDL/XML，渲染支持FFmpeg所有编解码器。  
+
+---
+
+### 3. 安装与使用  
+**快速安装**（README原文推荐）：  
+访问[官网下载页面](https://www.openshot.org/download/)获取预编译安装包，或选择每日构建的测试版本。  
+
+**开发者构建文档**：  
+```sh
+cd doc
+make html  # 使用Sphinx生成HTML文档
+```
+
+---
+
+### 4. 适用人群  
+- **普通用户**：需要免费、易用且功能丰富的跨平台视频编辑工具。  
+- **开发者**：希望贡献代码、修复漏洞或参与翻译（通过[LaunchPad](https://translations.launchpad.net/openshot/2.0/+translations)）。  
+- **进阶用户**：需硬件加速、关键帧动画或专业格式支持的用户。  
+
+（注：所有内容均严格基于README原文，无虚构信息。）
+
+---
