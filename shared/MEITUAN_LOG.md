@@ -140,3 +140,4 @@
 | 2026-03-03 17:23 | GitHub real learn | learn_from_github | repo:[gabrielelanzafamee/viral-clips-extractor](https://github.com/gabrielelanzafamee/viral-clips-extractor) star:42 topic:video clip automation pyt | done |
 | 2026-03-03 17:38 | GitHub real learn | learn_from_github | repo:[TheBlewish/Automated-AI-Web-Researcher-Ollama](https://github.com/TheBlewish/Automated-AI-Web-Researcher-Ollama) star:2955 topic:python web scraping conte | done |
 | 2026-03-03 18:06 | GitHub real learn | learn_from_github | repo:[yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) star:10 topic:python video segment spli | done |
+| 2026-03-03 18:20 | GitHub real learn | learn_from_github | repo:[OpenShot/openshot-qt](https://github.com/OpenShot/openshot-qt) star:5512 topic:video editing ffmpeg pyth | done |
