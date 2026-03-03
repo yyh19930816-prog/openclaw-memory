@@ -121,3 +121,4 @@
 | 2026-03-03 13:39 | GitHub real learn | learn_from_github | repo:[yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) star:10 topic:python video segment spli | done |
 | 2026-03-03 13:41 | GitHub real learn | learn_from_github | repo:[israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) star:2564 topic:python desktop gui tkinte | done |
 | 2026-03-03 13:42 | GitHub real learn | learn_from_github | repo:[HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) star:0 topic:ai copywriting generator  | done |
+| 2026-03-03 13:44 | GitHub real learn | learn_from_github | repo:[Saimulhoque/Youtube-Video-Clip-Cutter](https://github.com/Saimulhoque/Youtube-Video-Clip-Cutter) star:0 topic:python video clip slice m | done |
