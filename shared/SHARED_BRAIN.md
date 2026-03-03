@@ -3700,3 +3700,69 @@ generator.generate()
 > 注：所有功能描述均严格依据 README，未添加额外假设。
 
 ---
+
+### [Meituan-content] tiktok ai content creation tool (2026-03-03 09:16)
+**Real source**: [jacky-xbb/faceless-video-generator](https://github.com/jacky-xbb/faceless-video-generator) ⭐60
+**Practice code**: ✅ code/meituan_tiktok_ai_content_creation_tool_0303_0916.py
+
+以下是基于 GitHub 仓库 **jacky-xbb/faceless-video-generator** 的 README 内容的提炼：
+
+---
+
+### 1. **项目解决的问题**  
+这是一个多媒体内容生成工具，**一站式自动化生成无人物视频**（从故事创作、图片生成到视频合成的完整流程）。
+
+---
+
+### 2. **核心功能**  
+✅ **文本到视频全流程生成**  
+- 输入一段文本（支持12+故事类型如恐怖/历史/哲学等），自动生成完整视频  
+- **多风格图片生成**：照片级真实、电影感、动漫、漫画等  
+- **语音可选**：多种声音选项配合字幕生成  
+
+✅ **关键技术点**  
+- 使用 `OpenAI` 生成故事和语音  
+- 默认通过 `Replicate API` 生成图片（可选 `FAL`）  
+- 视频合成支持转场特效  
+
+✅ **高度自定义**  
+- 可修改 `config.json` 调整生成参数  
+- 可替换图片生成引擎（需改 `src/main.py`）  
+
+---
+
+### 3. **代码示例**  
+#### 安装步骤（引用README原文）  
+```bash
+# 克隆仓库  
+git clone https://github.com/SmartClipAI/faceless-video-generator.git
+cd faceless-video-generator
+
+# 创建虚拟环境（Windows示例）  
+python -m venv venv
+.\venv\Scripts\activate
+
+# 安装依赖  
+pip install -r requirements.txt
+```
+
+#### 运行命令  
+```bash
+python src/main.py  
+# 按提示选择故事类型、图片风格和语音
+```
+
+---
+
+### 4. **适合人群**  
+- **自媒体创作者**：快速生成无人物解说视频（如知识科普/恐怖故事）  
+- **开发者**：学习如何集成 OpenAI + Replicate/FAL API 的完整 pipeline  
+- **营销人员**：批量生成短视频内容，支持自定义品牌风格  
+
+⛔ 注意：需自行准备 `OpenAI` 和 `Replicate` 的 API 密钥（免费试用额度可能有限）。  
+
+--- 
+
+严格遵循 README 内容，未添加任何非原文信息。
+
+---
