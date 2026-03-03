@@ -5345,3 +5345,62 @@ Python 3.10+ | Ollama AI引擎 | Windows平台
 （注：README未提供具体安装代码，技术细节需参考项目源码）
 
 ---
+
+### [Meituan-video] ffmpeg video cut clip (2026-03-03 13:27)
+**Real source**: [arirusso/viddl](https://github.com/arirusso/viddl) ⭐32
+
+### 1. 项目解决的问题  
+Viddl 是一个基于命令行的工具，用于快速下载、剪切、裁剪和调整视频尺寸，简化视频处理流程。
+
+---
+
+### 2. 核心功能/知识点（直接来自README）  
+- **视频下载**：通过 `youtube-dl` 下载在线视频（如YouTube）。  
+- **视频剪切**：支持按时间戳截取片段（`-s` 开始时间，`-e` 结束时间或 `-d` 持续时间）。  
+- **尺寸调整**：通过 `-w` 和 `-h` 参数调整输出视频分辨率。  
+- **画面裁剪**：用 `--cx`/`--cy` 定位，`--cw`/`--ch` 定义裁剪区域。  
+- **音频控制**：`--no-audio` 可移除视频中的音轨。  
+
+---
+
+### 3. 安装/使用代码示例  
+#### 安装依赖 & Viddl  
+```sh
+# 需提前安装 youtube-dl 和 ffmpeg
+gem install viddl
+```
+
+#### 命令行示例  
+- **下载原视频**  
+  ```sh
+  viddl https://www.youtube.com/watch?v=6g4dkBF5anU
+  ```  
+- **剪切+静音+裁剪**  
+  ```sh
+  viddl 视频URL -s 15 -e 22 --no-audio --cx 20 --cy 20 --cw 40 --ch 40 -w 640 -h 480
+  ```
+
+#### Ruby集成  
+```ruby
+options = {
+  start: 15,
+  end: 22,
+  audio: false,
+  crop: { x: 20, y: 20, width: 40, height: 40 },
+  width: 640,
+  height: 480
+}
+video = Viddl::Video.download("视频URL")
+video.create_clip(options)
+```
+
+---
+
+### 4. 适合人群  
+- **开发者**：需通过命令行或Ruby脚本批量处理视频。  
+- **内容创作者**：快速剪辑/调整视频片段，无需复杂工具。  
+- **自动化流程**：集成到需要视频预处理的系统中。  
+
+> ⚠️ 注意：所有功能均严格基于README描述，未添加任何虚构内容。
+
+---
