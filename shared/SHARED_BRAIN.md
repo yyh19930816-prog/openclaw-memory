@@ -5109,3 +5109,43 @@ pip install -r requirements.txt
 （注：所有信息均来自README原文，未添加额外假设）
 
 ---
+
+### [Meituan-interact] python hotkey global keyboard (2026-03-03 12:54)
+**Real source**: [boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971
+**Practice code**: ✅ code/meituan_python_hotkey_global_keyboard_0303_1254.py
+
+以下是基于README内容的精准提炼：
+
+1. **解决什么问题**  
+这是一个Python键盘控制库，允许全局监听/模拟键盘事件、注册热键，提供跨平台键盘操作能力（Windows/Linux/实验性Mac支持）。
+
+2. **核心功能**  
+- 全局键盘事件钩子（不受焦点限制）
+- 跨平台支持（Windows/Linux需sudo，Mac实验性）
+- 纯Python实现，零依赖，兼容Python2/3
+- 高级API：热键组合(`ctrl+shift+m`)、键盘宏、缩写替换(`@@→email`)
+- 完整国际化布局支持（如`Ctrl+ç`）
+
+3. **安装/代码示例**  
+```bash
+# 安装
+pip install keyboard
+```
+```python
+# 示例代码（来自README）
+import keyboard
+keyboard.write('Hello')  # 模拟打字
+keyboard.add_hotkey('ctrl+space', print, args=('激活!',))
+recorded = keyboard.record(until='esc')  # 录制按键
+keyboard.play(recorded)  # 回放
+```
+
+4. **适用场景**  
+需要自动化键盘操作或监控输入的项目：  
+• 自动化测试脚本  
+• 快捷键增强工具  
+• 辅助功能开发（非恶意用途）  
+
+**注意**：当前项目未维护，部分功能可能受限，Linux需root权限，不适合游戏外挂/键鼠录制等场景（如README明确警告）。
+
+---
