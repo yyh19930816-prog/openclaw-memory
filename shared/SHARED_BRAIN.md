@@ -5983,3 +5983,46 @@ pip install vosk
 （注：所有信息均严格来自README，未添加非原文内容。）
 
 ---
+
+### [Meituan-video] python video clip slice moviepy (2026-03-03 14:46)
+**Real source**: [Saimulhoque/Youtube-Video-Clip-Cutter](https://github.com/Saimulhoque/Youtube-Video-Clip-Cutter) ⭐0
+
+### 1. 项目解决的问题  
+这个Python脚本可以帮助用户下载YouTube视频，并根据时间戳列表将视频切割成多个片段（基于README中"download YouTube videos and slice them into segments"的描述）。
+
+### 2. 核心功能/知识点  
+- **YouTube视频下载**：使用`pytube`库实现  
+- **视频片段切割**：通过`moviepy`库按时间戳分割视频  
+- **时间戳处理**：需提供时间列表来定义切割点  
+- **自动化流程**：一站式完成下载+切割操作  
+
+### 3. 安装/使用代码示例  
+README未提供具体代码，但提到依赖库：  
+```python
+# 必须安装的库（根据README隐含内容）
+pip install pytube moviepy
+```
+
+伪代码逻辑推测（README未提供真实代码，仅根据文字描述推导）：  
+```python
+from pytube import YouTube
+from moviepy.editor import VideoFileClip
+
+# 下载视频
+yt = YouTube("视频URL")
+video = yt.streams.get_highest_resolution().download()
+
+# 按时间戳切割
+clip = VideoFileClip(video)  
+segment = clip.subclip("00:00:10", "00:00:30")  # 示例时间段
+segment.write_videofile("output.mp4")
+```
+
+### 4. 适合人群  
+- 需要批量处理YouTube视频片段的内容创作者  
+- 想提取视频特定部分的研究人员/学生  
+- 对`pytube`和`moviepy`库感兴趣的Python初学者  
+
+（注：由于README内容极为简略，所有说明均严格基于现有文本，未添加任何假设功能）
+
+---
