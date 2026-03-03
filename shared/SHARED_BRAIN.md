@@ -4712,3 +4712,63 @@ python -m keyboard < events.txt
 - 游戏等程序可能屏蔽钩子
 
 ---
+
+### [Meituan-interact] python desktop gui tkinter modern (2026-03-03 12:14)
+**Real source**: [israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) ⭐2564
+**Practice code**: ✅ code/meituan_python_desktop_gui_tkinter_modern_0303_1214.py
+
+# ttkbootstrap 中文摘要  
+
+## 1. 项目解决的问题  
+*TTkbootstrap* 是一款基于 tkinter 的 Python 库，通过提供**现代扁平化风格主题**（灵感来自 Bootstrap）来简化 GUI 开发，帮助用户快速创建美观的界面应用。
+
+---
+
+## 2. 核心功能  
+✔️ **内置主题**  
+- 提供十余种暗黑/明亮风格的主题（如 `superhero`）  
+✔️ **预设样式**  
+- 支持 `outline`（描边）、`round toggle`（圆形切换）等按钮样式  
+✔️ **简化API**  
+- 使用关键词（如 `primary`、`striped`）替代传统复杂样式类名  
+✔️ **新增组件**  
+- 包含 `Meter`（仪表）、`DateEntry`（日期输入）等新控件  
+✔️ **主题编辑器**  
+- 内置工具可自定义主题并实时预览  
+
+---
+
+## 3. 安装与示例代码  
+**安装命令**：  
+```python
+python -m pip install ttkbootstrap
+```
+
+**基础用法**（创建窗口和按钮）：  
+```python
+import ttkbootstrap as ttk
+
+root = ttk.Window(themename="superhero")  # 使用主题
+
+b1 = ttk.Button(root, text="Submit", bootstyle="success")  # 绿色按钮
+b2 = ttk.Button(root, text="Submit", bootstyle="info-outline")  # 蓝色描边按钮
+
+b1.pack(side="left", padx=5, pady=10)
+b2.pack(side="left", padx=5, pady=10)
+root.mainloop()
+```
+
+> 💡 关键词写法灵活，以下等效：  
+> - `bootstyle="info-outline"`  
+> - `bootstyle=("info", "outline")`  
+
+---
+
+## 4. 适用人群  
+- **tkinter 开发者**：希望快速美化传统界面  
+- **Python 初学者**：需要简单易用的 GUI 工具  
+- **Bootstrap 用户**：熟悉 Web 开发风格，可无缝迁移关键词逻辑  
+
+> 📚 详细文档见 [官方文档](https://ttkbootstrap.readthedocs.io/)
+
+---
