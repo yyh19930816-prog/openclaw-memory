@@ -5071,3 +5071,41 @@ pip install -r requirements.txt
 ⚠️ 重申：以上内容均严格来自 README 原文，未添加任何额外信息。
 
 ---
+
+### [Meituan-content] video thumbnail generator python (2026-03-03 12:53)
+**Real source**: [pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) ⭐17
+
+以下是严格基于README内容的提炼分析：
+
+1. **解决的问题**  
+   该项目专注于高效生成视频缩略图，通过极简资源占用实现快速批量处理，并提供CLI和Python API简化工作流程。
+
+2. **核心功能**  
+   - ✨ 支持主流视频格式输入（mp4/mkv/avi等）  
+   - ⏱️ 按时间间隔自动生成缩略图（如每5秒一帧）  
+   - 📂 可选择输出为WebVTT或JSON格式（兼容Plyr/Video.js等播放器）  
+   - 🖼️ 内置图片压缩技术优化加载速度  
+   - 🔌 提供Python API和CLI两种调用方式  
+
+3. **代码示例**  
+   - **CLI调用**  
+     ```bash
+     thumbnails --base /media/ --output /path/to/thumbnails/ --interval 5 ~Videos/movies
+     ```  
+   - **Python API**  
+     ```python
+     from thumbnails import Generator
+     generator = Generator(["~Videos/movie.mp4"])
+     generator.output = "/output/path/"
+     generator.interval = 5
+     generator.generate()
+     ```  
+
+4. **目标用户**  
+   - 需要为视频网站生成预览缩略图的开发者  
+   - 使用Plyr/Video.js等播放器的前端工程师  
+   - 批量处理视频资源的运维人员  
+
+（注：所有信息均来自README原文，未添加额外假设）
+
+---
