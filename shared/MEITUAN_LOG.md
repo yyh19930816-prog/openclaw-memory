@@ -119,3 +119,4 @@
 | 2026-03-03 13:37 | GitHub real learn | learn_from_github | repo:[harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) star:49790 topic:python video automation m | done |
 | 2026-03-03 13:38 | GitHub real learn | learn_from_github | repo:[wanghaisheng/tiktoka-studio-uploader](https://github.com/wanghaisheng/tiktoka-studio-uploader) star:352 topic:social media scheduler py | done |
 | 2026-03-03 13:39 | GitHub real learn | learn_from_github | repo:[yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) star:10 topic:python video segment spli | done |
+| 2026-03-03 13:41 | GitHub real learn | learn_from_github | repo:[israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) star:2564 topic:python desktop gui tkinte | done |
