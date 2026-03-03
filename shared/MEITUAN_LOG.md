@@ -101,3 +101,4 @@
 | 2026-03-03 12:14 | Learn+Code | learn+write | repo:[israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) ⭐2564 | ✅ code/meituan_python_desktop_gui_tkinter_modern_0303_1214.py | done |
 | 2026-03-03 12:21 | Learn+Code | learn+write | repo:[ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) ⭐4 | ✅ code/meituan_content_calendar_automation_ai_0303_1221.py | done |
 | 2026-03-03 12:29 | Learn+Code | learn+write | repo:[klonnet23/helloy-word](https://github.com/klonnet23/helloy-word) ⭐82 | ✅ code/meituan_python_system_tray_app_0303_1229.py | done |
+| 2026-03-03 12:37 | Learn+Code | learn+write | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) ⭐14315 | ✅ code/meituan_python_speech_recognition_offline_0303_1237.py | done |
