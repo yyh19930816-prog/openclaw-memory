@@ -6524,3 +6524,60 @@ git clone https://github.com/TheBlewish/Automated-AI-Web-Researcher-Olla
 注：全部信息均来自原README，无任何补充内容。完整演示见[项目视频](https://youtu.be/hS7Q1B8N1mQ)。
 
 ---
+
+### [Meituan-video] python video segment split (2026-03-03 18:06)
+**Real source**: [yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) ⭐10
+
+以下是基于 **yzRobo/scene-segment-splitter** README 的准确中文提炼：
+
+---
+
+### 1. 解决的问题  
+自动分割包含两个剧集的视频文件，并通过黑帧检测识别剧集过渡，实现片头曲复用和剧集重命名（主要针对《Hey Arnold!》这类动画场景）。
+
+---
+
+### 2. 核心功能  
+- **自动分割**：检测视频中的黑帧过渡片段，将双剧集文件拆分为独立剧集  
+- **片头复用**：提取第一集的片头片段并插入到第二集  
+- **智能命名**：根据输入文件名自动分配剧集编号和名称  
+- **日志记录**：生成包含处理细节的日志文件  
+- **跨平台支持**：提供 Windows/macOS/Linux 的 FFmpeg 安装指南  
+
+---
+
+### 3. 关键代码示例  
+**配置虚拟环境（Windows/macOS/Linux）：**  
+```bash
+# Windows
+python -m venv myenv
+myenv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv myenv
+source myenv/bin/activate
+
+# 安装依赖
+pip install -r requirements.txt
+```
+
+**验证FFmpeg安装：**  
+```bash
+ffmpeg -version  # 所有平台通用检测命令
+```
+
+**Mac通过Homebrew安装FFmpeg：**  
+```bash
+brew install ffmpeg
+```
+
+---
+
+### 4. 适用人群  
+- **影视收藏者**：需批量分割双剧集合并的视频文件  
+- **自动化工具开发者**：学习黑帧检测和FFmpeg集成实践  
+- **数据整理员**：需要按剧集规则重命名文件的项目  
+
+（注：所有信息严格来自README，无额外补充）
+
+---
