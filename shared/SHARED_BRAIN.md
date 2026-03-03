@@ -5526,3 +5526,38 @@ README未提供具体安装代码，但明确说明：
 > 注：所有信息均严格来自README原文，未添加任何假设功能。"后期计划"中的GPT-SoVITS配音等功能尚未实现。
 
 ---
+
+### [Meituan-content] social media scheduler python (2026-03-03 13:38)
+**Real source**: [wanghaisheng/tiktoka-studio-uploader](https://github.com/wanghaisheng/tiktoka-studio-uploader) ⭐352
+
+# TikTok Studio Uploader 项目解析
+
+## 1. 项目解决的问题
+这个项目旨在自动化社交媒体平台(如YouTube、TikTok)的视频上传流程，帮助用户节省手动操作时间。
+
+## 2. 核心功能/特点
+- **自动化上传**：通过编程实现社交媒体视频自动发布
+- **多平台支持**：支持YouTube和TikTok等平台
+- **技术演进**：
+  - 初期基于Selenium实现
+  - 当前版本使用Playwright技术重构
+- **付费服务**：作者提供有偿服务器部署协助
+- **GUI版本**：提供可视化界面版本方便初学者使用
+
+## 3. 安装/使用信息
+由于README中没有提供详细安装代码示例，根据更新日志可确认：
+```python
+# 包已重命名并发布到PyPI以便安装
+# 原tsup包不再可用
+pip install [新包名]  # 具体包名未在README中说明
+```
+
+## 4. 目标用户群体
+- **电商运营者**：需要自动发布社交媒体内容的Shopify店主
+- **内容创作者**：需要批量上传视频到多平台的用户
+- **技术爱好者**：愿意自行部署自动化脚本的开发人员
+- **非技术人员**：可以使用提供的GUI版本简化操作
+
+注：本项目诞生于新冠疫情期间，作者为解决自身需求而开发，后续逐步完善功能并商用化。
+
+---
