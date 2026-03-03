@@ -3963,3 +3963,43 @@ $ (venv) python fbposter.py
 > 注意：所有功能描述均严格来自README原文，未添加任何额外信息。实际使用时需自行承担账号安全风险，建议使用测试账号操作。
 
 ---
+
+### [Meituan-content] viral content formula hook engagement (2026-03-03 09:52)
+**Real source**: [parzival1920/ViralHook---Premium-Hook-Generator](https://github.com/parzival1920/ViralHook---Premium-Hook-Generator) ⭐0
+**Practice code**: ✅ code/meituan_viral_content_formula_hook_engagement_0303_0952.py
+
+### 1. 项目解决的问题  
+该项目提供在本地运行和部署AI Studio应用的完整解决方案（源自README开篇描述）。
+
+---
+
+### 2. 核心功能/知识点  
+- **本地化运行AI应用**：包含运行AI Studio应用所需的所有依赖和环境配置  
+- **API密钥集成**：需配置`GEMINI_API_KEY`以连接Gemini服务  
+- **开发环境支持**：基于Node.js的本地开发流程  
+- **便捷部署**：通过简单命令即可启动开发服务器  
+
+---
+
+### 3. 安装/使用代码示例  
+```bash
+# 1. 安装依赖（README原文）
+npm install
+
+# 2. 配置API密钥（在.env.local中设置）
+GEMINI_API_KEY=your_api_key_here
+
+# 3. 启动应用（README原文）
+npm run dev
+```
+
+---
+
+### 4. 适合人群  
+- **AI开发者**：需要本地调试AI Studio应用的用户  
+- **Node.js使用者**：熟悉Node.js生态的前端/全栈开发者  
+- **Gemini API集成者**：调用Gemini服务的项目开发者  
+
+（注：所有内容均严格基于README原文，无额外补充信息）
+
+---
