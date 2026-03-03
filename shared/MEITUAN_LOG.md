@@ -105,3 +105,4 @@
 | 2026-03-03 12:46 | Learn+Code | learn+write | repo:[Surajkumar5050/zyron-assistant](https://github.com/Surajkumar5050/zyron-assistant) ⭐98 | ✅ code/meituan_python_voice_assistant_windows_0303_1246.py | done |
 | 2026-03-03 12:47 | GitHub real learn | learn_from_github | repo:[arirusso/viddl](https://github.com/arirusso/viddl) star:32 topic:ffmpeg video cut clip | done |
 | 2026-03-03 12:51 | GitHub real learn | learn_from_github | repo:[HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) star:0 topic:ai copywriting generator  | done |
+| 2026-03-03 12:52 | GitHub real learn | learn_from_github | repo:[04AR/webcon_python_subprocess](https://github.com/04AR/webcon_python_subprocess) star:2 topic:python subprocess automat | done |
