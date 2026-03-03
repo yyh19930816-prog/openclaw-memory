@@ -116,3 +116,4 @@
 | 2026-03-03 13:27 | GitHub real learn | learn_from_github | repo:[arirusso/viddl](https://github.com/arirusso/viddl) star:32 topic:ffmpeg video cut clip | done |
 | 2026-03-03 13:32 | GitHub real learn | learn_from_github | repo:[ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) star:4 topic:content calendar automati | done |
 | 2026-03-03 13:34 | GitHub real learn | learn_from_github | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) star:14315 topic:python speech recognition | done |
+| 2026-03-03 13:37 | GitHub real learn | learn_from_github | repo:[harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) star:49790 topic:python video automation m | done |
