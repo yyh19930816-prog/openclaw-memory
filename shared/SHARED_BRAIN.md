@@ -6287,3 +6287,42 @@ def generate_email(email_purpose, recipient_name...):
 ⚠️ 注：README未提供完整的安装步骤或依赖文件（如requirements.txt），实际使用需参考Groq和Resend的API文档。
 
 ---
+
+### [Meituan-interact] python voice assistant windows (2026-03-03 16:42)
+**Real source**: [Surajkumar5050/zyron-assistant](https://github.com/Surajkumar5050/zyron-assistant) ⭐98
+
+以下是严格基于**Surajkumar5050/zyron-assistant** README内容的提炼分析：
+
+---
+
+### 1. 解决什么问题  
+ZYRON桌面助手提供**完全本地的AI控制方案**，解决用户对隐私保护和离线使用的需求，通过语音或Telegram实现Windows电脑的智能化操控（无云端依赖）。
+
+### 2. 核心功能/知识点  
+- **本地化AI引擎**：基于Ollama框架和Qwen 2.5 Coder模型，**100%离线运行**，不依赖任何云服务  
+- **多模态控制**：  
+  - 语音唤醒（"Hey Pikachu"指令）  
+  - Telegram远程控制（跨设备操作电脑）  
+- **系统级操作**：  
+  ```python
+  包括应用启动/管理、电源控制（睡眠/关机）、文件搜索/操作、窗口切换等
+  ```
+- **实时监控**：  
+  - 浏览器活动追踪、电池状态检测、存储分析、地理位置获取  
+  - 支持截图/摄像头调用/录音功能  
+- **企业级特性**：自动启动、隐身模式、MIT开源许可  
+
+### 3. 安装/使用代码示例  
+README未提供具体代码片段，但标注了关键依赖：  
+```requirements
+Python 3.10+ | Windows平台 | Ollama AI引擎（需自行部署本地模型）
+```
+
+### 4. 适用人群  
+- **隐私敏感用户**：拒绝云端数据传输的技术人员/企业  
+- **效率追求者**：需快速通过语音/手机远程控制PC的开发者  
+- **AI实验者**：希望基于本地模型二次开发的研究人员  
+
+（注：所有信息均来自README原文，未添加额外内容）
+
+---
