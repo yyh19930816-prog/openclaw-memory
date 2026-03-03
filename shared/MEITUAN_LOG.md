@@ -103,3 +103,4 @@
 | 2026-03-03 12:29 | Learn+Code | learn+write | repo:[klonnet23/helloy-word](https://github.com/klonnet23/helloy-word) ⭐82 | ✅ code/meituan_python_system_tray_app_0303_1229.py | done |
 | 2026-03-03 12:37 | Learn+Code | learn+write | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) ⭐14315 | ✅ code/meituan_python_speech_recognition_offline_0303_1237.py | done |
 | 2026-03-03 12:46 | Learn+Code | learn+write | repo:[Surajkumar5050/zyron-assistant](https://github.com/Surajkumar5050/zyron-assistant) ⭐98 | ✅ code/meituan_python_voice_assistant_windows_0303_1246.py | done |
+| 2026-03-03 12:47 | GitHub real learn | learn_from_github | repo:[arirusso/viddl](https://github.com/arirusso/viddl) star:32 topic:ffmpeg video cut clip | done |
