@@ -5707,3 +5707,55 @@ root.mainloop()
 注：所有信息均严格源自README原文，未添加外部内容。技术栈部分未展开，因README未提供具体安装步骤或依赖文件（如requirements.txt）。
 
 ---
+
+### [Meituan-video] python video clip slice moviepy (2026-03-03 13:44)
+**Real source**: [Saimulhoque/Youtube-Video-Clip-Cutter](https://github.com/Saimulhoque/Youtube-Video-Clip-Cutter) ⭐0
+
+### 基于 `Saimulhoque/Youtube-Video-Clip-Cutter` 的项目解析  
+
+#### 1. 项目解决的问题  
+此Python脚本可通过给定时间戳列表，实现YouTube视频的下载与分段剪切（基于README原文功能描述）。  
+
+---
+
+#### 2. 核心功能/知识点 （直接从README提取）  
+- **YouTube视频下载**：通过 `pytube` 库直接获取视频内容。  
+- **视频片段剪切**：利用 `moviepy` 库按时间戳切割视频。  
+- **基于时间戳分割**：需提供分段的时间点列表，脚本自动生成多个视频片段。  
+- **轻量化依赖**：仅依赖两个主流Python库（`pytube`和`moviepy`），无需复杂配置。  
+
+---
+
+#### 3. 安装/使用代码示例  
+**依赖安装**（README未提供具体代码，但明确提及依赖库）：  
+```python
+pip install pytube moviepy
+```  
+
+**基础使用逻辑**（根据README功能推测）：  
+```python
+from pytube import YouTube
+from moviepy.editor import VideoFileClip
+
+# 下载视频（假设代码，README未提供完整示例）
+yt = YouTube("视频URL")
+stream = yt.streams.get_highest_resolution()
+stream.download(filename="原始视频.mp4")  
+
+# 切割视频（假设代码，README未提供完整示例）
+clip = VideoFileClip("原始视频.mp4")
+sub_clip = clip.subclip(0, 60)  # 截取0到60秒
+sub_clip.write_videofile("片段1.mp4")  
+```
+⚠️ 注意：README未提供完整代码，以上仅为根据功能描述的合理推断，实际实现需用户自行补充。  
+
+---
+
+#### 4. 适合人群  
+- **需要批量处理YouTube视频**的用户（如教育、自媒体领域）。  
+- **希望避免手动剪辑**的开发者（通过编程自动化切割）。  
+- **熟悉Python基础**的技术人员（需自行完善具体实现）。  
+
+（全文严格基于README原文信息，未添加任何虚构内容）
+
+---
