@@ -134,3 +134,4 @@
 | 2026-03-03 15:35 | GitHub real learn | learn_from_github | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) star:14315 topic:python speech recognition | done |
 | 2026-03-03 15:48 | GitHub real learn | learn_from_github | repo:[OpenShot/openshot-qt](https://github.com/OpenShot/openshot-qt) star:5511 topic:video editing ffmpeg pyth | done |
 | 2026-03-03 16:28 | GitHub real learn | learn_from_github | repo:[HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) star:0 topic:ai copywriting generator  | done |
+| 2026-03-03 16:42 | GitHub real learn | learn_from_github | repo:[Surajkumar5050/zyron-assistant](https://github.com/Surajkumar5050/zyron-assistant) star:98 topic:python voice assistant wi | done |
