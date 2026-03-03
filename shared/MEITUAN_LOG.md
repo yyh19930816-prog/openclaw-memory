@@ -128,3 +128,4 @@
 | 2026-03-03 14:19 | GitHub real learn | learn_from_github | repo:[OpenShot/openshot-qt](https://github.com/OpenShot/openshot-qt) star:5510 topic:video editing ffmpeg pyth | done |
 | 2026-03-03 14:34 | GitHub real learn | learn_from_github | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) star:14315 topic:python speech recognition | done |
 | 2026-03-03 14:46 | GitHub real learn | learn_from_github | repo:[Saimulhoque/Youtube-Video-Clip-Cutter](https://github.com/Saimulhoque/Youtube-Video-Clip-Cutter) star:0 topic:python video clip slice m | done |
+| 2026-03-03 15:00 | GitHub real learn | learn_from_github | repo:[D-K-E/byeframe](https://github.com/D-K-E/byeframe) star:1 topic:moviepy video clip trim | done |
