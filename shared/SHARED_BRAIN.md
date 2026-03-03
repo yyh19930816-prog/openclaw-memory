@@ -6231,3 +6231,59 @@ https://www.openshot.org/download/
 ✔ **翻译志愿者**：支持通过LaunchPad进行多语言翻译
 
 ---
+
+### [Meituan-content] ai copywriting generator tool (2026-03-03 16:28)
+**Real source**: [HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) ⭐0
+
+以下是严格基于README内容的提炼分析：
+
+---
+
+### 1. 解决什么问题
+EmailGenie是一个AI驱动的邮件撰写工具，通过**Groq AI平台**生成个性化商务邮件（如销售、求职、合作等），解决人工撰写耗时且难以标准化的问题。
+
+---
+
+### 2. 核心功能与知识点
+- **AI邮件生成**：基于Groq的Gemma-2-9B模型生成专业邮件内容  
+- **多场景模板**：支持销售、求职、合作等多种商务邮件类型  
+- **用户画像管理**：可保存行业、受众、公司背景等发件人信息（代码中可见`user_profile_setup`函数）  
+- **技术架构**：  
+  - 前端：Streamlit  
+  - 数据库：SQLite（存储模板和发送记录）  
+  - 邮件服务：Resend API直接发送  
+
+---
+
+### 3. 关键代码示例（来自README）
+
+#### 用户画像管理
+```python
+def user_profile_setup():
+    st.header("User Profile Setup")
+    profile_name = st.text_input("Profile Name")
+    industry = st.text_input("Industry")
+    if st.button("Save Profile"):
+        save_profile(profile_name, industry...)  # 保存至Excel文件
+    # 支持查看/删除现有画像（代码片段未完全展示）
+```
+
+#### 邮件生成引擎（部分代码）
+```python
+def generate_email(email_purpose, recipient_name...):
+    prompt = f""  # README中提示词模板未完整展示
+    # 使用Groq API生成邮件内容和主题行
+```
+
+---
+
+### 4. 适用人群
+- **B2B销售人员**：需要批量生成个性化开发信  
+- **求职者**：快速定制不同岗位的求职邮件  
+- **市场团队**：遵循邮件营销最佳实践的模板生成  
+
+--- 
+
+⚠️ 注：README未提供完整的安装步骤或依赖文件（如requirements.txt），实际使用需参考Groq和Resend的API文档。
+
+---
