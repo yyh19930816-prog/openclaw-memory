@@ -3479,3 +3479,52 @@ while toaster.notification_active():
 > 💡 注：所有功能描述均严格基于README原文，未添加假设性内容。实际使用时请参考项目最新文档。
 
 ---
+
+### [Meituan-interact] python hotkey global keyboard (2026-03-03 08:42)
+**Real source**: [boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971
+**Practice code**: ✅ code/meituan_python_hotkey_global_keyboard_0303_0842.py
+
+## 1. 项目解决的问题  
+这是一个Python键盘控制库，允许开发者全局监听/模拟键盘事件、注册热键，实现自动化操作（如快捷键触发、文本替换等）。当前项目已暂停维护，但基础功能仍可用。
+
+## 2. 核心功能  
+- **全局键盘钩子**：无视窗口焦点捕获所有按键事件  
+- **跨平台支持**：Windows/Linux（需sudo）/实验性OS X  
+- **高阶API**：支持录制回放（`record/play`）、缩写替换（`add_abbreviation`）  
+- **国际化布局兼容**：正确识别非英语键位（如`Ctrl+ç`）  
+- **零依赖**：纯Python实现，无需编译  
+
+## 3. 安装与代码示例  
+### 安装方式  
+```bash
+pip install keyboard  # PyPI安装
+# 或直接克隆仓库
+git clone https://github.com/boppreh/keyboard
+```
+
+### 基础用法  
+```python
+import keyboard
+# 快捷键绑定（Ctrl+Shift+A触发打印）
+keyboard.add_hotkey('ctrl+shift+a', print, args=('hotkey!',))  
+# 录制按键直到ESC
+recorded = keyboard.record(until='esc')  
+# 三倍速回放  
+keyboard.play(recorded, speed_factor=3)  
+# 缩写替换（输入@@+空格自动补全邮箱）  
+keyboard.add_abbreviation('@@', 'me@example.com')
+```
+
+## 4. 适用场景  
+- **自动化脚本开发**（如批量输入、游戏宏）  
+- **辅助工具作者**（需监听全局热键的场景）  
+- **测试工程师**（自动化按键模拟测试）  
+
+⚠️ 注意：  
+- Linux需root权限读取`/dev/input`设备  
+- SSH环境无法使用（仅转发文本而非按键事件）  
+- 不推荐用于线上游戏或键鼠脚本（无隐藏功能）  
+
+完整API参考[项目文档](https://github.com/boppreh/keyboard#api)。
+
+---
