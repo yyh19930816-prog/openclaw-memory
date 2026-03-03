@@ -3225,3 +3225,39 @@ REPLICATE_API_TOKEN=your_replicate_api_token
 > ⚠️ 注：商业平台[FacelessVideos.app](https://facelessvideos.app/)提供在线版服务，新用户可获1000免费积分。本项目开源版本需自行配置API密钥。
 
 ---
+
+### [Meituan-content] xiaohongshu content strategy automation (2026-03-03 08:08)
+**Real source**: [Freyasrepo/TT-Refugee-Adaptation](https://github.com/Freyasrepo/TT-Refugee-Adaptation) ⭐1
+**Practice code**: ✅ code/meituan_xiaohongshu_content_strategy_automation_0303_0808.py
+
+### 1. 项目解决的问题  
+该项目研究**TikTok用户迁移至小红书后的行为变化**，通过无监督学习分析其内容策略是保持"TikTok风格"还是转向小红书原生模式（摘自README概述部分）。
+
+### 2. 核心功能/知识点  
+- **跨平台用户迁移分析**：追踪3,000名从TikTok迁至小红书用户的帖子（2025年1-2月数据），包含行为、文本和时间特征（Dataset Description）。  
+- **无监督学习模型**：结合K-Means聚类、NMF主题建模和GNN+DBSCAN，用于用户分群和异常检测（Methodology部分）。  
+- **多维度特征工程**：  
+  ```python
+  # 伪代码示例（README未提供实际代码，仅根据描述提炼）
+  features = [
+      BehavioralFeatures(collects, comments, shares, likes),
+      TemporalFeatures(post_time, frequency),
+      TextFeatures(TFIDF_keywords)
+  ]
+  ```
+- **小红书生态适配研究**：识别用户讨论主题、参与度模式及机器人活动（Key Research Questions）。  
+
+### 3. 安装/使用代码示例  
+README未提供具体安装代码，但给出**数据处理步骤**：  
+- 文本清洗：处理中英文混合内容  
+- 缺失值填充：对行为数据补全  
+- 数值标准化：转换"1万+"类 engagement 数据  
+
+### 4. 适合用户  
+- **社交平台研究者**：分析跨平台用户迁移行为  
+- **数据科学家**：实践无监督学习（聚类、主题建模）  
+- **小红书/TikTok运营**：了解用户内容适配策略  
+
+（注：全部内容均严格基于README原文，无任何编造）
+
+---
