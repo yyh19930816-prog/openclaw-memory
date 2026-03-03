@@ -3528,3 +3528,42 @@ keyboard.add_abbreviation('@@', 'me@example.com')
 完整API参考[项目文档](https://github.com/boppreh/keyboard#api)。
 
 ---
+
+### [Meituan-content] viral content formula hook engagement (2026-03-03 08:49)
+**Real source**: [parzival1920/ViralHook---Premium-Hook-Generator](https://github.com/parzival1920/ViralHook---Premium-Hook-Generator) ⭐0
+**Practice code**: ✅ code/meituan_viral_content_formula_hook_engagement_0303_0849.py
+
+# ViralHook - Premium Hook Generator 项目解析
+
+1. **项目解决的问题**：
+   - README指出该项目用于"运行和部署你的AI Studio应用"，帮助用户在本地运行基于Gemini API的AI应用。
+
+2. **核心功能/知识点**：
+   - 提供AI Studio应用的本地运行环境
+   - 依赖Node.js环境运行
+   - 需要使用Gemini API密钥进行配置
+   - 支持通过npm命令快速启动开发服务器
+   - 包含`.env.local`文件存储敏感配置
+
+3. **安装/使用代码示例**：
+   ```bash
+   # 安装依赖
+   npm install
+
+   # 启动开发服务器
+   npm run dev
+   ```
+
+   ⚠️ 注意需要先在`.env.local`文件中配置：
+   ```env
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+4. **适合人群**：
+   - 正在使用AI Studio平台的开发者
+   - 需要本地测试Gemini API应用的技术人员
+   - 想快速部署AI应用的Node.js开发者
+
+该项目README提供的信息较为基础，主要说明如何配置和运行应用，但没有详细描述应用的具体功能或架构。如需了解更多功能细节，建议访问README中提到的AI Studio链接。
+
+---
