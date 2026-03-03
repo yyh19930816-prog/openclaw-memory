@@ -3650,3 +3650,53 @@ edge-playback --text "Hello, world!" --rate=-20%
 > 注意：项目明确说明 **不支持自定义SSML**，因微软限制了非Edge生成的SSML标记。
 
 ---
+
+### [Meituan-content] video thumbnail generator python (2026-03-03 09:09)
+**Real source**: [pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) ⭐17
+**Practice code**: ✅ code/meituan_video_thumbnail_generator_python_0303_0909.py
+
+### 1. 项目解决的问题
+这是一个专为**极速生成视频缩略图**优化的工具，通过最小化资源消耗实现高效批量处理，兼容主流视频播放器的缩略图格式需求（WebVTT/JSON）。
+
+---
+
+### 2. 核心功能/知识点
+- **多格式兼容**：支持 mp4、mkv、avi、mov 等主流视频格式作为输入文件  
+- **输出灵活**：可生成 WebVTT（用于Plyr/Video.js等播放器）或 JSON 格式缩略图  
+- **双重接口**：提供 CLI 命令行工具和 Python API 两种调用方式  
+- **性能优化**：内置图片压缩技术，确保缩略图快速加载  
+- **定制化选项**：支持跳过已生成文件（`skip=True`）、设置时间间隔（`interval=5`秒）等  
+
+---
+
+### 3. 安装/使用示例
+**安装开发模式**（修改代码实时生效）：
+```bash
+python3 -m pip install -e .
+```
+
+**CLI 命令行示例**：
+```bash
+thumbnails --base /media/ --output /var/www/movie.com/media/thumbnails/ --interval 5 ~Videos/movies
+```
+
+**Python API 示例**：
+```python
+from thumbnails import Generator
+
+generator = Generator(["~Downloads/movie.mp4"])
+generator.output = "/var/www/media/thumbnails/"
+generator.interval = 5
+generator.generate()
+```
+
+---
+
+### 4. 适用人群
+- **视频网站开发者**：需为 Plyr/Video.js 等播放器生成兼容缩略图  
+- **自动化脚本用户**：通过 CLI 批量处理目录中的视频文件  
+- **Python 集成开发者**：需在应用中动态生成缩略图（如CMS系统）  
+
+> 注：所有功能描述均严格依据 README，未添加额外假设。
+
+---
