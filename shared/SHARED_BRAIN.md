@@ -6108,3 +6108,43 @@ python clips_extractor.py --url <视频URL>
 （所有信息均严格来自README原文，未添加非公开内容）
 
 ---
+
+### [Meituan-content] content calendar automation ai (2026-03-03 15:21)
+**Real source**: [ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) ⭐4
+
+以下是根据提供的GitHub README内容精确提炼的中文信息：
+
+1. **项目解决的问题**  
+   - 利用AI自动化市场营销流程，帮助企业轻松制定高效营销策略并生成营销内容（来自开篇描述）
+
+2. **核心功能**  
+   - 🔍 **市场调研**  
+     自动分析市场趋势、竞品策略和客户需求，结果存储于`resources/drafts/market_research.md`  
+   - 📈 **营销策略生成**  
+     创建包含受众细分、品牌定位和渠道选择的完整计划，存储于`resources/drafts/marketing_strategy.md`  
+   - ✍️ **多平台内容生成**  
+     自动产出社交媒体帖子（LinkedIn/Twitter）、邮件营销文案、Instagram短视频脚本及SEO博客，分别存储在`resources/drafts/posts/`和`resources/drafts/blogs/`  
+   - 🗓️ **内容日历规划**  
+     生成每周内容发布计划，包括主题和发布时间表  
+   - 🔎 **SEO优化**  
+     自动为博客添加关键词、元描述和内链以提升搜索排名  
+
+3. **输入输出示例**  
+   ```json
+   // 输入示例（README原文）
+   {
+     "product_name": "AI Powered Excel Automation Tool",
+     "target_audience": "Small and Medium Enterprises (SMEs)",
+     "product_description": "A tool that automates repetitive tasks in Excel using AI.",
+     "budget": "Rs. 50,000",
+     "current_date": "2025-08-07"
+   }
+   ```
+   - 输出为自动生成的Markdown文件（如市场调研报告、博客草稿等），存储在指定路径
+
+4. **适用人群**  
+   - 中小型企业（SMEs）的营销团队  
+   - 需要快速生成标准化营销内容的创业者  
+   - 缺乏专业SEO/内容创作资源的个人开发者
+
+---
