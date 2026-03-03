@@ -6069,3 +6069,42 @@ python byeframe.py input.mp4 \
 > ⚠️ 注意：原README明确说明最小阈值功能已废弃，仅保留最大阈值检测。
 
 ---
+
+### [Meituan-video] video clip automation python (2026-03-03 15:08)
+**Real source**: [gabrielelanzafamee/viral-clips-extractor](https://github.com/gabrielelanzafamee/viral-clips-extractor) ⭐42
+
+# Viral Clips Extractor 中文解析  
+
+## 1. 项目解决的问题  
+这是一个通过分析YouTube视频转录内容来自动提取高传播价值片段（搞笑/有趣部分）的工具，结合人脸检测实现智能剪辑和字幕生成。（基于README概述部分）  
+
+## 2. 核心功能/知识点  
+- **智能片段提取**：使用Whisper Timestamped获取带时间戳的字幕，ChatGPT 3.5分析内容识别高光时刻（README功能概述）  
+- **自动化处理**：自动切割视频时间点、生成字幕文件（功能概述第3-4点）  
+- **人脸聚焦**：通过OpenCV检测并裁剪画面至人脸区域（功能概述第5点）  
+- **依赖技术栈**：FFMPEG+ImageMagick处理媒体文件，需配置OpenAI API密钥（Requirements和安装步骤3）  
+
+## 3. 安装/使用示例  
+**安装步骤**：  
+```shell
+git clone https://github.com/xjabr/viral-clips-extractor.git
+pip install -r requirements.txt
+```
+**关键配置**（需修改API密钥）：  
+```python
+# contents/chatgpt.py中设置
+openai.api_key = '<your-token>'
+```
+**运行命令**：  
+```shell
+python clips_extractor.py --url <视频URL>
+```
+
+## 4. 目标用户  
+- **短视频创作者**：快速从长视频提取传播潜力片段  
+- **内容分析人员**：量化识别视频中的高互动内容  
+- **技术实验者**：需要Whisper+ChatGPT+OpenCV综合应用案例  
+
+（所有信息均严格来自README原文，未添加非公开内容）
+
+---
