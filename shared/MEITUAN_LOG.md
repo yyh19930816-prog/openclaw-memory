@@ -124,3 +124,4 @@
 | 2026-03-03 13:44 | GitHub real learn | learn_from_github | repo:[Saimulhoque/Youtube-Video-Clip-Cutter](https://github.com/Saimulhoque/Youtube-Video-Clip-Cutter) star:0 topic:python video clip slice m | done |
 | 2026-03-03 13:46 | GitHub real learn | learn_from_github | repo:[arirusso/viddl](https://github.com/arirusso/viddl) star:32 topic:ffmpeg video cut clip | done |
 | 2026-03-03 13:58 | GitHub real learn | learn_from_github | repo:[yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) star:10 topic:python video segment spli | done |
+| 2026-03-03 14:11 | GitHub real learn | learn_from_github | repo:[yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) star:10 topic:python video segment spli | done |
