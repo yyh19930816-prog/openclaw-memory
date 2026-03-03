@@ -109,3 +109,4 @@
 | 2026-03-03 12:53 | GitHub real learn | learn_from_github | repo:[pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) star:17 topic:video thumbnail generator | done |
 | 2026-03-03 12:54 | Learn+Code | learn+write | repo:[boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971 | ✅ code/meituan_python_hotkey_global_keyboard_0303_1254.py | done |
 | 2026-03-03 12:58 | GitHub real learn | learn_from_github | repo:[wanghaisheng/tiktoka-studio-uploader](https://github.com/wanghaisheng/tiktoka-studio-uploader) star:352 topic:social media scheduler py | done |
+| 2026-03-03 13:00 | GitHub real learn | learn_from_github | repo:[klonnet23/helloy-word](https://github.com/klonnet23/helloy-word) star:82 topic:python system tray app | done |
