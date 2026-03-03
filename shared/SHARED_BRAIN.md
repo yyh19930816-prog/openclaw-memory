@@ -4401,3 +4401,57 @@ npm run dev
 （所有内容均严格来自README原文，无主观增补）
 
 ---
+
+### [Meituan-tech] python text to speech edge tts (2026-03-03 11:31)
+**Real source**: [rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10135
+**Practice code**: ✅ code/meituan_python_text_to_speech_edge_tts_0303_1131.py
+
+# edge-tts：微软Edge语音合成的Python工具  
+
+## 1. 解决的问题  
+该项目让开发者能直接在Python代码或命令行中使用**微软Edge的在线文本转语音服务**，无需通过浏览器操作。
+
+## 2. 核心功能  
+- **多语言语音支持**：提供全球多种语言/方言的神经语音（如阿拉伯语`ar-EG-SalmaNeural`）  
+- **语音参数调整**：通过`--rate`(语速)、`--volume`(音量)、`--pitch`(音高)控制输出  
+- **字幕生成**：转换时可同步生成`.srt`格式字幕文件  
+- **即时播放功能**：通过`edge-playback`命令实时播放合成语音（依赖mpv播放器）  
+- **微软服务限制**：不支持自定义SSML，仅允许使用Edge生成的语音标签结构  
+
+## 3. 关键代码示例  
+
+**安装方式**  
+```bash
+# 标准安装
+pip install edge-tts
+
+# 仅命令行使用（推荐）
+pipx install edge-tts
+```
+
+**基础使用**  
+```bash
+# 文本转语音并保存
+edge-tts --text "Hello, world!" --write-media hello.mp3 --write-subtitles hello.srt
+
+# 更换语音并调整语速（注意负值写法）
+edge-tts --voice ar-EG-SalmaNeural --rate=-50% --text "مرحبا" --write-media output.mp3
+```
+
+**语音列表查询**  
+```bash
+edge-tts --list-voices
+# 输出示例：
+# Name                     Gender  ContentCategories  
+# af-ZA-AdriNeural         Female  General
+# am-ET-MekdesNeural       Female  General  
+```
+
+## 4. 适用人群  
+- **需要快速集成TTS服务的开发者**  
+- **多语言项目需本地生成语音内容的技术团队**  
+- **语音研究/测试人员**（注意服务限制）  
+
+> ⚠️ 注意：所有功能均基于微软Edge在线服务实现，自定义SSML等高级功能受官方限制无法支持。
+
+---
