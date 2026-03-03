@@ -4599,3 +4599,46 @@ driver = webdriver.Firefox(executable_path='your/geckodriver/path')
 > 注意：所有脚本均需自行配置账号密码、图片路径和目标群组链接（LinkedIn还需指定公司页）。项目最后更新于2018年，使用时需注意各平台可能更新的反爬机制。
 
 ---
+
+### [Meituan-interact] python windows notification toast (2026-03-03 11:59)
+**Real source**: [jithurjacob/Windows-10-Toast-Notifications](https://github.com/jithurjacob/Windows-10-Toast-Notifications) ⭐993
+**Practice code**: ✅ code/meituan_python_windows_notification_toast_0303_1159.py
+
+### Windows 10 Toast Notifications 项目解析
+
+1. **项目解决的问题**  
+   这是一个简单易用的Python库，用于在Windows 10中显示Toast通知，方便Windows GUI开发人员快速集成系统通知功能。
+
+2. **核心功能/知识点**  
+   * 基于Python的Windows 10原生通知弹窗
+   * 支持自定义图标（`icon_path`参数）
+   * 可设置通知持续时间（`duration`参数，单位秒）  
+   * 支持多线程通知（`threaded=True`时需配合`notification_active()`检测状态）
+   * 依赖`pywin32`和`setuptools`运行环境
+
+3. **安装与代码示例**  
+
+   **安装命令**  
+   ```python
+   pip install win10toast
+   ```
+
+   **基础使用示例**  
+   ```python
+   # 非线程式通知
+   toaster.show_toast("标题", "内容", icon_path="custom.ico", duration=10)
+
+   # 线程式通知（需主动检测状态）
+   toaster.show_toast("线程通知", "独立线程运行", threaded=True)
+   while toaster.notification_active(): 
+       time.sleep(0.1)
+   ```
+
+4. **适用人群**  
+   * Windows平台Python开发者  
+   * 需要为桌面程序添加系统通知功能的场景  
+   * 自动化脚本需要可视化提醒的场景  
+
+（注：所有功能描述均严格摘自README，无额外补充内容）
+
+---
