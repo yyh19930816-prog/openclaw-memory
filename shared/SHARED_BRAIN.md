@@ -5867,3 +5867,44 @@ ffmpeg -version  # 所有平台通用
 （说明：原文未提供具体调用代码示例，仅描述工作流程）
 
 ---
+
+### [Meituan-video] python video segment split (2026-03-03 14:11)
+**Real source**: [yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) ⭐10
+
+### Scene Segment Splitter 项目解析  
+
+#### 1. 解决的问题  
+自动拆分包含两个剧集的视频文件，并正确处理片头片段和过渡帧（基于黑帧检测），适用于需要批量处理剧集的场景。  
+
+#### 2. 核心功能  
+- **自动分集**：将双剧集视频拆分成独立文件  
+- **片头处理**：提取首集的片头片段并添加到第二集  
+- **过渡检测**：通过黑帧检测识别剧集间的切换点  
+- **命名规范**：根据输入文件名自动生成剧集编号和名称  
+- **日志记录**：生成详细处理日志  
+
+#### 3. 安装与代码示例  
+**依赖环境**  
+```bash
+# 创建虚拟环境（Windows）
+python -m venv myenv
+myenv\Scripts\activate
+
+# 安装依赖
+pip install -r requirements.txt
+```
+
+**FFmpeg安装（Mac示例）**  
+```bash
+brew install ffmpeg
+ffmpeg -version  # 验证安装
+```
+
+#### 4. 适用人群  
+- **剧集整理爱好者**：需批量处理双剧集合并的视频文件  
+- **自动化工具用户**：依赖FFmpeg和Python脚本的影视处理流程  
+- **开发者**：需学习黑帧检测或视频分段技术的参考案例  
+
+（注：所有内容均严格基于README原文，未添加外部信息）
+
+---
