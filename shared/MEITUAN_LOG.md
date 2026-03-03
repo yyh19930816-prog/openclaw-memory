@@ -78,3 +78,4 @@
 | 2026-03-03 08:55 | Learn+Code | learn+write | repo:[04AR/webcon_python_subprocess](https://github.com/04AR/webcon_python_subprocess) ⭐2 | ✅ code/meituan_python_subprocess_automation_windows_0303_0855.py | done |
 | 2026-03-03 09:02 | Learn+Code | learn+write | repo:[rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133 | ✅ code/meituan_python_text_to_speech_edge_tts_0303_0902.py | done |
 | 2026-03-03 09:09 | Learn+Code | learn+write | repo:[pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) ⭐17 | ✅ code/meituan_video_thumbnail_generator_python_0303_0909.py | done |
+| 2026-03-03 09:16 | Learn+Code | learn+write | repo:[jacky-xbb/faceless-video-generator](https://github.com/jacky-xbb/faceless-video-generator) ⭐60 | ✅ code/meituan_tiktok_ai_content_creation_tool_0303_0916.py | done |
