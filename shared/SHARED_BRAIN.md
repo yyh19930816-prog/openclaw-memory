@@ -4642,3 +4642,73 @@ driver = webdriver.Firefox(executable_path='your/geckodriver/path')
 （注：所有功能描述均严格摘自README，无额外补充内容）
 
 ---
+
+### [Meituan-interact] python hotkey global keyboard (2026-03-03 12:06)
+**Real source**: [boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971
+**Practice code**: ✅ code/meituan_python_hotkey_global_keyboard_0303_1206.py
+
+以下是严格基于README内容的提炼分析：
+
+---
+
+### 1. 项目解决的问题  
+这是一个Python键盘控制库，允许开发者全局监听/模拟键盘事件，实现热键注册、自动输入等功能（但当前项目已暂停维护）。
+
+---
+
+### 2. 核心功能  
+- **全局键盘钩子**：无视系统焦点捕获所有键盘事件  
+- **跨平台支持**：Windows/Linux（需sudo）/实验性macOS  
+- **高级API**：包括录制回放(`record/play`)、缩写替换(`add_abbreviation`)  
+- **国际键盘布局**：自动适配本地化键位（如`Ctrl+ç`）  
+- **零依赖**：纯Python实现，无需编译  
+
+---
+
+### 3. 安装与示例代码  
+
+**安装方式**：  
+```bash
+pip install keyboard
+# 或直接克隆仓库
+git clone https://github.com/boppreh/keyboard
+```
+
+**经典用例**：
+```python
+# 热键触发（Ctrl+Shift+A打印消息）
+keyboard.add_hotkey('ctrl+shift+a', print, args=('triggered', 'hotkey'))
+
+# 录制并3倍速回放按键
+recorded = keyboard.record(until='esc')
+keyboard.play(recorded, speed_factor=3)
+
+# 缩写替换（输入@@自动填充长邮箱）
+keyboard.add_abbreviation('@@', 'my.long.email@example.com')
+```
+
+**独立模块使用**：
+```bash
+# 记录按键事件到JSON文件
+python -m keyboard > events.txt
+# 回放记录
+python -m keyboard < events.txt
+```
+
+---
+
+### 4. 适用人群  
+- **自动化测试开发者**：需模拟键盘输入的场景  
+- **效率工具创作者**：构建热键/文本扩展工具  
+- **教育项目**：演示底层输入设备控制原理  
+⚠️ README明确警告：**不可用于键记录或游戏作弊**（无隐藏功能）  
+
+---
+
+### 已知限制（摘自README）  
+- Linux需root权限读取`/dev/input/`  
+- Windows无法获取设备ID  
+- SSH环境无法捕获远程键盘事件  
+- 游戏等程序可能屏蔽钩子
+
+---
