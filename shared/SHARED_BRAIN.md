@@ -3766,3 +3766,51 @@ python src/main.py
 严格遵循 README 内容，未添加任何非原文信息。
 
 ---
+
+### [Meituan-content] content calendar automation ai (2026-03-03 09:23)
+**Real source**: [ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) ⭐4
+**Practice code**: ✅ code/meituan_content_calendar_automation_ai_0303_0923.py
+
+### 1. 项目解决的问题  
+该项目通过AI驱动的智能营销团队（基于CrewAI框架构建），**自动化执行营销任务**，帮助企业轻松制定高影响力的营销策略和内容（源自README首段描述）。
+
+---
+
+### 2. 核心功能  
+- **市场调研**  
+  分析市场趋势、竞争对手和客户需求，结果存储于`resources/drafts/market_research.md`。  
+- **营销策略生成**  
+  定制化营销计划（包括受众细分、渠道选择），存储为`marketing_strategy.md`。  
+- **内容日历制作**  
+  自动生成每周内容计划表（主题/发布时间），保存至`content_calendar.md`。  
+- **多平台内容创作**  
+  - 社交媒体帖文（LinkedIn/Twitter等）和邮件营销草稿 → 存储于`resources/drafts/posts/`  
+  - Instagram短视频脚本 → 保存为`reels1.md`等文件  
+  - SEO优化博客 → 输出到`resources/drafts/blogs/`  
+
+---
+
+### 3. 使用流程示例  
+README未提供具体安装代码，但展示了输入/输出结构：  
+```json
+// 输入示例（JSON格式）
+{
+ "product_name": "AI Powered Excel Automation Tool",
+ "target_audience": "中小企业(SMEs)",
+ "product_description": "通过AI自动化Excel重复任务的工具",
+ "budget": "50,000卢比",
+ "current_date": "2025-08-07"
+}
+// 输出：自动生成的文件（如market_research.md）会保存到resources/drafts/目录下
+```
+
+---
+
+### 4. 适合人群  
+- **中小企业营销团队**：需快速生成策略且预算有限  
+- **内容创作者**：需要批量生产社交媒体/博客内容  
+- **SEO从业者**：依赖自动化工具优化关键词和元数据  
+
+（注：所有信息均严格摘自README原文，未添加额外假设。）
+
+---
