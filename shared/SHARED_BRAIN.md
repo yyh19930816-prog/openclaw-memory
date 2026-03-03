@@ -4003,3 +4003,41 @@ npm run dev
 （注：所有内容均严格基于README原文，无额外补充信息）
 
 ---
+
+### [Meituan-content] youtube shorts script template (2026-03-03 09:59)
+**Real source**: [IgorShadurin/app.yumcut.com](https://github.com/IgorShadurin/app.yumcut.com) ⭐1025
+**Practice code**: ✅ code/meituan_youtube_shorts_script_template_0303_0959.py
+
+### YumCut项目解析：开源短视频AI生成工具  
+
+**1. 解决的问题**  
+- 将短视频制作从混乱的手动剪辑转变为可重复的工作流程  
+- 通过开源/自托管方案降低生产成本  
+
+**2. 核心功能**  
+- **全流程生成**：根据用户想法自动生成脚本、配音、画面、字幕和最终9:16比例视频  
+- **多平台适配**：专为TikTok/YouTube Shorts/Instagram Reels设计  
+- **多语言支持**：一键生成不同语言版本的视频（如西班牙语案例）  
+- **成本可控**：支持自托管和第三方服务接入  
+- **批量化生产**：适用于多品牌/客户的批量内容制作  
+
+**3. 适合人群**  
+- 无露脸频道的日常短视频创作者  
+- 需要快速测试不同内容风格的成长团队  
+- 为多语言市场制作内容的国际团队  
+- 服务多个客户的营销机构  
+
+**4. 核心技术特色**（来自README架构描述）  
+```text
+- 生产导向架构：分离应用与存储模式
+- 安全控制：签名上传/删除授权
+- 强类型API边界设计
+```  
+
+**5. 示例效果**（引用README可视化案例）  
+- [《辛普森一家》风格示例](https://youtube.com/shorts/ZnUjLcjjc0k)（YouTube Shorts 1.5K播放）  
+- [比特币故事](https://vt.tiktok.com/ZSaC2vsr6/)（TikTok 90K播放）  
+
+⚠️ 注：README未提供具体安装代码，仅说明提供自托管方案和已部署的托管版本。实际使用需参考项目文档。
+
+---
