@@ -5662,3 +5662,48 @@ root.mainloop()
 注意：所有信息均严格来自 README，未添加额外内容。
 
 ---
+
+### [Meituan-content] ai copywriting generator tool (2026-03-03 13:42)
+**Real source**: [HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) ⭐0
+
+### 1. 项目解决什么问题  
+该项目通过AI驱动的邮件生成工具（基于Groq平台的Gemma-2-9B模型），帮助用户快速创建个性化商业推广邮件，覆盖销售、求职、合作等多场景需求。  
+
+---
+
+### 2. 核心功能与知识点  
+- **AI邮件生成**：使用Groq Gemma-2-9B模型智能生成上下文相关的邮件内容。  
+- **多类型模板**：支持销售、求职、合作等不同邮件模板（来自READEME中的`Multi-Purpose Templates`说明）。  
+- **集成能力**：通过Resend API直接发送邮件，并支持HubSpot CRM对接（来自`Direct Email Integration`和`CRM Integration`部分）。  
+- **本地数据管理**：采用SQLite存储用户配置和邮件历史记录（`Local Database`部分）。  
+- **实时编辑预览**：Streamlit前端提供邮件草稿的实时修改功能（`Email Preview & Editing`部分）。  
+
+---
+
+### 3. 安装/使用代码示例（来自README原文）  
+- **用户配置管理功能**：  
+  ```python
+  def user_profile_setup():
+      st.header("User Profile Setup")
+      # 输入字段包括行业、目标受众、发件人信息等
+      profile_name = st.text_input("Profile Name")
+      industry = st.text_input("Industry")
+      if st.button("Save Profile"):
+          save_profile(profile_name, industry, ...)  # 保存到本地数据库
+  ```
+- **邮件生成逻辑片段**（README未完整展示，仅含框架）：  
+  ```python
+  def generate_email(email_purpose, recipient_name, ...):
+      prompt = f"...AI生成邮件的提示词..."  # 根据输入参数动态生成提示词
+  ```
+
+---
+
+### 4. 适合人群  
+- **B2B销售人员**：需批量发送个性化推广邮件。  
+- **求职者**：快速生成针对不同公司的求职邮件。  
+- **商务拓展人员**：与合作方高效沟通（来自README的`Multi-Purpose Templates`应用场景说明）。  
+
+注：所有信息均严格源自README原文，未添加外部内容。技术栈部分未展开，因README未提供具体安装步骤或依赖文件（如requirements.txt）。
+
+---
