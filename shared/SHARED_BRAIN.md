@@ -5149,3 +5149,43 @@ keyboard.play(recorded)  # 回放
 **注意**：当前项目未维护，部分功能可能受限，Linux需root权限，不适合游戏外挂/键鼠录制等场景（如README明确警告）。
 
 ---
+
+### [Meituan-content] social media scheduler python (2026-03-03 12:58)
+**Real source**: [wanghaisheng/tiktoka-studio-uploader](https://github.com/wanghaisheng/tiktoka-studio-uploader) ⭐352
+
+以下是严格基于README内容的提炼：
+
+---
+
+### 1. 项目解决的问题  
+自动化社交媒体平台（如YouTube/TikTok）的视频上传流程，帮助用户节省重复操作时间（出自开发者自述部分）。
+
+---
+
+### 2. 核心功能/知识点  
+- **跨平台支持**：通过Playwright实现浏览器自动化上传（取代旧版Selenium）
+- **多版本选择**：提供GUI版本（V1/V2）和脚本版本（当前仓库）
+- **扩展服务**：付费支持私有化部署服务器（开发者明确提及）
+- **持续维护**：因旧包`tsup`停用，已重打包发布至PyPI（2023-12-06更新）
+- **移动端计划**：未来将支持手机端上传以规避平台反爬机制（Roadmap部分）
+
+---
+
+### 3. 安装/使用代码示例  
+README未提供具体代码，但明确指出：  
+```bash
+# 通过PyPI安装（包名已更新）
+pip install upgenius  
+```
+使用需参考独立的指南文档：  
+- [YouTube上传指南](./how-to-upload-youtube.md)  
+- [TikTok上传指南](./how-to-upload-tiktok.md)
+
+---
+
+### 4. 适合人群  
+- **电商运营者**：开发者提到为Shopify商店编写此工具  
+- **社媒内容创作者**：需要批量/定时发布视频的用户  
+- **技术尝鲜者**：README明确标注可提交issue咨询技术问题
+
+---
