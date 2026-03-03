@@ -4041,3 +4041,70 @@ npm run dev
 ⚠️ 注：README未提供具体安装代码，仅说明提供自托管方案和已部署的托管版本。实际使用需参考项目文档。
 
 ---
+
+### [Meituan-content] xiaohongshu content strategy automation (2026-03-03 10:20)
+**Real source**: [Freyasrepo/TT-Refugee-Adaptation](https://github.com/Freyasrepo/TT-Refugee-Adaptation) ⭐1
+**Practice code**: ✅ code/meituan_xiaohongshu_content_strategy_automation_0303_1020.py
+
+# TikTok难民在小红书的迁移与适应研究分析
+
+## 项目解决的问题
+该项目研究**TikTok用户迁移至小红书平台后**的行为变化，通过无监督学习技术分析他们在新平台的**身份重建与内容适应策略**。
+
+## 核心功能/知识点
+
+- **跨平台行为分析**：追踪3,000名用户从TikTok迁至小红书(2025年1-2月数据)后的关键行为指标：
+  ```python
+  # 数据集包含的关键指标
+  features = ['collects', 'comments', 'shares', 'likes', 
+             'post_timestamp', 'post_type', 'engagement_level']
+  ```
+
+- **混合方法研究**：
+  - 行为特征：收藏/评论/分享数量
+  - 文本特征：TF-IDF关键词提取
+  - 时序特征：发帖频率与时间段分析
+
+- **无监督学习模型组合**：
+  ```python
+  # README提名的模型组合
+  models = [
+      'K-Means + NMF主题建模',
+      '图神经网络(GNN) + DBSCAN聚类'
+  ]
+  ```
+
+- **异常检测能力**：
+  - 识别机器人账号
+  - 检测超活跃KOL
+
+- **商业应用方向**：
+  - 为小红书推荐系统优化提供策略
+  - 识别高潜力跨平台创作者
+
+## 适合人群
+
+- **社交平台研究者**：研究用户跨平台迁移行为的学术人员
+- **数据科学家**：需要实践无监督学习(GNN/NMF/DBSCAN)的工程师
+- **小红书运营团队**：了解竞品用户特性的平台方
+- **数字营销从业者**：研究用户内容适应策略的市场人员
+
+## 技术亮点总结
+
+- **多模态特征处理**：
+  ```python
+  # 数据预处理步骤
+  '文本清洗' -> '缺失值处理' -> '数值标准化(如"1万+"转换)'
+  ```
+
+- **创新模型应用**：
+  - K-Means用于用户分群
+  - NMF提取内容主题
+  - GNN+DBSCAN检测社区结构
+
+- **可视化分析**：
+  - 用户行为分布图
+  - 关键词共现热力图
+  - 社交网络关系图
+
+---
