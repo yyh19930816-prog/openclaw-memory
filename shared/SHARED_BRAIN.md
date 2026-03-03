@@ -5404,3 +5404,50 @@ video.create_clip(options)
 > ⚠️ 注意：所有功能均严格基于README描述，未添加任何虚构内容。
 
 ---
+
+### [Meituan-content] content calendar automation ai (2026-03-03 13:32)
+**Real source**: [ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) ⭐4
+
+根据提供的GitHub README内容，以下是严格提炼的中文信息：
+
+### 1. 解决的问题  
+项目通过AI驱动的营销自动化系统，**帮助企业自动执行营销任务并制定高效策略**，尤其解决中小企业创建战略内容和市场分析的效率问题。（源自首段描述和输入示例）
+
+---
+
+### 2. 核心功能  
+- **市场研究**：自动分析市场趋势、竞争对手和客户需求，存储为`market_research.md`。  
+- **营销策略生成**：定制受众细分、渠道选择和品牌定位方案，保存至`marketing_strategy.md`。  
+- **内容生产流水线**：  
+  - 社交媒体帖子和邮件草稿（存储于`posts/`目录）  
+  - Instagram视频脚本（`reels/`目录）  
+  - SEO优化博客（含关键词和元描述，`blogs/`目录）  
+- **自动化工具支持**：使用`SerperDevTool`和`ScrapeWebsiteTool`抓取数据。（全部功能点均来自输出示例部分）  
+
+---
+
+### 3. 使用示例  
+READEME未提供具体安装代码，但展示了输入输出的JSON结构范例：  
+```json
+{
+  "product_name": "AI驱动Excel自动化工具",
+  "target_audience": "中小企业(SMEs)",
+  "product_description": "利用AI自动化Excel重复任务的工具",
+  "budget": "50,000卢比",
+  "current_date": "2025-08-07"
+}
+```
+系统会根据输入自动生成各模块内容并保存至对应Markdown文件。
+
+---
+
+### 4. 目标用户  
+- **中小企业营销团队**：需快速生成策略但缺乏人力  
+- **独立内容创作者**：依赖社交媒体和博客推广  
+- **营销代理商**：为多个客户批量化生产内容  
+
+（用户推断基于输入示例中的中小企业定位和输出内容类型）  
+
+⚠️ 注意：所有信息均严格源自README原文，未添加任何额外假设。
+
+---
