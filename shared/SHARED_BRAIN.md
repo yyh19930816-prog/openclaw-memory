@@ -3609,3 +3609,44 @@ pip install -r requirements.txt
 注：所有内容均直接翻译/引用自README原文，未添加任何外部信息。项目未提及具体功能实现，仅涉及环境配置流程。
 
 ---
+
+### [Meituan-tech] python text to speech edge tts (2026-03-03 09:02)
+**Real source**: [rany2/edge-tts](https://github.com/rany2/edge-tts) ⭐10133
+**Practice code**: ✅ code/meituan_python_text_to_speech_edge_tts_0303_0902.py
+
+# edge-tts 中文解析
+
+## 项目定位
+该项目通过Python模块/命令行工具，让开发者能直接调用Microsoft Edge的在线文本转语音(TTS)服务。
+
+## 核心功能
+- **多语言语音支持**：提供全球多种语言/性别的神经网络语音（如阿拉伯语`ar-EG-SalmaNeural`）
+- **参数化调节**：支持调整语速(`--rate`)、音量(`--volume`)和音高(`--pitch`)
+- **即时播放与输出**：通过`edge-playback`实时播放或生成音频/字幕文件
+- **语音列表查询**：`--list-voices`可查看全部支持的语音选项
+- **简洁API**：支持Python直接调用（示例见`/examples/`目录）
+
+## 安装与使用
+```bash
+# 标准安装
+pip install edge-tts
+
+# 推荐CLI专用安装（隔离环境）
+pipx install edge-tts
+
+# 生成阿拉伯语语音文件
+edge-tts --voice ar-EG-SalmaNeural --text "مرحبا كيف حالك؟" --write-media hello.mp3
+
+# 实时播放（需安装mpv）
+edge-playback --text "Hello, world!" --rate=-20%
+```
+
+## 适用人群
+- 需要快速集成高质量TTS的Python开发者
+- 多语言项目需要语音输出的应用场景
+- 需要调节语音参数的音视频创作者
+- 避免自己部署语音合成服务的轻量化方案
+
+> 注意：项目明确说明 **不支持自定义SSML**，因微软限制了非Edge生成的SSML标记。
+
+---
