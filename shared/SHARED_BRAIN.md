@@ -3567,3 +3567,45 @@ keyboard.add_abbreviation('@@', 'me@example.com')
 该项目README提供的信息较为基础，主要说明如何配置和运行应用，但没有详细描述应用的具体功能或架构。如需了解更多功能细节，建议访问README中提到的AI Studio链接。
 
 ---
+
+### [Meituan-tech] python subprocess automation windows (2026-03-03 08:55)
+**Real source**: [04AR/webcon_python_subprocess](https://github.com/04AR/webcon_python_subprocess) ⭐2
+**Practice code**: ✅ code/meituan_python_subprocess_automation_windows_0303_0855.py
+
+根据GitHub仓库 **04AR/webcon_python_subprocess** 的README内容，以下是严格基于原文的中文提炼：
+
+---
+
+### 1. 项目解决的问题  
+该项目提供了Python项目环境配置的标准流程，帮助开发者快速搭建隔离的Python虚拟环境并安装依赖。
+
+### 2. 核心功能/知识点  
+- **虚拟环境创建**：通过Python内置模块`venv`创建项目级隔离环境  
+- **跨平台环境激活**：支持Windows/macOS/Linux系统的虚拟环境激活命令  
+- **依赖安装**：通过`requirements.txt`一键安装所有依赖包  
+
+### 3. 安装/使用代码示例  
+```sh
+# 创建虚拟环境（所有系统通用）
+python -m venv .
+
+# 激活环境（Windows）
+.\venv\Scripts\activate
+
+# 激活环境（macOS/Linux）
+source venv/bin/activate
+
+# 安装依赖（需先激活环境）
+pip install -r requirements.txt
+```
+
+### 4. 适合人群  
+- 需要快速初始化Python项目环境的开发者  
+- 学习Python虚拟环境管理的新手  
+- 跨平台协作的团队（提供Windows/macOS/Linux兼容指令）  
+
+---
+
+注：所有内容均直接翻译/引用自README原文，未添加任何外部信息。项目未提及具体功能实现，仅涉及环境配置流程。
+
+---
