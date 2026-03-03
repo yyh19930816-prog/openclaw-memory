@@ -129,3 +129,4 @@
 | 2026-03-03 14:34 | GitHub real learn | learn_from_github | repo:[alphacep/vosk-api](https://github.com/alphacep/vosk-api) star:14315 topic:python speech recognition | done |
 | 2026-03-03 14:46 | GitHub real learn | learn_from_github | repo:[Saimulhoque/Youtube-Video-Clip-Cutter](https://github.com/Saimulhoque/Youtube-Video-Clip-Cutter) star:0 topic:python video clip slice m | done |
 | 2026-03-03 15:00 | GitHub real learn | learn_from_github | repo:[D-K-E/byeframe](https://github.com/D-K-E/byeframe) star:1 topic:moviepy video clip trim | done |
+| 2026-03-03 15:08 | GitHub real learn | learn_from_github | repo:[gabrielelanzafamee/viral-clips-extractor](https://github.com/gabrielelanzafamee/viral-clips-extractor) star:42 topic:video clip automation pyt | done |
