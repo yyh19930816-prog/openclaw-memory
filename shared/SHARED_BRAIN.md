@@ -3369,3 +3369,53 @@ generator.generate()
 （所有内容均严格遵循README原文，未添加额外信息）
 
 ---
+
+### [Meituan-interact] python desktop gui tkinter modern (2026-03-03 08:29)
+**Real source**: [israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) ⭐2564
+**Practice code**: ✅ code/meituan_python_desktop_gui_tkinter_modern_0303_0829.py
+
+# ttkbootstrap - Tkinter现代主题美化库
+
+## 项目定位
+ttkbootstrap解决了Python标准库tkinter界面样式老旧的问题，提供类似Bootstrap的现代化扁平风格主题和预定义控件样式。
+
+## 核心功能
+- **丰富主题库**  
+  内置十余种精心设计的深色/浅色主题（如演示中的`superhero`主题）
+  
+- **简化样式API**  
+  使用`primary`/`info-outline`等直观关键词替代传统冗长的ttk样式类名
+
+- **增强型控件**  
+  新增`Meter`仪表盘、`DateEntry`日期选择器等特色组件：  
+  ```python
+  date_entry = ttk.DateEntry(root)
+  ```
+
+- **主题创作工具**  
+  内置可视化主题生成器，支持自定义配色方案
+
+## 安装与基础使用
+1. 安装命令：  
+```bash
+python -m pip install ttkbootstrap
+```
+
+2. 快速创建风格化窗口：  
+```python
+import ttkbootstrap as ttk
+
+app = ttk.Window(themename="superhero")  # 应用主题
+btn = ttk.Button(app, text="确认", bootstyle="success")
+btn.pack(padx=10, pady=10)
+app.mainloop()
+```
+
+## 目标用户
+- 需要快速美化tkinter界面的Python开发者
+- 熟悉Bootstrap设计风格的前端转GUI开发人员
+- 教育领域需要演示现代UI设计的编程教师
+
+> 所有功能描述均严格基于README原文，未添加任何虚构内容。完整API请参考[官方文档](https://ttkbootstrap.readthedocs.io)。
+
+---
