@@ -4455,3 +4455,46 @@ edge-tts --list-voices
 > ⚠️ 注意：所有功能均基于微软Edge在线服务实现，自定义SSML等高级功能受官方限制无法支持。
 
 ---
+
+### [Meituan-content] social media scheduler python (2026-03-03 11:38)
+**Real source**: [wanghaisheng/tiktoka-studio-uploader](https://github.com/wanghaisheng/tiktoka-studio-uploader) ⭐352
+**Practice code**: ✅ code/meituan_social_media_scheduler_python_0303_1138.py
+
+根据提供的GitHub仓库README内容，以下是严格提炼的中文信息：
+
+---
+
+### 1. 项目解决的问题
+自动化社交媒体平台（如YouTube/TikTok）的视频上传流程，帮助用户节省手动操作时间（特别是疫情期间需要远程运营Shopify商店时）。
+
+---
+
+### 2. 核心功能/知识点
+- **多平台支持**：提供YouTube和TikTok的视频自动上传功能（需查看单独的[YouTube教程](how-to-upload-youtube.md)和[TikTok教程](how-to-upload-tiktok.md)）
+- **技术演进**：从最初的Selenium版本过渡到自主开发的Playwright版本
+- **GUI选择**：提供[V1](https://github.com/wanghaisheng/uploader-genius-V1)和[V2](https://github.com/wanghaisheng/tiktoka-studio-uploader-app)两个图形界面版本
+- **移动端计划**：未来计划支持移动端上传以避免平台反爬机制
+- **付费支持**：作者提供有偿的服务器部署协助服务
+
+---
+
+### 3. 安装/使用代码示例
+README中未提供具体代码片段，但包含以下关键安装信息：
+```markdown
+1. 已重命名PyPi包以便安装（原tsup包不可用）
+2. 通过PyPi安装：[![PyPi](https://img.shields.io/badge/-PyPi-blue.svg)](https://pypi.org/project/upgenius)
+```
+
+---
+
+### 4. 适合人群
+- **电商运营者**：如Shopify店主需要自动化社交媒体发布
+- **内容创作者**：需批量上传视频到多平台的用户
+- **技术学习者**：想研究Playwright/Selenium自动化案例的开发人员
+- **付费服务需求者**：需要作者提供私有化部署支持的用户
+
+---
+
+⚠️ 所有信息均直接来自README原文，未添加任何虚构内容。项目最新动态请参考[官网](www.tiktokastudio.com)或提交GitHub Issue咨询作者。
+
+---
