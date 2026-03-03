@@ -5602,3 +5602,63 @@ ffmpeg -version
 > 注意：所有功能描述均基于README原文，未添加任何假设性内容。完整使用需按照文档配置FFmpeg环境并准备符合格式的CSV剧集列表。
 
 ---
+
+### [Meituan-interact] python desktop gui tkinter modern (2026-03-03 13:41)
+**Real source**: [israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) ⭐2564
+
+这里是基于 **ttkbootstrap** README 的准确提炼：
+
+---
+
+### 1. 解决什么问题  
+ttkbootstrap 通过提供受 Bootstrap 启发的现代化扁平风格主题，增强 tkinter 的界面美观性，帮助开发者快速创建时尚的 GUI 应用。
+
+---
+
+### 2. 核心功能  
+✔️ **内置主题**  
+提供十余种精心设计的深色和浅色主题（如 `superhero`），可直接调用。  
+✔️ **预定义样式**  
+简化样式配置，使用 `bootstyle` 关键词（如 `success`、`info-outline`）替代传统复杂写法。  
+✔️ **新增组件**  
+包含美观的扩展组件如 `Meter`、`DateEntry` 和 `Floodgauge`，且所有对话框支持主题定制。  
+✔️ **主题创建器**  
+内置工具支持自定义主题的创建、加载和应用。  
+
+---
+
+### 3. 安装与示例代码  
+**安装命令**（摘自 README）：  
+```python
+python -m pip install ttkbootstrap
+```
+
+**基础用法示例**（原文代码）：  
+```python
+import ttkbootstrap as ttk
+
+root = ttk.Window(themename="superhero")  # 使用superhero主题
+
+b1 = ttk.Button(root, text="Submit", bootstyle="success")  # 绿色按钮
+b2 = ttk.Button(root, text="Cancel", bootstyle="info-outline")  # 蓝色轮廓按钮
+b1.pack(side="left", padx=5, pady=10)
+b2.pack(side="left", padx=5, pady=10)
+
+root.mainloop()
+```
+关键词 API 支持多种格式：`"info-outline"`、`("info", "outline")` 等均可。
+
+---
+
+### 4. 适合人群  
+- 需要快速美化 tkinter 界面的开发者  
+- 熟悉 Bootstrap 设计风格的前端转 GUI 开发人员  
+- 希望减少复杂样式代码的 Python 用户  
+
+（文档链接：[官方文档](https://ttkbootstrap.readthedocs.io/)）  
+
+--- 
+
+注意：所有信息均严格来自 README，未添加额外内容。
+
+---
