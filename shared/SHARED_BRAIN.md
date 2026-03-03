@@ -4553,3 +4553,49 @@ if st.button("Save Profile"):
 （注：所有信息均严格来自README原文，未添加任何外部内容）
 
 ---
+
+### [Meituan-tech] python social media automation post (2026-03-03 11:52)
+**Real source**: [ColombiaPython/social-media-automation](https://github.com/ColombiaPython/social-media-automation) ⭐108
+**Practice code**: ✅ code/meituan_python_social_media_automation_post_0303_1152.py
+
+# ColombiaPython/social-media-automation 项目解析
+
+## 1. 项目解决的问题
+该项目提供基于Selenium的自动化脚本，用于向Facebook群组、Twitter和LinkedIn（个人主页/公司页/群组）发布带图片的文字内容。
+
+## 2. 核心功能与知识点
+- **跨平台发布支持**：覆盖三大主流社交平台（Facebook/Twitter/LinkedIn）
+- **Selenium自动化**：使用Python Selenium绑定实现浏览器自动化操作
+- **灵活发布场景**：
+  - Facebook支持群组发布
+  - LinkedIn支持个人主页、公司页面和群组发布
+  - Twitter支持基础推文发布
+- **环境隔离**：要求通过virtualenv创建Python虚拟环境
+- **驱动配置**：需单独配置geckodriver路径
+
+## 3. 安装与使用示例
+```bash
+# 创建虚拟环境（所有平台通用）
+$ pip install virtualenv
+$ virtualenv venv
+$ source venv/bin/activate  # 激活环境
+
+# 安装依赖（示例以Facebook为例）
+$ (venv) pip install selenium
+$ (venv) python fbposter.py  # 运行脚本
+```
+
+需在脚本中修改的关键配置：
+```python
+# 示例配置位置（对应各脚本的line 23）
+driver = webdriver.Firefox(executable_path='your/geckodriver/path')
+```
+
+## 4. 适合人群
+- **社交媒体运营人员**：需要批量发布相同内容到多个平台
+- **Python初学者**：学习基础的Selenium自动化实践
+- **自动化工具开发者**：需要跨平台发布功能的参考实现
+
+> 注意：所有脚本均需自行配置账号密码、图片路径和目标群组链接（LinkedIn还需指定公司页）。项目最后更新于2018年，使用时需注意各平台可能更新的反爬机制。
+
+---
