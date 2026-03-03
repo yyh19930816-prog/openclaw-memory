@@ -107,3 +107,4 @@
 | 2026-03-03 12:51 | GitHub real learn | learn_from_github | repo:[HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) star:0 topic:ai copywriting generator  | done |
 | 2026-03-03 12:52 | GitHub real learn | learn_from_github | repo:[04AR/webcon_python_subprocess](https://github.com/04AR/webcon_python_subprocess) star:2 topic:python subprocess automat | done |
 | 2026-03-03 12:53 | GitHub real learn | learn_from_github | repo:[pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) star:17 topic:video thumbnail generator | done |
+| 2026-03-03 12:54 | Learn+Code | learn+write | repo:[boppreh/keyboard](https://github.com/boppreh/keyboard) ⭐3971 | ✅ code/meituan_python_hotkey_global_keyboard_0303_1254.py | done |
