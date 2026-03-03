@@ -3864,3 +3864,55 @@ sudo apt install build-essential tesseract-ocr tesseract-ocr-eng libtesseract-de
 > 注：所有信息均严格来自README原文，无任何内容补充。项目当前版本为0.6.0（根据下载链接版本号确认）。
 
 ---
+
+### [Meituan-tech] python social media automation post (2026-03-03 09:38)
+**Real source**: [ColombiaPython/social-media-automation](https://github.com/ColombiaPython/social-media-automation) ⭐108
+**Practice code**: ✅ code/meituan_python_social_media_automation_post_0303_0937.py
+
+# Selenium脚本在Facebook、Twitter和LinkedIn自动发帖分析
+
+## 1. 项目解决的问题
+该项目通过Selenium脚本实现自动化在Facebook群组、Twitter和LinkedIn(个人主页/公司页面/群组)发布带图片的贴文，解决手动重复发帖效率低下的问题。
+
+## 2. 核心功能与特点
+* **多平台支持**：覆盖三大主流社交平台(Facebook/Twitter/LinkedIn)
+* **可视化操作**：可自动上传图片并附带文本内容（来自各脚本的main方法配置）
+* **多种发布场景**：
+  - LinkedIn支持个人主页、公司管理员页面和群组发布
+  - Facebook专用于群组内容发布
+* **标准化流程**：所有脚本共享相同的Python虚拟环境配置基础和geckodriver驱动
+
+## 3. 安装使用示例
+基础环境配置代码：
+```bash
+# 创建虚拟环境
+$ pip install virtualenv
+$ virtualenv venv
+$ source venv/bin/activate
+
+# 安装依赖
+$ (venv) pip install selenium
+$ (venv) cd social-media-automation
+```
+
+各平台脚本运行示例：
+```bash
+# Facebook发布
+$ (venv) python fbposter.py
+
+# LinkedIn发布(需配置第23行的geckodriver路径)
+$ (venv) python linkedinpost.py  
+
+# Twitter发布(需配置22/23行的路径)
+$ (venv) python tweetpost.py
+```
+
+## 4. 目标用户
+该工具特别适合：
+* **社交媒体运营人员**：需要同时管理多个平台内容发布
+* **Python开发者**：学习Selenium自动化测试的实际应用案例
+* **小型企业主**：低成本实现基础社交平台自动化运营
+
+⚠️ 注意事项：所有脚本都需要手动配置geckodriver路径和账号信息(第22-23行)，不支持全自动化登录。
+
+---
