@@ -5561,3 +5561,44 @@ pip install [新包名]  # 具体包名未在README中说明
 注：本项目诞生于新冠疫情期间，作者为解决自身需求而开发，后续逐步完善功能并商用化。
 
 ---
+
+### [Meituan-video] python video segment split (2026-03-03 13:39)
+**Real source**: [yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) ⭐10
+
+# Scene Segment Splitter 中文解析
+
+## 1. 项目解决的问题
+该项目用于**自动分割包含两集的视频文件**，并能智能提取片头片段添加到第二集中，解决双集视频的分离处理需求。
+
+## 2. 核心功能
+- **双集视频自动分割**：通过黑帧检测识别剧集过渡点
+- **片头智能处理**：提取首集片头并添加到第二集
+- **自动命名**：根据输入文件名匹配剧集编号和名称
+- **日志记录**：生成包含详细处理信息的日志文件
+- **跨平台支持**：提供Windows/macOS/Linux的FFmpeg安装指南
+
+## 3. 关键代码示例
+```python
+# 创建虚拟环境 (Windows)
+python -m venv myenv
+myenv\Scripts\activate
+
+# macOS/Linux环境配置
+python3 -m venv myenv
+source myenv/bin/activate
+
+# 安装依赖
+pip install -r requirements.txt
+
+# FFmpeg安装验证
+ffmpeg -version
+```
+
+## 4. 目标用户
+- **影视收藏爱好者**：需要处理双集合并视频文件的个人用户
+- **媒体库维护者**：使用Sonarr等工具管理剧集的专业用户
+- **Python开发者**：需要学习视频处理技术的开发人员
+
+> 注意：所有功能描述均基于README原文，未添加任何假设性内容。完整使用需按照文档配置FFmpeg环境并准备符合格式的CSV剧集列表。
+
+---
