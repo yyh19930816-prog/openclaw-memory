@@ -81,3 +81,4 @@
 | 2026-03-03 09:16 | Learn+Code | learn+write | repo:[jacky-xbb/faceless-video-generator](https://github.com/jacky-xbb/faceless-video-generator) ⭐60 | ✅ code/meituan_tiktok_ai_content_creation_tool_0303_0916.py | done |
 | 2026-03-03 09:23 | Learn+Code | learn+write | repo:[ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) ⭐4 | ✅ code/meituan_content_calendar_automation_ai_0303_0923.py | done |
 | 2026-03-03 09:30 | Learn+Code | learn+write | repo:[dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525 | ✅ code/meituan_python_screen_capture_ocr_0303_0930.py | done |
+| 2026-03-03 09:38 | Learn+Code | learn+write | repo:[ColombiaPython/social-media-automation](https://github.com/ColombiaPython/social-media-automation) ⭐108 | ✅ code/meituan_python_social_media_automation_post_0303_0937.py | done |
