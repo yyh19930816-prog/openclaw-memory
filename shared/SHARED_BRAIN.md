@@ -3419,3 +3419,63 @@ app.mainloop()
 > 所有功能描述均严格基于README原文，未添加任何虚构内容。完整API请参考[官方文档](https://ttkbootstrap.readthedocs.io)。
 
 ---
+
+### [Meituan-interact] python windows notification toast (2026-03-03 08:35)
+**Real source**: [jithurjacob/Windows-10-Toast-Notifications](https://github.com/jithurjacob/Windows-10-Toast-Notifications) ⭐993
+**Practice code**: ✅ code/meituan_python_windows_notification_toast_0303_0835.py
+
+# Windows 10 Toast Notifications 中文介绍
+
+## 1. 项目解决的问题  
+这是一个Python库，用于在Windows 10系统中显示原生Toast通知，简化Windows GUI开发中的通知功能实现。
+
+## 2. 核心功能与特性  
+- 🚀 **原生集成**：调用Windows 10内置通知系统  
+- 🐍 **Python支持**：基于Python语言开发（MIT许可证）  
+- ⏱️ **灵活控制**：支持设置通知持续时间（`duration`参数）  
+- 🧵 **线程支持**：可通过`threaded=True`启用非阻塞通知  
+- 🖼️ **图标自定义**：可添加自定义图标（`icon_path`参数）  
+
+## 3. 安装与代码示例  
+
+**安装命令**：  
+```python
+pip install win10toast
+```
+
+**依赖项**：  
+```python
+pypiwin32
+setuptools
+```
+
+**基础使用示例**：  
+```python
+from win10toast import ToastNotifier
+
+toaster = ToastNotifier()
+toaster.show_toast("示例标题", 
+                  "这里是通知内容",
+                  icon_path="custom.ico",
+                  duration=10)
+```
+
+**线程化通知示例**：  
+```python
+# 线程化通知（非阻塞）
+toaster.show_toast("线程示例",
+                  "此通知在独立线程运行",
+                  threaded=True)
+# 等待线程完成
+while toaster.notification_active(): 
+    time.sleep(0.1)
+```
+
+## 4. 适用人群  
+✔️ Windows平台Python开发者  
+✔️ 需要系统级通知的桌面应用开发者  
+✔️ 希望快速集成通知功能的工具作者  
+
+> 💡 注：所有功能描述均严格基于README原文，未添加假设性内容。实际使用时请参考项目最新文档。
+
+---
