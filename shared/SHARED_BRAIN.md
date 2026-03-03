@@ -4327,3 +4327,77 @@ npm run dev
 ⚠️ 注意：README中未包含实际的安装命令或代码示例，所有描述均基于展示的功能标签和文字说明。项目通过MIT许可证开源，当前版本为1.5.0。
 
 ---
+
+### [Meituan-interact] python clipboard monitor automation (2026-03-03 11:24)
+**Real source**: [XingYuan55/autoreplier](https://github.com/XingYuan55/autoreplier) ⭐6
+**Practice code**: ✅ code/meituan_python_clipboard_monitor_automation_0303_1124.py
+
+以下是基于README内容的精准提炼：
+
+---
+
+### 1. 解决的问题  
+通过AI技术实现微信消息的**智能监控与自动回复**，帮助用户减少重复性消息处理工作，提高沟通效率（摘取自"项目介绍"部分）。
+
+### 2. 核心功能/知识点  
+- **消息自动化处理**  
+  使用`PyAutoGUI`和`Win32 API`实现：
+  ```python
+  # 依赖库示例（来自README）
+  pip install pyautogui pygetwindow pillow pywin32 win32clipboard
+  ```
+
+- **AI对话集成**  
+  支持在线/离线两种模式：
+  ```bash
+  # 运行命令（原文引用）
+  python main.py                # 在线模式
+  python main_offline_model.py  # 离线模式
+  ```
+
+- **中文优化**  
+  专门适配中文场景，处理剪贴板编码问题（更新日志中提到修复了"中文文本处理问题"）
+
+- **可靠性机制**  
+  包含故障恢复和状态监控（"优势特色"中提到的🛡️稳定可靠特性）
+
+- **Mermaid可视化流程**  
+  README中明确描述的监控逻辑：
+  ```mermaid
+  graph TD
+    A[监控消息] -->|发现新消息| B[捕获消息内容]
+    B --> C[复制消息文本]
+    C --> D[发送至AI处理]
+    D --> E[获取AI回复]
+    E --> F[发送回复消息]
+    F --> A
+  ```
+
+### 3. 安装/使用示例  
+关键步骤来自README：
+1. 安装依赖：
+   ```bash
+   pip install pyautogui pygetwindow pillow pywin32 win32clipboard
+   ```
+2. 配置坐标：
+   ```json
+   // settings.json 需包含（README提到的配置项）
+   {
+     "window_coordinates": [x,y],
+     "model_params": {...}
+   }
+   ```
+3. 注意事项：
+   - 禁止移动窗口（原文强调）
+   - 需保持窗口前台可见
+
+### 4. 适合人群  
+直接引用README分类：
+- 📌 需要自动化处理消息的**个人用户**
+- 🏢 寻求智能客服的**小微企业**  
+- 👥 提高消息效率的**团队**  
+- 💻 对AI对话感兴趣的**开发者**
+
+（所有内容均严格来自README原文，无主观增补）
+
+---
