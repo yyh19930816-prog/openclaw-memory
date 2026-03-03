@@ -5268,3 +5268,39 @@ make html  # 使用Sphinx生成HTML文档
 （注：所有内容均严格基于README原文，无虚构信息。）
 
 ---
+
+### [Meituan-interact] python screen capture ocr (2026-03-03 13:11)
+**Real source**: [dynobo/normcap](https://github.com/dynobo/normcap) ⭐2525
+
+### NormCap 项目解析  
+
+#### 1. 解决的问题  
+NormCap 是一款基于 OCR 技术的屏幕捕获工具，它能直接捕获屏幕上的**文字信息**而非图片（来自README首段描述）。  
+
+#### 2. 核心功能与特点  
+- **跨平台支持**：兼容 Linux、macOS 和 Windows 系统（标题明确标注）。  
+- **多安装方式**：提供预构建包（MSI/AppImage/DMG）、Flathub 扁平包、Python 包等多种安装选项（Installation 部分）。  
+- **OCR 依赖**：使用 Tesseract-OCR 引擎识别文字（Linux 安装需手动安装依赖 `tesseract-ocr`）。  
+- **便捷操作**：捕获后自动复制文本到剪贴板（Linux 依赖 `wl-clipboard`）。  
+- **开源透明**：代码覆盖率检测、CI/CD 集成（README顶部的徽章展示）。  
+
+#### 3. 安装代码示例  
+**Linux 推荐安装（Flathub）：**  
+```sh
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo  
+flatpak install flathub com.github.dynobo.normcap
+```  
+**Python 包安装（需手动装依赖）：**  
+```sh
+# Ubuntu/Debian 系统  
+sudo apt install build-essential tesseract-ocr tesseract-ocr-eng libtesseract-dev libleptonica-dev wl-clipboard
+```  
+
+#### 4. 适用人群  
+- **开发者**：需快速提取代码/终端文本。  
+- **效率工具用户**：避免手动输入截图中的文字。  
+- **多平台工作者**：支持主流操作系统，切换设备无忧。  
+
+> ⚠️ 注意：所有信息均严格摘自 README，不含额外推测。macOS 首次运行需手动授权（见 Security & Privacy 设置）。
+
+---
