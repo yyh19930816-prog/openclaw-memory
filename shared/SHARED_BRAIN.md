@@ -4498,3 +4498,58 @@ README中未提供具体代码片段，但包含以下关键安装信息：
 ⚠️ 所有信息均直接来自README原文，未添加任何虚构内容。项目最新动态请参考[官网](www.tiktokastudio.com)或提交GitHub Issue咨询作者。
 
 ---
+
+### [Meituan-content] ai copywriting generator tool (2026-03-03 11:45)
+**Real source**: [HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator](https://github.com/HarieshKumar17/EmailGenie-AI-Powered-Email-Copywriting-Generator) ⭐0
+**Practice code**: ✅ code/meituan_ai_copywriting_generator_tool_0303_1145.py
+
+以下是严格按照README内容提炼的中文信息：
+
+---
+
+### 1. 项目解决的问题  
+通过AI生成个性化的商务拓展邮件（Cold Outreach），结合现代AI语言模型与专业邮件营销实践，解决企业多场景邮件撰写效率问题。
+
+---
+
+### 2. 核心功能与知识点  
+- **AI驱动邮件生成**：基于Groq平台的Gemma-2-9B模型实现智能写作  
+- **多场景模板支持**：覆盖销售、求职、合作等商务场景  
+- **全链路管理**：  
+  ```python
+  # 用户档案管理（README代码片段）
+  save_profile(profile_name, industry, target_audience, background, 
+              sender_name, sender_company, sender_email)
+  ```
+- **无缝集成**：支持Resend API直接发送邮件 + HubSpot CRM对接  
+- **本地化存储**：SQLite数据库保存模板和历史记录  
+
+---
+
+### 3. 核心代码示例  
+**用户档案设置功能**（直接引用README）：  
+```python
+# Streamlit前端交互示例
+st.header("User Profile Setup")
+profile_name = st.text_input("Profile Name")
+industry = st.text_input("Industry")
+if st.button("Save Profile"):
+    save_profile(profile_name, industry...)  # 省略部分参数
+```
+
+**技术栈依赖**：  
+- 前端：Streamlit  
+- 数据处理：Pandas  
+- 环境管理：python-dotenv  
+
+---
+
+### 4. 目标用户  
+- **B2B销售/商务人员**：需高频发送定制化开发邮件  
+- **市场营销团队**：需要标准化模板兼顾个性化  
+- **求职者**：快速生成专业求职邮件  
+- **技术开发者**：学习AI+CRM集成实战案例  
+
+（注：所有信息均严格来自README原文，未添加任何外部内容）
+
+---
