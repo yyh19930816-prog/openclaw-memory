@@ -4191,3 +4191,54 @@ pip install normcap
 ⚠️ 注意：所有信息均来自README原文，未添加任何未提及的功能或代码示例。macOS用户需注意首次运行时的安全权限设置（见原文Security & Privacy说明）。
 
 ---
+
+### [Meituan-content] tiktok ai content creation tool (2026-03-03 11:02)
+**Real source**: [jacky-xbb/faceless-video-generator](https://github.com/jacky-xbb/faceless-video-generator) ⭐60
+**Practice code**: ✅ code/meituan_tiktok_ai_content_creation_tool_0303_1102.py
+
+# Faceless Video Generator 项目解析  
+
+## 1. 解决的核心问题  
+简化多媒体内容创作流程，**通过AI一键生成无真人出镜的视频**，自动完成从故事生成、图片创作到视频合成的全流程（基于README的"Project Overview"部分）。  
+
+## 2. 核心功能  
+- **多样化故事生成**  
+  支持12种故事类型（恐怖/悬疑/历史趣闻/哲学等），通过`story_generator.py`实现：
+  ```python
+  # 示例故事类型（来自README）
+  "Scary, Mystery, Bedtime, Urban Legends, Philosophy..."
+  ```
+
+- **多风格图像生成**  
+  提供5种AI绘画风格选择，通过`image_generator.py`实现：
+  ```plaintext
+  photorealistic, cinematic, anime, comic-book, pixar-art
+  ```
+
+- **自动化视频合成**  
+  自动将生成的图片、字幕和语音（多配音可选）合成为视频，依赖`video_creator.py`和`audio_generator.py`。
+
+## 3. 安装与使用示例  
+完整安装步骤（摘自README）：  
+```bash
+# 克隆仓库
+git clone https://github.com/SmartClipAI/faceless-video-generator.git
+cd faceless-video-generator
+
+# 安装依赖（必须配置.env中的API密钥）
+pip install -r requirements.txt
+```
+
+运行命令：  
+```bash
+python src/main.py  # 按提示选择故事类型/图像风格/语音
+```
+
+## 4. 目标用户  
+✔️ **自媒体创作者**：快速生成故事类短视频内容  
+✔️ **营销人员**：制作产品讲解/知识科普等无真人素材  
+✔️ **AI技术爱好者**：学习多模态AI工作流整合  
+
+> 注意：实际使用时需要自行申请`OpenAI`和`Replicate`的API密钥（README明确强调）。
+
+---
