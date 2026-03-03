@@ -6479,3 +6479,48 @@ python clips_extractor.py --url <视频URL>
 （注：所有信息均严格基于README原文，未添加额外假设。）
 
 ---
+
+### [Meituan-tech] python web scraping content (2026-03-03 17:38)
+**Real source**: [TheBlewish/Automated-AI-Web-Researcher-Ollama](https://github.com/TheBlewish/Automated-AI-Web-Researcher-Ollama) ⭐2955
+
+以下是严格基于GitHub README内容的提炼：
+
+---
+
+### 1. 解决的核心问题  
+该项目通过Ollama本地运行的大语言模型，自动化执行结构化网络研究任务，解决传统LLM交互方式无法系统性搜集、整理和溯源网络信息的问题。（源自Description段）
+
+---
+
+### 2. 核心功能  
+- **分优先级研究框架**  
+  LLM将用户提问拆解为5个优先级研究领域（如"全球人口下降预测年份"会生成人口模型、权威报告等子方向）  
+
+- **全自动化研究流程**  
+  自动执行「搜索词生成→网页抓取→内容提取→源链接记录」的闭环（代码演示中的`research text file`会保存全部内容）  
+
+- **动态优化机制**  
+  根据已有发现智能生成新的研究方向（README提到的"self-improving search mechanism"）  
+
+- **可中断研究+总结**  
+  用户输入终止命令后，LLM会自动生成综合摘要并进入问答模式（关键差异化功能）  
+
+---
+
+### 3. 安装代码示例  
+```sh
+# Linux/MacOS安装（README原代码）
+git clone https://github.com/TheBlewish/Automated-AI-Web-Researcher-Olla
+# Windows需使用特定分支（原文明确说明）
+```
+
+---
+
+### 4. 目标用户  
+- **学术研究者**：需快速梳理跨领域文献  
+- **数据分析师**：要求结果可溯源（README强调保存所有URL）  
+- **技术极客**：希望实验本地LLM的自动化能力（依赖Ollama环境）  
+
+注：全部信息均来自原README，无任何补充内容。完整演示见[项目视频](https://youtu.be/hS7Q1B8N1mQ)。
+
+---
