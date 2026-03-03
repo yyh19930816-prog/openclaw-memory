@@ -6375,3 +6375,69 @@ Viddl::Video.download("https://youtube.com/watch?v=xxx").create_clip(options)
 （注：所有功能描述均严格基于 README 原文，无额外补充。）
 
 ---
+
+### [Meituan-video] ffmpeg video cut clip (2026-03-03 17:09)
+**Real source**: [arirusso/viddl](https://github.com/arirusso/viddl) ⭐32
+
+# Viddl - 视频下载与剪辑工具分析
+
+## 1. 项目解决的问题
+Viddl 是一个快速下载、剪切、裁剪和调整视频大小的 Ruby 工具，通过集成 youtube-dl 和 ffmpeg 实现高效视频处理。
+
+## 2. 核心功能/知识点
+- **多功能下载**：支持 YouTube 等平台的视频原始下载
+- **精准剪辑**：可按秒级精度截取视频片段（起始/结束时间或持续时间）
+- **画面处理**： 
+  - 支持任意尺寸调整（width/height参数）
+  - 支持局部画面裁剪（x/y坐标+宽高参数）
+- **音频控制**：可选是否保留原视频音频
+- **多平台支持**：提供命令行和 Ruby API 两种使用方式
+
+## 3. 安装与代码示例
+### 安装准备
+```sh
+# 需预先安装：
+# 1. youtube-dl (https://github.com/rg3/youtube-dl)
+# 2. ffmpeg (https://ffmpeg.org)
+
+# 通过gem安装：
+gem install viddl
+
+# 或使用Bundler：
+gem "viddl"
+```
+
+### 命令行使用
+```sh
+# 基础下载
+viddl https://www.youtube.com/watch?v=6g4dkBF5anU
+
+# 组合操作示例（15-22秒片段/静音/局部裁剪/缩放）
+viddl https://www.youtube.com/watch?v=6g4dkBF5anU -s 15 -e 22 --no-audio \
+      --cx 20 --cy 20 --cw 40 --ch 40 -w 640 -h 480
+```
+
+### Ruby API
+```ruby
+options = {
+  start: 15,
+  end: 22,
+  audio: false,
+  crop: { x: 20, y: 20, width: 40, height: 40 },
+  width: 640,
+  height: 480,
+  output_path: "assets/video"
+}
+
+video = Viddl::Video.download("视频URL")
+video.create_clip(options)
+```
+
+## 4. 适用人群
+- **开发者**：需要将视频处理集成到Ruby项目中的工程师
+- **内容创作者**：需要快速剪辑/处理网络视频的运营人员
+- **自动化脚本用户**：希望通过命令行批量处理视频的技术人员
+
+（注：所有功能描述均严格来自README，未添加任何外部信息）
+
+---
