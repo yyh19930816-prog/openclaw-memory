@@ -6326,3 +6326,52 @@ Python 3.10+ | Windows平台 | Ollama AI引擎（需自行部署本地模型）
 （注：所有信息均来自README原文，未添加额外内容）
 
 ---
+
+### [Meituan-video] ffmpeg video cut clip (2026-03-03 16:55)
+**Real source**: [arirusso/viddl](https://github.com/arirusso/viddl) ⭐32
+
+### Viddl 项目介绍  
+
+#### 1. 解决的问题  
+Viddl 是一个通过命令行或 Ruby 快速下载、剪切、裁剪和调整视频大小的工具（基于 `youtube-dl` 和 `ffmpeg`）。
+
+#### 2. 核心功能  
+- **下载视频**：支持直接下载原始视频（如 YouTube 链接）。  
+- **剪切片段**：通过时间戳截取指定区间（`-s` 开始时间，`-d` 持续时间 或 `-e` 结束时间）。  
+- **调整尺寸**：修改视频分辨率（`-w` 宽度，`-h` 高度）。  
+- **裁剪画面**：从指定位置截取局部画面（`--cx`/`--cy` 坐标，`--cw`/`--ch` 宽高）。  
+- **静音处理**：移除视频音频（`--no-audio`）。  
+
+#### 3. 安装与代码示例  
+
+**安装依赖**：需提前安装 `youtube-dl` 和 `ffmpeg`。  
+```sh
+gem install viddl  # 或 Bundler 添加 gem "viddl"
+```
+
+**命令行示例**：  
+```sh
+# 下载并裁剪10-15秒的片段，静音，输出到指定目录
+viddl https://youtube.com/watch?v=xxx -s 10 -e 22 --no-audio --cx 20 --cy 20 --cw 40 --ch 40
+```
+
+**Ruby 示例**：  
+```ruby
+options = {
+  start: 15,
+  end: 22,
+  audio: false,
+  crop: { x: 20, y: 20, width: 40, height: 40 },
+  width: 640,
+  height: 480
+}
+Viddl::Video.download("https://youtube.com/watch?v=xxx").create_clip(options)
+```
+
+#### 4. 适合人群  
+- **开发者**：需在 Ruby 项目中集成视频处理的用户。  
+- **命令行用户**：快速处理视频片段（如制作 GIF 或短视频）。  
+
+（注：所有功能描述均严格基于 README 原文，无额外补充。）
+
+---
