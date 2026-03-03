@@ -6441,3 +6441,41 @@ video.create_clip(options)
 （注：所有功能描述均严格来自README，未添加任何外部信息）
 
 ---
+
+### [Meituan-video] video clip automation python (2026-03-03 17:23)
+**Real source**: [gabrielelanzafamee/viral-clips-extractor](https://github.com/gabrielelanzafamee/viral-clips-extractor) ⭐42
+
+### 1. 项目解决的问题  
+该项目用于从YouTube视频中**自动提取最具传播性、搞笑或有趣的片段**，通过分析字幕和面部检测技术，生成带字幕的精简短视频。
+
+### 2. 核心功能/知识点  
+- **字幕提取**：使用 `whisper_timestamped` 提取视频字幕及时间戳  
+- **内容分析**：调用 ChatGPT 3.5 API 识别高光片段  
+- **视频剪辑**：按分析结果裁剪原视频  
+- **字幕生成**：为剪辑片段自动添加字幕  
+- **面部追踪**：通过 OpenCV 实现人脸检测并智能裁剪画面  
+
+### 3. 安装/使用代码示例  
+#### 安装依赖  
+```shell
+git clone https://github.com/xjabr/viral-clips-extractor.git
+pip install -r requirements.txt
+```
+#### 配置API密钥  
+修改 `contents/chatgpt.py` 中的配置：  
+```python
+openai.api_key = '<your-token>'
+```
+#### 运行工具  
+```shell
+python clips_extractor.py --url <视频URL>
+```
+
+### 4. 适合人群  
+- **短视频创作者**：快速生成高传播潜力片段  
+- **内容分析师**：研究视频的高光时刻特征  
+- **AI开发者**：学习 Whisper、OpenCV 与 ChatGPT 的集成应用  
+
+（注：所有信息均严格基于README原文，未添加额外假设。）
+
+---
