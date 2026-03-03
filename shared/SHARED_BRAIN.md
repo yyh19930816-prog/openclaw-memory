@@ -3329,3 +3329,43 @@ card_bytes = card.card1()  # 返回可直接用于discord.File的bytes
 > 注意：所有功能说明均严格来自README原文，示例代码为直接引用。实际开发时建议查阅最新文档确认接口稳定性。
 
 ---
+
+### [Meituan-content] video thumbnail generator python (2026-03-03 08:22)
+**Real source**: [pysnippet/thumbnails](https://github.com/pysnippet/thumbnails) ⭐17
+**Practice code**: ✅ code/meituan_video_thumbnail_generator_python_0303_0822.py
+
+### 1. 项目核心解决问题 
+该项目专为**高效生成视频缩略图**设计，通过优化资源占用实现快速批量化处理，并提供友好的CLI和Python API接口。（源自README首段描述）
+
+### 2. 核心功能亮点
+- **多格式兼容**：支持mp4/mkv/avi/mov等主流视频输入（README明确列举）
+- **输出灵活**：可生成WebVTT或JSON格式缩略图元数据，适配Plyr/Video.js等播放器（兼容性章节）
+- **双接口支持**：同时提供命令行工具和Python API（Features部分）
+- **性能优化**：采用图像压缩技术降低文件体积（Features末条）
+- **定制化选项**：支持跳过已存在文件、设置时间间隔等（Python API示例）
+
+### 3. 关键代码示例
+#### CLI调用（直接引用README）：
+```bash
+thumbnails --base /media/ --output /var/www/movie.com/media/thumbnails/ --interval 5 ~Videos/movies
+```
+
+#### Python API调用（完整复制README示例）：
+```python
+from thumbnails import Generator
+
+generator = Generator(["~Downloads/movie.mp4"])  # 支持多文件路径
+generator.output = "/var/www/media/thumbnails/"
+generator.interval = 5  # 每5秒生成一张
+generator.skip = True  # 跳过已存在文件
+generator.generate()
+```
+
+### 4. 目标用户群体
+- **视频网站开发者**：需要为Plyr/Video.js等播放器生成预览缩略图
+- **多媒体处理工具链**：希望集成轻量级缩略图生成功能
+- **自动化脚本编写者**：需通过Python API批量处理视频文件
+
+（所有内容均严格遵循README原文，未添加额外信息）
+
+---
