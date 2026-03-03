@@ -4242,3 +4242,38 @@ python src/main.py  # 按提示选择故事类型/图像风格/语音
 > 注意：实际使用时需要自行申请`OpenAI`和`Replicate`的API密钥（README明确强调）。
 
 ---
+
+### [Meituan-content] viral content formula hook engagement (2026-03-03 11:09)
+**Real source**: [parzival1920/ViralHook---Premium-Hook-Generator](https://github.com/parzival1920/ViralHook---Premium-Hook-Generator) ⭐0
+**Practice code**: ✅ code/meituan_viral_content_formula_hook_engagement_0303_1109.py
+
+### 1. 项目解决的问题  
+该项目提供本地运行和部署AI Studio应用的完整解决方案（基于README中的"Run and deploy your AI Studio app"描述）。
+
+### 2. 核心功能/知识点  
+- 👨‍💻 **本地运行AI应用**：提供完整的本地开发环境支持  
+- 🔌 **依赖管理**：通过Node.js生态管理项目依赖  
+- 🔑 **API密钥配置**：需设置Gemini AI的API密钥（`.env.local`文件）  
+- 🚀 **开发命令**：使用`npm run dev`启动开发服务器  
+- 🌐 **云端关联**：可关联至AI Studio的云端应用（README中提供的URL）  
+
+### 3. 安装/使用代码示例  
+```bash
+# 1. 安装依赖（原文代码）
+npm install
+
+# 2. 配置API密钥（需自行替换）
+echo "GEMINI_API_KEY=your_api_key_here" > .env.local
+
+# 3. 启动应用（原文代码）
+npm run dev
+```
+
+### 4. 适用人群  
+- 🛠️ **AI开发者**：需要在本地调试Gemini API相关应用  
+- 🔧 **全栈工程师**：使用Node.js技术栈的前后端开发者  
+- ☁️ **AI Studio用户**：已在该平台创建应用需本地化部署的场景  
+
+（注：所有内容均严格基于README原文，未添加任何虚构信息）
+
+---
