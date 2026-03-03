@@ -6026,3 +6026,46 @@ segment.write_videofile("output.mp4")
 （注：由于README内容极为简略，所有说明均严格基于现有文本，未添加任何假设功能）
 
 ---
+
+### [Meituan-video] moviepy video clip trim (2026-03-03 15:00)
+**Real source**: [D-K-E/byeframe](https://github.com/D-K-E/byeframe) ⭐1
+
+# Byeframe 视频静音片段裁剪工具  
+
+### 1. 解决的问题  
+通过音频阈值自动检测并裁剪视频中的静音片段，适用于需要快速去除视频无声部分的场景。  
+
+### 2. 核心功能  
+- **音频阈值触发**：基于 `max_thresh`（最大音量阈值）和 `thresh_duration`（持续时间阈值）检测静音  
+- **高效处理**：支持多线程（默认3线程）和视频分块处理（大文件推荐每块约10秒）  
+- **简单API**：`trim.py` 提供可直接调用的 `SilenceTrimmer` 类（曾支持最小阈值但已移除）  
+
+### 3. 安装与使用  
+**安装依赖**：  
+```bash
+pip install moviepy==1.0
+```
+
+**基础命令**：  
+```bash
+python byeframe.py INPUT.mp4 min_thres max_thresh thresh_duration
+# 输出同目录下的 out.mp4
+```
+
+**高级参数**：  
+```bash
+python byeframe.py input.mp4 \
+  --tmax 0.1 \          # 最大音量阈值（默认0.1）
+  --tdur 0.05 \         # 静音持续秒数（默认0.05秒）
+  --thread 3 \          # 线程数（默认3）
+  --splitNb 5           # 分块数（大视频必填）
+```
+
+### 4. 适用人群  
+- **视频编辑新手**：无需专业软件，命令行快速处理  
+- **开发者**：可直接集成 `trim.py` 的 `SilenceTrimmer` 到自有项目  
+- **批量处理需求**：利用多线程和分块处理优化大视频剪辑  
+
+> ⚠️ 注意：原README明确说明最小阈值功能已废弃，仅保留最大阈值检测。
+
+---
