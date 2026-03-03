@@ -114,3 +114,4 @@
 | 2026-03-03 13:11 | GitHub real learn | learn_from_github | repo:[dynobo/normcap](https://github.com/dynobo/normcap) star:2525 topic:python screen capture ocr | done |
 | 2026-03-03 13:21 | GitHub real learn | learn_from_github | repo:[Surajkumar5050/zyron-assistant](https://github.com/Surajkumar5050/zyron-assistant) star:98 topic:python voice assistant wi | done |
 | 2026-03-03 13:27 | GitHub real learn | learn_from_github | repo:[arirusso/viddl](https://github.com/arirusso/viddl) star:32 topic:ffmpeg video cut clip | done |
+| 2026-03-03 13:32 | GitHub real learn | learn_from_github | repo:[ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI](https://github.com/ahmadmustafa02/AI-Powered-Marketing-Automation-Marketing-Agentic-AI) star:4 topic:content calendar automati | done |
