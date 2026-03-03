@@ -5821,3 +5821,49 @@ Viddl::Video.download(URL).create_clip(options)
 > 注：所有功能均严格基于README文档描述，项目采用Apache 2.0许可，由Ari Russo于2017年开发维护。
 
 ---
+
+### [Meituan-video] python video segment split (2026-03-03 13:58)
+**Real source**: [yzRobo/scene-segment-splitter](https://github.com/yzRobo/scene-segment-splitter) ⭐10
+
+# Scene Segment Splitter 项目解析  
+
+## 1. 解决什么问题  
+自动分割包含两集内容的视频文件，并智能处理片头片尾（如将第一集的片头添加到第二集）。
+
+## 2. 核心功能  
+- **黑帧检测**：通过识别黑帧自动定位剧集之间的过渡点  
+- **片头移植**：将第一集的片头片段插入到第二集开头  
+- **命名规范**：根据输入文件名自动生成规范的剧集编号和名称  
+- **日志记录**：生成详细处理日志（含时间戳和操作记录）  
+- **跨平台支持**：提供Windows/macOS/Linux的FFmpeg安装指南  
+
+## 3. 关键代码示例  
+**虚拟环境配置**  
+```bash
+# Windows
+python -m venv myenv
+myenv\Scripts\activate
+
+# macOS/Linux  
+python3 -m venv myenv  
+source myenv/bin/activate
+```
+
+**依赖安装**  
+```bash
+pip install -r requirements.txt
+```
+
+**FFmpeg验证**  
+```bash
+ffmpeg -version  # 所有平台通用
+```
+
+## 4. 适用人群  
+- **影视收藏者**：需要整理连续剧集合并文件  
+- **自动化工具开发者**：参考黑帧检测/视频分割的实现  
+- **Sonarr用户**：兼容Sonarr API导出的剧集元数据格式  
+
+（说明：原文未提供具体调用代码示例，仅描述工作流程）
+
+---
